@@ -44,16 +44,22 @@ function inspect(file) {
         .join(' ')
         .slice(0, 190)
     : ''
-  return { props, summary }
+  return { props, summary: scrub(summary) }
 }
+
+/* Component comments name the reference site; the docs should not. Scrub on
+   output so regenerating never reintroduces it. */
+const scrub = (s) => String(s)
+  .replace(/\blive jasper\.ai\b/gi, 'the reference site')
+  .replace(/\bjasper\.ai\b/gi, 'the reference site')
 
 const O = []
 const P = (s) => O.push(s)
 
 P('# Component library\n')
 P('Generated from the source files. Regenerate with `node design/gen-components.mjs`.\n')
-P('Every block carries a header comment recording the values MEASURED off live')
-P('jasper.ai — section height, grid tracks, font sizes, colours. Read that')
+P('Every block carries a header comment recording the values MEASURED off the')
+P('reference site — section height, grid tracks, font sizes, colours. Read that')
 P('comment before changing a block; the numbers are evidence, not preference.\n')
 P('The 22 Platform pages and the Solutions/Resources/Company sub-pages are')
 P('compositions of these blocks, not bespoke builds. Webflow reuses a small')

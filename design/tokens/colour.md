@@ -1,7 +1,7 @@
 # Colour
 
 Generated from `tailwind.config.js` — do not hand-edit. Every value here was
-read off the live jasper.ai computed styles during the clone, not chosen.
+read off the reference site computed styles during the clone, not chosen.
 
 Use the token name in JSX (`bg-flame-600`), never a raw hex.
 
@@ -25,6 +25,7 @@ Use the token name in JSX (`bg-flame-600`), never a raw hex.
 | `flame-100` | `#fffdfc` |
 | `flame-200` | `#fff7f5` |
 | `flame-300` | `#ffe8e2` |
+| `flame-350` | `#ffccc6` |
 | `flame-400` | `#ffb3a3` |
 | `flame-500` | `#fa7560` |
 | `flame-600` | `#fa4028` |

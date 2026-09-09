@@ -12,9 +12,12 @@ import { useReveal } from '../../hooks/useReveal'
      logo row    six 193x80 marks laid on the 1360px well, first at x=40 and
                  the last ending at 1400 — an even 233px pitch, i.e. a
                  6-column grid with a 40px gutter. Pages with fewer logos
-                 (healthcare ships 2, retail 3) keep the same 205x84 mark box
-                 and simply run short, so the row is a flex with a fixed gap
-                 rather than a rigid 6-col grid.
+                 (healthcare ships 2, retail 3, professional-services 4) keep
+                 the same mark box and START of the row, running SHORT on the
+                 right rather than spreading edge-to-edge — so the row is a
+                 left-aligned flex on the measured 40px gap, NOT
+                 justify-between (which flung healthcare's two marks to
+                 opposite ends of the well).
      80px        g_section_space
 
    The live blade is a Webflow CMS marquee but does not actually scroll at
@@ -37,7 +40,7 @@ export default function LogoBlade({ title, logos = [] }) {
           <h2 className="reveal font-sans text-h4 leading-1 text-ink">{title}</h2>
         )}
 
-        <div className="reveal mt-[56px] flex flex-wrap items-center justify-between gap-8"
+        <div className="reveal mt-[56px] flex flex-wrap items-center gap-x-10 gap-y-8"
              style={{ '--reveal-delay': '80ms' }}>
           {logos.map((l) => (
             <img key={l.src} src={l.src} alt={l.alt || ''} width={l.w} height={l.h}

@@ -3,7 +3,7 @@
 Generated from `src/App.jsx`, `src/data/stubRoutes.js` and
 `src/components/NavMenuData.js`. Regenerate with `node design/gen-ia.mjs`.
 
-**28 pages cloned · 26 placeholders · 54 routes total**
+**41 pages cloned · 13 placeholders · 54 routes total**
 
 A placeholder is an honest "Not cloned yet" page carrying that route's real
 live headline — not a 404, and never the homepage. Before these existed, every
@@ -47,24 +47,24 @@ and hides the gap.
 | `/style-guide` | **cloned** | 6,488px |
 | `/visual-guidelines` | **cloned** | 6,158px |
 
-## Solutions — 1/14 cloned
+## Solutions — 14/14 cloned
 
 | route | state | live height |
 |---|---|---|
 | `/solutions` | **cloned** | — |
-| `/solutions/by-industry/financial-services` | placeholder | 8,150px |
-| `/solutions/by-industry/healthcare` | placeholder | 8,140px |
-| `/solutions/by-industry/media-and-entertainment` | placeholder | 8,365px |
-| `/solutions/by-industry/professional-services` | placeholder | 7,992px |
-| `/solutions/by-industry/retail-and-consumer-goods` | placeholder | 8,055px |
-| `/solutions/by-industry/tech` | placeholder | 8,007px |
-| `/solutions/by-role/brand-marketers` | placeholder | 4,567px |
-| `/solutions/by-role/content-marketers` | placeholder | 4,623px |
-| `/solutions/by-role/field-marketers` | placeholder | 4,595px |
-| `/solutions/by-role/performance-marketers` | placeholder | 4,617px |
-| `/solutions/by-role/pr-and-communications` | placeholder | 4,589px |
-| `/solutions/by-role/product-marketers` | placeholder | 4,601px |
-| `/solutions/seo-aeo-geo` | placeholder | 6,943px |
+| `/solutions/by-industry/financial-services` | **cloned** | 8,150px |
+| `/solutions/by-industry/healthcare` | **cloned** | 8,140px |
+| `/solutions/by-industry/media-and-entertainment` | **cloned** | 8,365px |
+| `/solutions/by-industry/professional-services` | **cloned** | 7,992px |
+| `/solutions/by-industry/retail-and-consumer-goods` | **cloned** | 8,055px |
+| `/solutions/by-industry/tech` | **cloned** | 8,007px |
+| `/solutions/by-role/brand-marketers` | **cloned** | 4,567px |
+| `/solutions/by-role/content-marketers` | **cloned** | 4,623px |
+| `/solutions/by-role/field-marketers` | **cloned** | 4,595px |
+| `/solutions/by-role/performance-marketers` | **cloned** | 4,617px |
+| `/solutions/by-role/pr-and-communications` | **cloned** | 4,589px |
+| `/solutions/by-role/product-marketers` | **cloned** | 4,601px |
+| `/solutions/seo-aeo-geo` | **cloned** | 6,943px |
 
 ## Resources — 0/7 cloned
 

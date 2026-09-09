@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Design system</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#00063d;--bg:#fff;--bg2:#f2f2f3;--line:#e4e4e7;--flame:#fa4028}
+  *{box-sizing:border-box}
+  body{margin:0;font:16px/1.55 Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg)}
+  header{padding:56px 40px 32px;border-bottom:1px solid var(--line)}
+  h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);margin:0 0 .3em;letter-spacing:-.03em}
+  .lede{max-width:64ch;color:#4a4f6a;margin:0}
+  nav{position:sticky;top:0;z-index:9;display:flex;gap:4px;flex-wrap:wrap;padding:12px 40px;
+      background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav a{font:500 13px/1 Inter,sans-serif;color:var(--ink);text-decoration:none;padding:8px 12px;border-radius:6px}
+  nav a:hover{background:var(--bg2)}
+  section{padding:48px 40px;border-bottom:1px solid var(--line);scroll-margin-top:56px}
+  h2{font-family:'Playfair Display',serif;font-size:1.9rem;margin:0 0 .2em;letter-spacing:-.02em}
+  .note{color:#4a4f6a;max-width:70ch;margin:0 0 28px}
+  .fam{font:500 12px/1 'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.08em;
+       color:#6b7089;margin:26px 0 10px}
+  .row{display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:8px}
+  .sw{aspect-ratio:1.5;border-radius:8px;padding:10px;display:flex;flex-direction:column;
+      justify-content:flex-end;border:1px solid rgba(0,0,0,.07)}
+  .tok{font:500 11px/1.3 'JetBrains Mono',monospace}
+  .hex{font:400 10px/1.4 'JetBrains Mono',monospace;opacity:.72}
+  .spec{padding:14px 0;border-bottom:1px solid var(--line)}
+  .spec-meta{display:flex;gap:12px;align-items:baseline;margin-bottom:6px}
+  .spec-meta code{font:500 12px 'JetBrains Mono',monospace;color:var(--flame)}
+  .spec-meta span{font:400 11px 'JetBrains Mono',monospace;color:#6b7089}
+  .spec-sample{line-height:1.1;letter-spacing:-.02em}
+  .sp{display:flex;align-items:center;gap:14px;padding:5px 0}
+  .sp code{font:500 12px 'JetBrains Mono',monospace;min-width:104px;color:var(--flame)}
+  .sp-bar{height:14px;background:var(--flame);border-radius:3px;min-width:1px}
+  .sp span{font:400 11px 'JetBrains Mono',monospace;color:#6b7089}
+  table{border-collapse:collapse;width:100%;font-size:14px}
+  td{border-bottom:1px solid var(--line);padding:9px 12px;vertical-align:top}
+  td:first-child{width:190px}
+  td code{font:500 12px 'JetBrains Mono',monospace;color:var(--flame)}
+  .pages{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:20px}
+  .pg{margin:0}
+  .pg img{width:100%;border:1px solid var(--line);border-radius:8px;display:block;
+          max-height:300px;object-fit:cover;object-position:top}
+  figcaption{font:400 11px/1.4 'JetBrains Mono',monospace;color:#6b7089;margin-top:6px}
+  footer{padding:36px 40px;color:#6b7089;font-size:13px}
+</style></head><body>
+<header>
+  <h1>Design system</h1>
+  <p class="lede">Generated from <code>tailwind.config.js</code> and the block sources, so it
+  cannot drift from what ships. Every value was measured off the reference DOM rather than chosen.
+  Regenerate with <code>node design/gen-gallery.mjs</code>.</p>
+</header>
+<nav>
+  <a href="#colour">Colour</a><a href="#type">Type</a><a href="#space">Spacing</a>
+  <a href="#blocks">Blocks</a><a href="#pages">Pages</a>
+</nav>
+<section id="colour"><h2>Colour</h2>
+  <p class="note">Use the token name in JSX (<code>bg-flame-600</code>), never a raw hex.
+  Text is <code>ink</code> navy on light grounds — watch for navy-on-navy, which passes every
+  automated check while being invisible.</p>
+  <h3 class="fam">blue</h3><div class="row"><div class="sw" style="background:#e4f4ff;color:#00063d">
+      <span class="tok">blue-200</span><span class="hex">#e4f4ff</span></div><div class="sw" style="background:#ceebff;color:#00063d">
+      <span class="tok">blue-300</span><span class="hex">#ceebff</span></div><div class="sw" style="background:#81cbff;color:#00063d">
+      <span class="tok">blue-400</span><span class="hex">#81cbff</span></div><div class="sw" style="background:#0095ff;color:#ffffff">
+      <span class="tok">blue-500</span><span class="hex">#0095ff</span></div><div class="sw" style="background:#0043d3;color:#ffffff">
+      <span class="tok">blue-600</span><span class="hex">#0043d3</span></div><div class="sw" style="background:#0011a7;color:#ffffff">
+      <span class="tok">blue-700</span><span class="hex">#0011a7</span></div><div class="sw" style="background:#00063d;color:#ffffff">
+      <span class="tok">blue-800</span><span class="hex">#00063d</span></div></div><h3 class="fam">flame</h3><div class="row"><div class="sw" style="background:#fffdfc;color:#00063d">
+      <span class="tok">flame-100</span><span class="hex">#fffdfc</span></div><div class="sw" style="background:#fff7f5;color:#00063d">
+      <span class="tok">flame-200</span><span class="hex">#fff7f5</span></div><div class="sw" style="background:#ffe8e2;color:#00063d">
+      <span class="tok">flame-300</span><span class="hex">#ffe8e2</span></div><div class="sw" style="background:#ffccc6;color:#00063d">
+      <span class="tok">flame-350</span><span class="hex">#ffccc6</span></div><div class="sw" style="background:#ffb3a3;color:#00063d">
+      <span class="tok">flame-400</span><span class="hex">#ffb3a3</span></div><div class="sw" style="background:#fa7560;color:#ffffff">
+      <span class="tok">flame-500</span><span class="hex">#fa7560</span></div><div class="sw" style="background:#fa4028;color:#ffffff">
+      <span class="tok">flame-600</span><span class="hex">#fa4028</span></div><div class="sw" style="background:#801a10;color:#ffffff">
+      <span class="tok">flame-700</span><span class="hex">#801a10</span></div><div class="sw" style="background:#410d07;color:#ffffff">
+      <span class="tok">flame-800</span><span class="hex">#410d07</span></div></div><h3 class="fam">green</h3><div class="row"><div class="sw" style="background:#e6ffd9;color:#00063d">
+      <span class="tok">green-300</span><span class="hex">#e6ffd9</span></div><div class="sw" style="background:#d2ffc1;color:#00063d">
+      <span class="tok">green-400</span><span class="hex">#d2ffc1</span></div><div class="sw" style="background:#96ff6f;color:#00063d">
+      <span class="tok">green-500</span><span class="hex">#96ff6f</span></div><div class="sw" style="background:#45ff00;color:#00063d">
+      <span class="tok">green-600</span><span class="hex">#45ff00</span></div><div class="sw" style="background:#207a00;color:#ffffff">
+      <span class="tok">green-700</span><span class="hex">#207a00</span></div><div class="sw" style="background:#103a00;color:#ffffff">
+      <span class="tok">green-800</span><span class="hex">#103a00</span></div></div><h3 class="fam">pink</h3><div class="row"><div class="sw" style="background:#fff9fc;color:#00063d">
+      <span class="tok">pink-300</span><span class="hex">#fff9fc</span></div><div class="sw" style="background:#ffe6f3;color:#00063d">
+      <span class="tok">pink-400</span><span class="hex">#ffe6f3</span></div><div class="sw" style="background:#ffb3de;color:#00063d">
+      <span class="tok">pink-500</span><span class="hex">#ffb3de</span></div><div class="sw" style="background:#ff80c8;color:#ffffff">
+      <span class="tok">pink-600</span><span class="hex">#ff80c8</span></div><div class="sw" style="background:#ff66cc;color:#ffffff">
+      <span class="tok">pink-700</span><span class="hex">#ff66cc</span></div><div class="sw" style="background:#5a003c;color:#ffffff">
+      <span class="tok">pink-800</span><span class="hex">#5a003c</span></div></div><h3 class="fam">violet</h3><div class="row"><div class="sw" style="background:#faf9ff;color:#00063d">
+      <span class="tok">violet-300</span><span class="hex">#faf9ff</span></div><div class="sw" style="background:#e7e3f7;color:#00063d">
+      <span class="tok">violet-400</span><span class="hex">#e7e3f7</span></div><div class="sw" style="background:#b5a9e3;color:#ffffff">
+      <span class="tok">violet-500</span><span class="hex">#b5a9e3</span></div><div class="sw" style="background:#7c5ac4;color:#ffffff">
+      <span class="tok">violet-600</span><span class="hex">#7c5ac4</span></div><div class="sw" style="background:#391e7e;color:#ffffff">
+      <span class="tok">violet-700</span><span class="hex">#391e7e</span></div><div class="sw" style="background:#1b0e3c;color:#ffffff">
+      <span class="tok">violet-800</span><span class="hex">#1b0e3c</span></div></div><h3 class="fam">yellow</h3><div class="row"><div class="sw" style="background:#fffef4;color:#00063d">
+      <span class="tok">yellow-200</span><span class="hex">#fffef4</span></div><div class="sw" style="background:#fffeef;color:#00063d">
+      <span class="tok">yellow-300</span><span class="hex">#fffeef</span></div><div class="sw" style="background:#fffdd9;color:#00063d">
+      <span class="tok">yellow-400</span><span class="hex">#fffdd9</span></div><div class="sw" style="background:#fffbb7;color:#00063d">
+      <span class="tok">yellow-500</span><span class="hex">#fffbb7</span></div><div class="sw" style="background:#fff67d;color:#00063d">
+      <span class="tok">yellow-600</span><span class="hex">#fff67d</span></div><div class="sw" style="background:#fff133;color:#00063d">
+      <span class="tok">yellow-700</span><span class="hex">#fff133</span></div><div class="sw" style="background:#a69f00;color:#ffffff">
+      <span class="tok">yellow-800</span><span class="hex">#a69f00</span></div></div><h3 class="fam">dark</h3><div class="row"><div class="sw" style="background:#f9f9f9;color:#00063d">
+      <span class="tok">dark-50</span><span class="hex">#f9f9f9</span></div><div class="sw" style="background:#f2f2f3;color:#00063d">
+      <span class="tok">dark-100</span><span class="hex">#f2f2f3</span></div><div class="sw" style="background:#ededed;color:#00063d">
+      <span class="tok">dark-150</span><span class="hex">#ededed</span></div><div class="sw" style="background:#e0e0e1;color:#00063d">
+      <span class="tok">dark-200</span><span class="hex">#e0e0e1</span></div><div class="sw" style="background:#cfcfd0;color:#00063d">
+      <span class="tok">dark-300</span><span class="hex">#cfcfd0</span></div><div class="sw" style="background:#bbbabc;color:#00063d">
+      <span class="tok">dark-400</span><span class="hex">#bbbabc</span></div><div class="sw" style="background:#9b9b9b;color:#ffffff">
+      <span class="tok">dark-500</span><span class="hex">#9b9b9b</span></div><div class="sw" style="background:#7d7d7e;color:#ffffff">
+      <span class="tok">dark-600</span><span class="hex">#7d7d7e</span></div><div class="sw" style="background:#5e5d5f;color:#ffffff">
+      <span class="tok">dark-700</span><span class="hex">#5e5d5f</span></div><div class="sw" style="background:#515052;color:#ffffff">
+      <span class="tok">dark-800</span><span class="hex">#515052</span></div><div class="sw" style="background:#262627;color:#ffffff">
+      <span class="tok">dark-900</span><span class="hex">#262627</span></div></div><h3 class="fam">chart</h3><div class="row"><div class="sw" style="background:#e6ffd9;color:#00063d">
+      <span class="tok">chart-green-200</span><span class="hex">#e6ffd9</span></div><div class="sw" style="background:#ceebff;color:#00063d">
+      <span class="tok">chart-blue-200</span><span class="hex">#ceebff</span></div><div class="sw" style="background:#ffe8e2;color:#00063d">
+      <span class="tok">chart-flame-200</span><span class="hex">#ffe8e2</span></div><div class="sw" style="background:#ffe6f3;color:#00063d">
+      <span class="tok">chart-pink-200</span><span class="hex">#ffe6f3</span></div><div class="sw" style="background:#fffbb7;color:#00063d">
+      <span class="tok">chart-vintage-electric-200</span><span class="hex">#fffbb7</span></div><div class="sw" style="background:#e7e3f7;color:#00063d">
+      <span class="tok">chart-violet-200</span><span class="hex">#e7e3f7</span></div></div><h3 class="fam">single tokens</h3><div class="row"><div class="sw" style="background:#1c1c1c;color:#ffffff">
+      <span class="tok">ink-950</span><span class="hex">#1c1c1c</span></div><div class="sw" style="background:#6f6a00;color:#ffffff">
+      <span class="tok">olive-700</span><span class="hex">#6f6a00</span></div><div class="sw" style="background:#00063d;color:#ffffff">
+      <span class="tok">ink</span><span class="hex">#00063d</span></div><div class="sw" style="background:#ffffff;color:#00063d">
+      <span class="tok">surface</span><span class="hex">#ffffff</span></div><div class="sw" style="background:#f2f2f3;color:#00063d">
+      <span class="tok">surface-2</span><span class="hex">#f2f2f3</span></div></div></section>
+<section id="type"><h2>Type</h2>
+  <p class="note">Playfair Display, Inter and JetBrains Mono stand in for the original's licensed
+  faces. The substitutes set about 9% wider, which is the main source of remaining per-section
+  height differences — never shrink a measured size to close that gap.</p>
+  <div class="spec">
+    <div class="spec-meta"><code>text-display</code><span>clamp(2.5rem, 1.5284rem + 3.8573vw, 5rem)</span></div>
+    <div class="spec-sample" style="font-family:'Playfair Display', Georgia, serif;font-size:clamp(2.5rem, 1.5284rem + 3.8573vw, 5rem)">
+      Marketing that moves at the speed of thought</div></div><div class="spec">
+    <div class="spec-meta"><code>text-h1</code><span>clamp(2.375rem, 1.9864rem + 1.5429vw, 3.375rem)</span></div>
+    <div class="spec-sample" style="font-family:'Playfair Display', Georgia, serif;font-size:clamp(2.375rem, 1.9864rem + 1.5429vw, 3.375rem)">
+      Marketing that moves at the speed of thought</div></div><div class="spec">
+    <div class="spec-meta"><code>text-h2</code><span>2.375rem</span></div>
+    <div class="spec-sample" style="font-family:'Playfair Display', Georgia, serif;font-size:2.375rem">
+      Marketing that moves at the speed of thought</div></div><div class="spec">
+    <div class="spec-meta"><code>text-h3</code><span>1.75rem</span></div>
+    <div class="spec-sample" style="font-family:'Playfair Display', Georgia, serif;font-size:1.75rem">
+      Marketing that moves at the speed of thought</div></div><div class="spec">
+    <div class="spec-meta"><code>text-h4</code><span>1.5rem</span></div>
+    <div class="spec-sample" style="font-family:'Playfair Display', Georgia, serif;font-size:1.5rem">
+      Marketing that moves at the speed of thought</div></div><div class="spec">
+    <div class="spec-meta"><code>text-h5</code><span>1.25rem</span></div>
+    <div class="spec-sample" style="font-family:'Playfair Display', Georgia, serif;font-size:1.25rem">
+      Marketing that moves at the speed of thought</div></div><div class="spec">
+    <div class="spec-meta"><code>text-h6</code><span>1rem</span></div>
+    <div class="spec-sample" style="font-family:'Playfair Display', Georgia, serif;font-size:1rem">
+      Marketing that moves at the speed of thought</div></div><div class="spec">
+    <div class="spec-meta"><code>text-text-large</code><span>1.125rem</span></div>
+    <div class="spec-sample" style="font-family:Inter, system-ui, sans-serif;font-size:1.125rem">
+      Marketing that moves at the speed of thought</div></div><div class="spec">
+    <div class="spec-meta"><code>text-text-main</code><span>1rem</span></div>
+    <div class="spec-sample" style="font-family:Inter, system-ui, sans-serif;font-size:1rem">
+      Marketing that moves at the speed of thought</div></div><div class="spec">
+    <div class="spec-meta"><code>text-text-small</code><span>0.875rem</span></div>
+    <div class="spec-sample" style="font-family:Inter, system-ui, sans-serif;font-size:0.875rem">
+      Marketing that moves at the speed of thought</div></div><div class="spec">
+    <div class="spec-meta"><code>text-text-tiny</code><span>0.75rem</span></div>
+    <div class="spec-sample" style="font-family:Inter, system-ui, sans-serif;font-size:0.75rem">
+      Marketing that moves at the speed of thought</div></div></section>
+<section id="space"><h2>Spacing</h2>
+  <p class="note">Drawn to scale. The 12-column grid sits in a 1360px container with a 16px
+  gutter, so one column is 98.667px. The container has <code>padding-inline: 0</code> — the page
+  gutter sits outside the well.</p>
+  <div class="sp"><code>s1</code>
+    <div class="sp-bar" style="width:clamp(0.5rem, 0.5rem + 0vw, 0.5rem)"></div><span>clamp(0.5rem, 0.5rem + 0vw, 0.5rem)</span></div><div class="sp"><code>s2</code>
+    <div class="sp-bar" style="width:0.75rem"></div><span>0.75rem</span></div><div class="sp"><code>s3</code>
+    <div class="sp-bar" style="width:1rem"></div><span>1rem</span></div><div class="sp"><code>s3-5</code>
+    <div class="sp-bar" style="width:1.25rem"></div><span>1.25rem</span></div><div class="sp"><code>s4</code>
+    <div class="sp-bar" style="width:1.5rem"></div><span>1.5rem</span></div><div class="sp"><code>s5</code>
+    <div class="sp-bar" style="width:2rem"></div><span>2rem</span></div><div class="sp"><code>s6</code>
+    <div class="sp-bar" style="width:clamp(2rem, 1.8057rem + 0.7715vw, 2.5rem)"></div><span>clamp(2rem, 1.8057rem + 0.7715vw, 2.5rem)</span></div><div class="sp"><code>s7</code>
+    <div class="sp-bar" style="width:3rem"></div><span>3rem</span></div><div class="sp"><code>s8</code>
+    <div class="sp-bar" style="width:4rem"></div><span>4rem</span></div><div class="sp"><code>s9</code>
+    <div class="sp-bar" style="width:5rem"></div><span>5rem</span></div><div class="sp"><code>section-xxs</code>
+    <div class="sp-bar" style="width:clamp(1rem, 0.4171rem + 2.3144vw, 2.5rem)"></div><span>clamp(1rem, 0.4171rem + 2.3144vw, 2.5rem)</span></div><div class="sp"><code>section-small</code>
+    <div class="sp-bar" style="width:clamp(3rem, 2.1429rem + 4.2857vw, 6rem)"></div><span>clamp(3rem, 2.1429rem + 4.2857vw, 6rem)</span></div><div class="sp"><code>section-xsmall</code>
+    <div class="sp-bar" style="width:5rem"></div><span>5rem</span></div><div class="sp"><code>section-main</code>
+    <div class="sp-bar" style="width:clamp(4rem, 3.1429rem + 4.2857vw, 7rem)"></div><span>clamp(4rem, 3.1429rem + 4.2857vw, 7rem)</span></div><div class="sp"><code>section-large</code>
+    <div class="sp-bar" style="width:clamp(7rem, 5.7857rem + 6.0714vw, 11.25rem)"></div><span>clamp(7rem, 5.7857rem + 6.0714vw, 11.25rem)</span></div><div class="sp"><code>section-page-top</code>
+    <div class="sp-bar" style="width:clamp(6.25rem, 5.5357rem + 3.5714vw, 8.75rem)"></div><span>clamp(6.25rem, 5.5357rem + 3.5714vw, 8.75rem)</span></div></section>
+<section id="blocks"><h2>Block library</h2>
+  <p class="note">37 prop-driven blocks. Pages are compositions of these, not
+  bespoke builds — one block appears 15 times across the product pages. Extend through props;
+  never fork a second copy.</p>
+  <table><tr><td><code>Accordion</code></td><td>`accordion_1 u-container u-grid-autofill` — the interior-page FAQ.</td></tr><tr><td><code>AgentDetail</code></td><td>`apps_page_wrap` — the Agent Library DETAIL template.</td></tr><tr><td><code>AgentLibrary</code></td><td>The Agent Library — the 4445px filter-and-grid block on live /agents.</td></tr><tr><td><code>AgentSlider</code></td><td>`.slider_main_wrap` — "Agents for every marketer, across every function".</td></tr><tr><td><code>ApiEndpointCards</code></td><td>`.api_cards_section` — "Jasper API endpoints", the 8-card catalogue shared</td></tr><tr><td><code>Catalog</code></td><td>`.catalog_wrap` — left-aligned copy header over a full-width product shot.</td></tr><tr><td><code>ChecklistVis</code></td><td>`.horizontal_vis_wrap` as it appears on the six Solutions > By Industry</td></tr><tr><td><code>ClosingPhoto</code></td><td>`.closing_photo_wrap` — the 900px photo-and-copy band that closes every</td></tr><tr><td><code>DocLayout</code></td><td>`.simple_layout_wrap u-position-relative` used as a LONG-FORM DOCUMENT —</td></tr><tr><td><code>EditorialHero</code></td><td>`.editorial_hero_wrap` — the split "one big card | ranked list" band that</td></tr><tr><td><code>FilterIndex</code></td><td>`.sticky_scroll_wrap` in its CMS-index form — a sticky left rail carrying the</td></tr><tr><td><code>GridHero</code></td><td>`.grid_hero_wrap` — a full-bleed coloured band with the copy in the 1360px</td></tr><tr><td><code>HeroVertical</code></td><td>`.hero_vertical_wrap` — the CENTRED statement block. 10x across Platform.</td></tr><tr><td><code>HorizontalContent</code></td><td>`.horizontal_content_wrap` — a copy column beside a CHECKLIST column.</td></tr><tr><td><code>HorizontalVis</code></td><td>`.horizontal_vis_wrap` — the two-column copy | illustration band.</td></tr><tr><td><code>IQHub</code></td><td>`hero_main_wrap` + `feature_banner_wrap` — the "Jasper IQ" cross-sell band</td></tr><tr><td><code>IlloHero</code></td><td>`.illo_hero` — the centred hero on /solutions/seo-aeo-geo. A one-off: no</td></tr><tr><td><code>IndustryHero</code></td><td>`.grid_hero_wrap` as used by the six Solutions > By Industry pages — the</td></tr><tr><td><code>IntegrationsVis</code></td><td>`.horizontal_vis_wrap` — the "Integrations for &lt;Role>" band, fourth section</td></tr><tr><td><code>LayoutCards</code></td><td>`.layout_cards_wrap` — a split header over a 3-up card row. 5x on Platform.</td></tr><tr><td><code>LogoBlade</code></td><td>`.marquee_wrap` — the customer-logo blade that sits directly under the hero</td></tr><tr><td><code>PeopleRail</code></td><td>`.slider_main_wrap` — a split header over a horizontally-scrolling rail.</td></tr><tr><td><code>PhotoMarquee</code></td><td>`.careers-photo-marquee-wrapper` — the two-row photo rail on live /careers</td></tr><tr><td><code>ProductSlot</code></td><td>`.g_slot u-container` — a full-bleed patterned backdrop with one product</td></tr><tr><td><code>RevealSection</code></td><td>A `&lt;section>` that owns its own reveal observer.</td></tr><tr><td><code>RoleHero</code></td><td>`.hero_main_wrap.is_full_height.is_solutions` — the CENTRED hero that opens</td></tr><tr><td><code>SeoSection</code></td><td>The `.horizontal_content_wrap` + `.seo_image_wrap` pair that repeats three</td></tr><tr><td><code>SideBlockStack</code></td><td>`.side_block` x N inside a `.simple_layout_inner` — the scroll-pinned</td></tr><tr><td><code>SimpleLayout</code></td><td>`.simple_layout_wrap` — the N-up tile grid. 15x across Platform, the single</td></tr><tr><td><code>SplitHero</code></td><td>`.split_hero_wrap` — the centred hero flanked by two clipped product panels.</td></tr><tr><td><code>StickyScroll</code></td><td>`sticky_scroll_wrap` — a two-column band whose LEFT column is a heading that</td></tr><tr><td><code>StoryPanel</code></td><td>`.stories_large_wrap` (inside a `.w-dyn-list`) — the customer-story panel</td></tr><tr><td><code>TrustCards</code></td><td>`.layout_cards_wrap` in its CENTRED 4-up form — the "Foster AI Trust. Scale</td></tr><tr><td><code>UseCaseCards</code></td><td>`.layout_cards_wrap` holding `.card_iq_wrap` tiles — the "The only</td></tr><tr><td><code>ValueProps</code></td><td>`value_props_wrap` — an 80px display heading over a two-track band: a</td></tr><tr><td><code>WindowCta</code></td><td>`window_wrap u-width-full` — the short navy closing band used by the two</td></tr><tr><td><code>primitives</code></td><td>Shared primitives for the Platform-family Webflow blocks.</td></tr></table></section>
+<section id="pages"><h2>Pages</h2>
+  <p class="note">Reference captures at 1440px, 55 pages. These are the ground truth
+  each rebuilt page was diffed against. Images load from <code>.scrape/</code>, which is not
+  committed — run the capture scripts locally to populate them.</p>
+  <div class="pages"><figure class="pg"><img loading="lazy" src="../.scrape/plat-agents-optimization.png" alt="agents-optimization">
+      <figcaption>/agents/optimization</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-agents-research.png" alt="agents-research">
+      <figcaption>/agents/research</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-agents-translation.png" alt="agents-translation">
+      <figcaption>/agents/translation</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-agents.png" alt="agents">
+      <figcaption>/agents</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-api.png" alt="api">
+      <figcaption>/api</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-blog.png" alt="blog">
+      <figcaption>/blog</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-brand-iq.png" alt="brand-iq">
+      <figcaption>/brand/iq</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-brand-voice.png" alt="brand-voice">
+      <figcaption>/brand/voice</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-canvas.png" alt="canvas">
+      <figcaption>/canvas</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-careers.png" alt="careers">
+      <figcaption>/careers</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-contact-support.png" alt="contact-support">
+      <figcaption>/contact/support</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-content-pipelines.png" alt="content-pipelines">
+      <figcaption>/content/pipelines</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-cta-fixed.png" alt="cta-fixed">
+      <figcaption>/cta/fixed</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-customer-stories.png" alt="customer-stories">
+      <figcaption>/customer/stories</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-customer-success.png" alt="customer-success">
+      <figcaption>/customer/success</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-diagnostics-geo.png" alt="diagnostics-geo">
+      <figcaption>/diagnostics/geo</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-full-390.png" alt="full-390">
+      <figcaption>/full/390</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-full-768.png" alt="full-768">
+      <figcaption>/full/768</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-geo.png" alt="geo">
+      <figcaption>/geo</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-governance.png" alt="governance">
+      <figcaption>/governance</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-grid.png" alt="grid">
+      <figcaption>/grid</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-hero-now.png" alt="hero-now">
+      <figcaption>/hero/now</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-image-api.png" alt="image-api">
+      <figcaption>/image/api</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-image-pipelines.png" alt="image-pipelines">
+      <figcaption>/image/pipelines</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-iq.png" alt="iq">
+      <figcaption>/iq</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-jasper-iq.png" alt="jasper-iq">
+      <figcaption>/jasper/iq</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-knowledge-base.png" alt="knowledge-base">
+      <figcaption>/knowledge/base</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-legal.png" alt="legal">
+      <figcaption>/legal</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-llm-optimized.png" alt="llm-optimized">
+      <figcaption>/llm/optimized</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-marketing-iq.png" alt="marketing-iq">
+      <figcaption>/marketing/iq</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-mcp.png" alt="mcp">
+      <figcaption>/mcp</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-models.png" alt="models">
+      <figcaption>/models</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-press.png" alt="press">
+      <figcaption>/press</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-product-iq.png" alt="product-iq">
+      <figcaption>/product/iq</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-security.png" alt="security">
+      <figcaption>/security</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-solutions-by-industry-financial-services.png" alt="solutions-by-industry-financial-services">
+      <figcaption>/solutions/by/industry/financial/services</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-solutions-by-industry-healthcare.png" alt="solutions-by-industry-healthcare">
+      <figcaption>/solutions/by/industry/healthcare</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-solutions-by-industry-media-and-entertainment.png" alt="solutions-by-industry-media-and-entertainment">
+      <figcaption>/solutions/by/industry/media/and/entertainment</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-solutions-by-industry-professional-services.png" alt="solutions-by-industry-professional-services">
+      <figcaption>/solutions/by/industry/professional/services</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-solutions-by-industry-retail-and-consumer-goods.png" alt="solutions-by-industry-retail-and-consumer-goods">
+      <figcaption>/solutions/by/industry/retail/and/consumer/goods</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-solutions-by-industry-tech.png" alt="solutions-by-industry-tech">
+      <figcaption>/solutions/by/industry/tech</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-solutions-by-role-brand-marketers.png" alt="solutions-by-role-brand-marketers">
+      <figcaption>/solutions/by/role/brand/marketers</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-solutions-by-role-content-marketers.png" alt="solutions-by-role-content-marketers">
+      <figcaption>/solutions/by/role/content/marketers</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-solutions-by-role-field-marketers.png" alt="solutions-by-role-field-marketers">
+      <figcaption>/solutions/by/role/field/marketers</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-solutions-by-role-performance-marketers.png" alt="solutions-by-role-performance-marketers">
+      <figcaption>/solutions/by/role/performance/marketers</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-solutions-by-role-pr-and-communications.png" alt="solutions-by-role-pr-and-communications">
+      <figcaption>/solutions/by/role/pr/and/communications</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-solutions-by-role-product-marketers.png" alt="solutions-by-role-product-marketers">
+      <figcaption>/solutions/by/role/product/marketers</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-solutions-seo-aeo-geo.png" alt="solutions-seo-aeo-geo">
+      <figcaption>/solutions/seo/aeo/geo</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-stories.png" alt="stories">
+      <figcaption>/stories</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-studio.png" alt="studio">
+      <figcaption>/studio</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-style-guide.png" alt="style-guide">
+      <figcaption>/style/guide</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-trust.png" alt="trust">
+      <figcaption>/trust</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-visual-guidelines.png" alt="visual-guidelines">
+      <figcaption>/visual/guidelines</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-webinars.png" alt="webinars">
+      <figcaption>/webinars</figcaption></figure><figure class="pg"><img loading="lazy" src="../.scrape/plat-workflows.png" alt="workflows">
+      <figcaption>/workflows</figcaption></figure></div></section>
+<footer>Not affiliated with or endorsed by the original site's owner.
+Content belongs to its owner; see the repo README.</footer>
+</body></html>

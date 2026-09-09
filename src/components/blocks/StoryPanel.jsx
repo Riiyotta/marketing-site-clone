@@ -14,7 +14,12 @@ import { ArrowLink } from './primitives'
    section 1440 x 851, ground blue-300 rgb(206,235,255) full-bleed):
 
      header row      1360px well at x=40, y=41, 105px tall, split
-                       left  409px  customer logo (185x33), inset 41px
+                       left  409px  customer logo, inset 41px. Live draws it
+                             185px WIDE with the height falling out of the
+                             asset's own ratio (33px for the 2.4:1 marks).
+                             Sizing by height instead shrank the wide 5.4:1
+                             Bonterra mark to a 80px sliver, so width is the
+                             driven axis and height is capped.
                        right 951px  "Read Customer Story" arrow link,
                              right-aligned at x=1144
      body row        1360px well at y=147, 663px tall — a FIXED height, so
@@ -82,8 +87,8 @@ export default function StoryPanel({
           <div className={`reveal flex flex-wrap items-center justify-between gap-6 border-b ${t.rule} pb-[41px]`}>
             {logo && (
               <img src={logo.src} alt={logo.alt || ''} width={logo.w} height={logo.h}
-                   loading="lazy" className="w-auto max-w-[200px] object-contain object-left"
-                   style={{ height: logo.h || 33 }} />
+                   loading="lazy" className="h-auto object-contain object-left"
+                   style={{ width: logo.w || 185, maxHeight: 48 }} />
             )}
             {link && <ArrowLink {...link} className="ml-auto" />}
           </div>

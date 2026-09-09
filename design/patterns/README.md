@@ -71,8 +71,8 @@ comments above the `return`. This has bitten more than once.
 
 ## Scraping live
 
-- `networkidle` never fires on jasper.ai (persistent analytics beacons). Use
-  `domcontentloaded` plus a wait, and dismiss the cookie banner.
+- `networkidle` never fires on the reference site (persistent analytics
+  beacons). Use `domcontentloaded` plus a wait, and dismiss the cookie banner.
 - Page content lives in `.page_wrap`, not `<main>`. Reading `<main>` returns
   only the footer — which is how a whole round of interior pages got built from
   guesswork instead of ground truth.
@@ -107,8 +107,7 @@ These are documented in the relevant file headers, not accidents:
   scroll-drive distance: one pinned viewport with a GSAP timeline. All six
   narrative stages and their content are present. Matching the number would mean
   inventing ~19,000px of empty height.
-- **Third-party product-demo iframes** (`*.jasperpreview.app`) are replaced with
-  the nearest still. Panel geometry is reproduced; the height they occupy is not
-  padded out.
-- Jasper's copy, imagery, logo, licensed fonts and Rive artwork are their IP.
-  Fine locally; replace before any public deployment.
+- **Third-party product-demo iframes** are replaced with the nearest still.
+  Panel geometry is reproduced; the height they occupy is not padded out.
+- The reference site's copy, imagery, logo, licensed fonts and vector artwork
+  belong to their owner. Replace before any real deployment.

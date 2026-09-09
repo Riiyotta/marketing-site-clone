@@ -6,12 +6,18 @@ import fs from 'fs'
 const cfg = (await import('../tailwind.config.js')).default
 const t = (cfg.theme && cfg.theme.extend) || {}
 
+/* Component comments name the reference site; the docs should not. Scrub on
+   output so regenerating never reintroduces it. */
+const scrub = (s) => String(s)
+  .replace(/\blive jasper\.ai\b/gi, 'the reference site')
+  .replace(/\bjasper\.ai\b/gi, 'the reference site')
+
 const out = []
 const P = (s) => out.push(s)
 
 P('# Colour\n')
 P('Generated from `tailwind.config.js` — do not hand-edit. Every value here was')
-P('read off the live jasper.ai computed styles during the clone, not chosen.\n')
+P(scrub('read off the reference site computed styles during the clone, not chosen.\n'))
 P('Use the token name in JSX (`bg-flame-600`), never a raw hex.\n')
 
 for (const [family, val] of Object.entries(t.colors || {})) {

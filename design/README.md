@@ -1,25 +1,39 @@
 # Design repo
 
-The design system behind this jasper.ai clone. Most of it is **generated from
-the code**, so it cannot drift from what actually ships.
+The design system behind this clone. Most of it is **generated from the code**,
+so it cannot drift from what actually ships.
 
 ```
 design/
+├── gallery.html                ← START HERE. The visual system, in a browser.
 ├── Information architecture/   every route, its state, its live height
 ├── tokens/                     colour, type, space, motion — from tailwind.config.js
 ├── components/                 the block library and its prop APIs — from source
 └── patterns/                   hand-written: traps, method, deliberate divergences
 ```
 
+## Look at it first
+
+```bash
+open design/gallery.html
+```
+
+One page with real swatches for every colour token, type specimens set at the
+measured sizes, the spacing scale drawn to scale, the block library, and every
+reference page capture. A table telling you `flame-600` is `#fa4028` is not the
+same as seeing it — the Markdown files are the reference, the gallery is how you
+actually read the system.
+
 ## Regenerate
 
 ```bash
+node design/gen-gallery.mjs     # gallery.html  ← the visual system
 node design/gen-ia.mjs          # Information architecture/README.md
 node design/gen-tokens.mjs      # tokens/colour.md, tokens/type-space-motion.md
 node design/gen-components.mjs  # components/README.md
 ```
 
-Run all three after adding routes, tokens or blocks. `patterns/README.md` is the
+Run all four after adding routes, tokens or blocks. `patterns/README.md` is the
 only hand-written file — it records bugs that shipped and the rules that stop
 them recurring, which no generator can infer.
 
