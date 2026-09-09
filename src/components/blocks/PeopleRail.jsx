@@ -95,17 +95,20 @@ export default function PeopleRail({
                   : 'w-[70vw] shrink-0 sm:w-[46%] lg:w-[calc((100%-3*16px)/4)]'}>
               {variant === 'quotes' ? (
                 <div className="flex flex-col gap-6 sm:flex-row sm:items-start">
-                  <p className="flex-1 font-serif text-ink tracking-tighter
-                                text-[clamp(1.25rem,1.95vw,1.75rem)] leading-[1.15]">
+                  {/* live tags the pull-quote as an h2 and the speaker's name
+                      as an h3 inside each card — matched here so the document
+                      outline (and the comparison harness) agree. */}
+                  <h2 className="flex-1 font-serif text-ink tracking-tighter
+                                 text-[clamp(1.25rem,1.95vw,1.75rem)] leading-[1.15]">
                     {it.quote}
-                  </p>
+                  </h2>
                   <div className="w-[137px] shrink-0">
                     <img src={it.img} alt={it.alt || ''} width={137} height={137} loading="lazy"
                          className="h-[137px] w-[137px] object-cover" />
-                    <p className="mt-3 font-serif text-ink tracking-tightest
-                                  text-[clamp(1.5rem,2.64vw,2.375rem)] leading-1">
+                    <h3 className="mt-3 font-serif text-ink tracking-tightest
+                                   text-[clamp(1.5rem,2.64vw,2.375rem)] leading-1">
                       {it.name}
-                    </p>
+                    </h3>
                     <p className="mt-1 text-text-small text-ink/60">{it.role}</p>
                   </div>
                 </div>

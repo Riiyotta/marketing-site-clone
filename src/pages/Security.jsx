@@ -171,13 +171,21 @@ export default function Security() {
 
       {/* hero_vertical_wrap — 589px on blue-300 */}
       <section ref={heroRef} className="clip-bleed bg-blue-300">
-        <div className="u-container flex flex-col items-center py-[80px] text-center">
-          <h1 className="reveal max-w-[720px] font-serif text-ink tracking-tightest
+        {/* live's hero_vertical_wrap measures 589px around a ~429px content
+            well — 80px of g_section_space above and below it. Our substitute
+            face sets the same copy ~35px shorter, so the block is padded to
+            115px to land on the measured section height rather than shrinking
+            or growing any type. */}
+        <div className="u-container flex flex-col items-center py-[115px] text-center">
+          {/* live breaks this as "Your data is safe / with Jasper" in a 640px
+              measure; the substitute Playfair runs wider, so the measure is
+              narrowed to hold the same two lines. Font size is unchanged. */}
+          <h1 className="reveal max-w-[540px] font-serif text-ink tracking-tightest
                          text-[clamp(2.5rem,5.55vw,5rem)] leading-1">
             Your data is safe with Jasper
           </h1>
 
-          <p className="reveal mt-6 max-w-[430px] text-text-main text-ink text-pretty"
+          <p className="reveal mt-6 max-w-[460px] text-text-main text-ink text-pretty"
              style={{ '--reveal-delay': '80ms' }}>
             Experience unparalleled safety and security with our cutting-edge AI
             solutions designed with your data &amp; privacy in mind.

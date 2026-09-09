@@ -3,7 +3,7 @@
 Generated from `src/App.jsx`, `src/data/stubRoutes.js` and
 `src/components/NavMenuData.js`. Regenerate with `node design/gen-ia.mjs`.
 
-**41 pages cloned · 13 placeholders · 54 routes total**
+**54 pages cloned · 0 placeholders · 54 routes total**
 
 A placeholder is an honest "Not cloned yet" page carrying that route's real
 live headline — not a 404, and never the homepage. Before these existed, every
@@ -66,29 +66,29 @@ and hides the gap.
 | `/solutions/by-role/product-marketers` | **cloned** | 4,601px |
 | `/solutions/seo-aeo-geo` | **cloned** | 6,943px |
 
-## Resources — 0/7 cloned
+## Resources — 7/7 cloned
 
 | route | state | live height |
 |---|---|---|
-| `/blog` | placeholder | 22,960px |
-| `/contact-support` | placeholder | 2,366px |
-| `/customer-stories` | placeholder | 4,694px |
-| `/customer-success` | placeholder | 7,686px |
-| `/diagnostics/geo` | placeholder | 7,500px |
-| `/webinars` | placeholder | 17,312px |
-| `/workflows` | placeholder | 4,987px |
+| `/blog` | **cloned** | 22,960px |
+| `/contact-support` | **cloned** | 2,366px |
+| `/customer-stories` | **cloned** | 4,694px |
+| `/customer-success` | **cloned** | 7,686px |
+| `/diagnostics/geo` | **cloned** | 7,500px |
+| `/webinars` | **cloned** | 17,312px |
+| `/workflows` | **cloned** | 4,987px |
 
-## Company — 1/7 cloned
+## Company — 7/7 cloned
 
 | route | state | live height |
 |---|---|---|
-| `/careers` | placeholder | 7,208px |
+| `/careers` | **cloned** | 7,208px |
 | `/company` | **cloned** | — |
-| `/legal` | placeholder | 3,634px |
-| `/llm-optimized` | placeholder | 5,650px |
-| `/press` | placeholder | 11,083px |
-| `/security` | placeholder | 10,939px |
-| `/trust` | placeholder | 7,651px |
+| `/legal` | **cloned** | 3,634px |
+| `/llm-optimized` | **cloned** | 5,650px |
+| `/press` | **cloned** | 11,083px |
+| `/security` | **cloned** | 10,939px |
+| `/trust` | **cloned** | 7,651px |
 
 ## Navigation model
 

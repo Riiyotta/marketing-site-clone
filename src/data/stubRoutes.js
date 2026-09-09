@@ -10,22 +10,15 @@
    along with the live page height, which is a rough measure of how much work each
    full clone would be.
 
-   The 13 Solutions sub-pages (/solutions/by-industry/*, /solutions/by-role/*
-   and /solutions/seo-aeo-geo) used to live here; they are now real cloned
-   pages routed above this table in App.jsx, so they were removed.
+   The table is now EMPTY: every route that used to sit here has been built as a
+   real cloned page and routed above this map in App.jsx —
+     the 13 Solutions sub-pages (/solutions/by-industry/*, /solutions/by-role/*,
+       /solutions/seo-aeo-geo),
+     the Resources family (/blog, /webinars, /customer-stories, /customer-success,
+       /contact-support, /workflows, /diagnostics/geo),
+     and the Company family (/press, /security, /trust, /careers, /llm-optimized,
+       /legal).
+   `Stub` itself is kept as the `*` catch-all in App.jsx, so an unknown URL still
+   lands on an honest placeholder rather than silently rendering the homepage.
 --------------------------------------------------------------------------- */
-export const STUB_ROUTES = [
-  { path: "/blog", title: "Resources for AI in Marketing", liveHeight: 22960 },
-  { path: "/careers", title: "Grow your career while shaping the future of marketing", liveHeight: 7208 },
-  { path: "/contact-support", title: "How can Jasper customer support help you today?", liveHeight: 2366 },
-  { path: "/customer-stories", title: "Jasper helps 100,000+ customers transform how they work", liveHeight: 4694 },
-  { path: "/customer-success", title: "Fast-track your AI ROI with Jasper's success resources", liveHeight: 7686 },
-  { path: "/diagnostics/geo", title: "Make sure AI recommends you, not your competitors.", liveHeight: 7500 },
-  { path: "/legal", title: "Jasper legal information", liveHeight: 3634 },
-  { path: "/llm-optimized", title: "The best AI models, governed and on-brand", liveHeight: 5650 },
-  { path: "/press", title: "Jasper in the news", liveHeight: 11083 },
-  { path: "/security", title: "Your data is safe with Jasper", liveHeight: 10939 },
-  { path: "/trust", title: "Marketing led, IT-governed AI", liveHeight: 7651 },
-  { path: "/webinars", title: "Learn AI best practices, how to use Jasper, & more", liveHeight: 17312 },
-  { path: "/workflows", title: "AI marketing workflows for every use case in Jasper", liveHeight: 4987 },
-]
+export const STUB_ROUTES = []

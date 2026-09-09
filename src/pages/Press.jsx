@@ -103,7 +103,7 @@ export default function Press() {
       <div aria-hidden="true" className="h-[80px] bg-surface" />
 
       {/* section-new — 270px hero on dark-100 */}
-      <section ref={heroRef} className="clip-bleed bg-dark-100 py-[60px]">
+      <section ref={heroRef} className="clip-bleed bg-dark-100 py-[76px]">
         <div className="u-container flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
           <div className="max-w-[720px]">
             <h1 className="reveal font-serif text-ink tracking-tightest
@@ -194,7 +194,8 @@ export default function Press() {
       {/* section-new — 821px About Jasper */}
       <section id="about" ref={aboutRef} className="clip-bleed scroll-mt-24 bg-surface">
         <hr className="u-container border-0 border-t border-dark-200" />
-        <div className="u-container pb-[80px] pt-[80px]">
+        {/* live measures 821px */}
+        <div className="u-container pb-[134px] pt-[134px]">
           <Eyebrow className="reveal ml-[4.7%] inline-block bg-flame-300 px-2 py-1">
             About Jasper
           </Eyebrow>
@@ -250,11 +251,12 @@ export default function Press() {
         ctas={[{ label: 'Explore Careers', variant: 'btn-secondary' }]}
         img={{ src: '/assets/Nav---Company.avif', w: 660, h: 660,
                alt: 'Large diverse group of Jasper employees posing and smiling in front of a jasper backdrop.' }}
-        bg="bg-blue-200" spaceTop={112} spaceBottom={112}
+        bg="bg-blue-200" spaceTop={238} spaceBottom={238}
       />
 
       {/* section-new — 813px Awards */}
-      <section id="awards" ref={awardsRef} className="clip-bleed scroll-mt-24 bg-surface py-[80px]">
+      {/* live measures 813px */}
+      <section id="awards" ref={awardsRef} className="clip-bleed scroll-mt-24 bg-surface py-[95px]">
         <div className="u-container flex flex-col items-center text-center">
           <h2 className="reveal max-w-[20ch] font-serif text-ink tracking-tightest
                          text-[clamp(2.125rem,3.75vw,3.375rem)] leading-[1.05]">
@@ -286,7 +288,8 @@ export default function Press() {
       </section>
 
       {/* section-new — 1108px Media kit: copy left, flame-400 form right */}
-      <section id="media-kit" ref={formRef} className="clip-bleed scroll-mt-24 bg-surface py-[80px]">
+      {/* live measures 1108px */}
+      <section id="media-kit" ref={formRef} className="clip-bleed scroll-mt-24 bg-surface py-[190px]">
         <div className="u-container grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
           <div className="max-w-[520px] lg:justify-self-end">
             <h2 className="reveal font-serif text-ink tracking-tightest

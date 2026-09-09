@@ -9,22 +9,44 @@ import { CtaRow } from './primitives'
    shared one.
 
    MEASURED at 1440px on live /solutions/by-role/brand-marketers
-   (section 750px, white ground; the art positions are read off
-   .scrape/plat-solutions-by-role-brand-marketers.png at the section's offset):
+   (.scrape/stripes.mjs; the section is 750px on the white surface, and every
+   offset below is RELATIVE to the section box):
 
-     copy column, x=40, 660px:
+     112px       g_section_space
+     copy        `.horizontal_vis_content` 660px at  40, 287
        h2      Feature 38/38 ink, ~2 lines
-       body    ABC ROM 16/22.4 ink, 632px measure
+       body    ABC ROM 16/22.4 ink
        button  a 48px outline "Explore Integrations"
-     art column, right:
-       photo   660 x 526 (work-image.jpg), the anchor of the collage
-       contour 347 x 327 (contour-green.png) — a pixelated green blob lapping
-               the photo's TOP-LEFT corner, roughly half off it
-       stripes 512 x 190 (stripes-pattern-orange.svg) — three coral bars
-               crossing the photo's BOTTOM-RIGHT corner and bleeding past it
+     photo       `.g_visual_img` 660x526 at 740, 112  — work-image.jpg
+     contour     `.horizontal_vis_contour` 347x327 at 641,  59 — the pixelated
+                 green blob lapping the photo's TOP-LEFT corner, about a third
+                 of it hanging off to the left and above.
+     stripes     `.horizontal_vis_lines` 512x190 at 1075, 482 — the piece that
+                 needs care. The ASSET is a PORTRAIT 176x638 strip of three
+                 VERTICAL bars. Live sizes its 512x190 BOX and rotates it; the
+                 computed matrix is
+                   matrix(-0.104528, -0.994522, 0.994522, -0.104528, …)
+                 whose angle is 186deg. But that matrix is applied to a box
+                 whose content is already laid on the long axis, so the bars
+                 land NEARLY HORIZONTAL — three wide flat coral sweeps across
+                 the photo's bottom-right corner, running off the right edge.
+                 Reproducing it here means rotating the 176x638 asset by
+                 186 - 90 = 96deg inside a 160x560 box anchored over the
+                 photo's bottom-right corner (left 52%, top 42% of the photo
+                 box), which lands the bars at live's shallow angle and lets
+                 them run off the right edge.
+                 Two earlier revisions of this file got this wrong: dropping
+                 the asset in untransformed painted three upright coral
+                 columns down the middle of the photograph, and rotating the
+                 already-stretched 512x190 box left them as a small steep
+                 cluster instead of wide flat sweeps.
+
+   Per the house rule, that rotation goes on a WRAPPER — never as an inline
+   transform on a `.reveal` element, where the reveal animation's
+   `fill: forwards` silently overrides it.
 
    Only the headline and body change per role; the art is identical on all six.
-   The decorations are ornament and are dropped below lg.
+   The two decorations are ornament and are dropped below lg.
 
    PROPS
      title  string   the 38px Feature h2 ("Integrations for Brand Marketers")
@@ -36,7 +58,7 @@ export default function IntegrationsVis({ title, body, ctas = [] }) {
   const ref = useReveal({ threshold: 0 })
 
   return (
-    <section ref={ref} className="relative clip-bleed bg-surface">
+    <section ref={ref} className="relative clip-bleed bg-surface lg:min-h-[750px]">
       <div aria-hidden="true" className="h-[112px]" />
 
       <div className="u-container">
@@ -67,12 +89,27 @@ export default function IntegrationsVis({ title, body, ctas = [] }) {
                    alt="Two colleagues reviewing a document together at a desk"
                    width={660} height={526} loading="lazy"
                    className="relative z-10 block h-auto w-full object-cover" />
+
+              {/* contour: live 347x327 at x=-99, y=-53 relative to the photo */}
               <img src="/assets/contour-green.png" alt="" aria-hidden="true"
                    width={347} height={327} loading="lazy"
-                   className="pointer-events-none absolute -left-[8%] -top-[14%] z-20 hidden w-[53%] lg:block" />
-              <img src="/assets/stripes-pattern-orange.svg" alt="" aria-hidden="true"
-                   width={512} height={190} loading="lazy"
-                   className="pointer-events-none absolute -bottom-[10%] right-[-14%] z-20 hidden w-[78%] lg:block" />
+                   className="pointer-events-none absolute z-20 hidden w-[53%] lg:block"
+                   style={{ left: '-15%', top: '-10%' }} />
+
+              {/* stripes: the rotation lives on this WRAPPER, never on the
+                  `.reveal` element — the reveal animation's fill:forwards
+                  would silently override an inline transform there. The asset
+                  is drawn at its own 176x638 portrait size and turned 96deg,
+                  which lays the three bars out nearly flat and lets them run
+                  past the photo's right edge exactly as live does. */}
+              <div className="pointer-events-none absolute z-20 hidden lg:block"
+                   style={{ left: '52%', top: '42%', width: 160, height: 560,
+                            transform: 'rotate(96deg)', transformOrigin: 'center' }}
+                   aria-hidden="true">
+                <img src="/assets/stripes-pattern-orange.svg" alt=""
+                     width={176} height={638}
+                     className="h-full w-full object-fill" />
+              </div>
             </div>
           </div>
         </div>

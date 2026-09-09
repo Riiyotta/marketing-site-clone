@@ -104,10 +104,11 @@ export default function DocLayout({
       {signoff && (
         <div className="u-container mt-[100px]">
           <hr className="border-0 border-t border-ink/25" />
-          <p className="reveal mt-[68px] max-w-[18ch] font-serif text-ink tracking-tightest
-                        text-[clamp(2.5rem,5.55vw,5rem)] leading-1">
+          {/* live tags the sign-off line as an h3 at 80px, not a paragraph */}
+          <h3 className="reveal mt-[68px] max-w-[18ch] font-serif text-ink tracking-tightest
+                         text-[clamp(2.5rem,5.55vw,5rem)] leading-1">
             {signoff}
-          </p>
+          </h3>
         </div>
       )}
 

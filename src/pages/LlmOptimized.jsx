@@ -78,13 +78,22 @@ export default function LlmOptimized() {
         <div aria-hidden="true" className="absolute inset-0 bg-grid"
              style={{ '--grid-color': 'rgba(255,255,255,.7)', '--grid-size': '40px' }} />
 
-        {/* the collage sits in a 1440x1027 stage so every measured coordinate
-            below is literal; it scales with the viewport via the aspect box */}
-        <div className="relative mx-auto w-full max-w-[1440px]"
-             style={{ aspectRatio: '1440 / 1027' }}>
-          <div className="absolute inset-0" style={{ containerType: 'inline-size' }}>
-            <div className="absolute inset-0 origin-top-left"
-                 style={{ width: 1440, height: 1027, transform: 'scale(min(1, 100cqw / 1440))' }}>
+        {/* The collage sits in a fixed 1440 x 1027 stage so every measured
+            coordinate below is literal, then the whole stage is SCALED to the
+            viewport. The scale factor has to be unitless — an earlier revision
+            wrote `scale(min(1, 100cqw / 1440))`, which is invalid CSS (scale()
+            takes a number, not a length), so the declaration was dropped and
+            the stage stayed 1440px wide: at 390px the h1 was sliced off and the
+            whole collage sat outside the viewport. `min(1, 100vw / 1440px)`
+            divides two lengths, which IS a valid unitless result. */}
+        {/* Desktop only: below `lg` a 1027px stage scales to ~278px and the
+            80px headline becomes unreadable, so the phone/tablet breakpoint
+            gets the plain stacked layout underneath instead. */}
+        <div className="relative mx-auto hidden w-full max-w-[1440px] overflow-hidden lg:block"
+             style={{ height: 'calc(1027px * min(1, 100vw / 1440px))' }}>
+          <div className="absolute left-0 top-0 origin-top-left"
+               style={{ width: 1440, height: 1027,
+                        transform: 'scale(min(1, 100vw / 1440px))' }}>
 
               {/* copy column — measured at x=40 (the 1360 container's left
                   edge) with a 560px measure. The substitute Playfair face runs
@@ -159,8 +168,49 @@ export default function LlmOptimized() {
                      className="absolute max-w-none object-contain"
                      style={{ left: m.x, top: 613, width: 180, height: 177 }} />
               ))}
-            </div>
           </div>
+        </div>
+
+        {/* stacked hero for < lg — same copy and the same collage assets, laid
+            out in normal flow rather than the measured absolute stage */}
+        <div className="u-container flex flex-col py-[64px] lg:hidden">
+          <Eyebrow className="reveal mb-6">LLM-Optimized</Eyebrow>
+          <h1 className="reveal font-serif text-ink tracking-tightest
+                         text-[clamp(2.5rem,5.55vw,5rem)] leading-1"
+              style={{ '--reveal-delay': '80ms' }}>
+            The best AI models, governed and on-brand
+          </h1>
+          <p className="reveal mt-6 text-text-main text-ink text-pretty"
+             style={{ '--reveal-delay': '140ms' }}>
+            Jasper routes every marketing task to the best-performing model for the job,
+            then layers in your brand, context, and guardrails. You get higher-quality
+            output without choosing, testing, or maintaining models. Your team focuses on
+            the marketing; we manage the AI underneath.
+          </p>
+          <CtaRow className="reveal mt-8" style={{ '--reveal-delay': '200ms' }}
+                  ctas={[
+                    { label: 'Start Free Trial', variant: 'btn-secondary' },
+                    { label: 'Get A Demo', variant: 'btn-primary' },
+                  ]} />
+
+          <div className="reveal relative mt-10" style={{ '--reveal-delay': '240ms' }}>
+            <img src="/assets/llm-grid.png" alt="" aria-hidden="true" loading="lazy"
+                 className="block h-auto w-full" />
+            <img src="/assets/gemini-headshot.avif" loading="lazy"
+                 alt="Smiling woman with curly hair and glasses wearing a striped shirt."
+                 className="pointer-events-none absolute bottom-[6%] left-1/2 h-auto w-[50%]
+                            -translate-x-1/2 object-contain" />
+          </div>
+
+          <ul className="reveal mt-4 grid list-none grid-cols-2 gap-2 sm:grid-cols-4"
+              style={{ '--reveal-delay': '280ms' }}>
+            {MODELS.map((m) => (
+              <li key={`m-${m.src}`}>
+                <img src={m.src} alt={m.alt} width={180} height={177} loading="lazy"
+                     className="h-auto w-full object-contain" />
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -170,7 +220,8 @@ export default function LlmOptimized() {
       <div aria-hidden="true" className="hidden h-[180px] bg-surface lg:block" />
 
       {/* marketing_outcomes_wrap — 572px: 54px heading left, collage right */}
-      <section ref={outRef} className="clip-bleed bg-surface">
+      {/* marketing_outcomes_wrap measures 572px on live */}
+      <section ref={outRef} className="clip-bleed bg-surface py-[26px]">
         <div className="u-container grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
           <div className="flex max-w-[500px] flex-col">
             <h2 className="reveal max-w-[13ch] font-serif text-ink tracking-tightest
@@ -218,7 +269,8 @@ export default function LlmOptimized() {
       <div aria-hidden="true" className="h-[80px] bg-surface" />
 
       {/* derisk_wrap — 628px, centred, on the blue-200 graph-paper ground */}
-      <section ref={deriskRef} className="relative clip-bleed bg-blue-200 py-[120px]">
+      {/* derisk_wrap measures 628px on live */}
+      <section ref={deriskRef} className="relative clip-bleed bg-blue-200 py-[74px]">
         <div aria-hidden="true" className="absolute inset-0 bg-grid"
              style={{ '--grid-color': 'rgba(255,255,255,.7)', '--grid-size': '40px' }} />
 
@@ -268,7 +320,7 @@ export default function LlmOptimized() {
           body="No prompt-engineering rabbit holes, no model comparisons, no keeping up with release notes. Your team works on strategy, creative, and campaigns while Jasper handles model selection in the background. The people closest to your customers spend their time where it matters."
           img={{ src: '/assets/group-imgae.jpg', w: 625, h: 502,
                  alt: 'Man showing a document to a woman working on a laptop in a bright office.' }}
-          spaceTop={112} spaceBottom={112}
+          spaceTop={62} spaceBottom={112}
         />
       </div>
 

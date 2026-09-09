@@ -35,9 +35,16 @@ export default function PhotoMarquee({
   const ref = useReveal({ threshold: 0 })
 
   if (variant === 'columns') {
+    /* The stage is the measured 1000px on desktop, where it sits BESIDE the
+       copy. Below `lg` it stacks under the copy instead, and a full 1000px of
+       portraits there is a dead scroll — so the stage halves on small screens
+       (`--pm-h` drives the height, overridden by the media query in the style
+       attribute's custom property). */
     return (
-      <div ref={ref} className="reveal marquee-track clip-bleed relative flex gap-0"
-           style={{ height }} aria-hidden="true">
+      <div ref={ref} className="reveal marquee-track clip-bleed relative flex gap-0
+                                h-[var(--pm-h-sm)] lg:h-[var(--pm-h)]"
+           style={{ '--pm-h': `${height}px`, '--pm-h-sm': `${Math.round(height * 0.46)}px` }}
+           aria-hidden="true">
         {columns.map((col, ci) => (
           <div key={ci} className={`relative h-full flex-1 overflow-hidden ${col.tint || ''}`}>
             <div className={`flex flex-col ${col.dir === 'down' ? 'animate-marquee-down' : 'animate-marquee-up'}`}

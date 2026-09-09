@@ -189,7 +189,7 @@ export default function Careers() {
         body="Jasper’s remote-first culture allows our team to work where they want to live, not the other way around. With team members across the United States, France and Australia, flexibility isn't just a tagline -- it's the critical ingredient to getting work done."
         img={{ src: '/assets/Careers-Regions.avif', w: 660, h: 591,
                alt: 'Colorful blocks with country names USA, Australia and France set at angles.' }}
-        bg="bg-flame-300" spaceTop={112} spaceBottom={80}
+        bg="bg-flame-300" spaceTop={112} spaceBottom={112}
       >
         <div className="mt-10">
           <h3 className="reveal font-serif text-ink tracking-tightest
@@ -220,7 +220,9 @@ export default function Careers() {
       />
 
       {/* layout_cards_wrap — 864px perks grid, header in cell 1 */}
-      <section ref={perksRef} className="clip-bleed bg-surface pb-[112px]">
+      {/* live measures 864px around a 12px-gutter grid; the block carries a
+          40px lead-in above the cards as well as the 112px space below. */}
+      <section ref={perksRef} className="clip-bleed bg-surface pb-[112px] pt-[110px]">
         <div className="u-container grid grid-cols-1 gap-gutter sm:grid-cols-2 lg:grid-cols-3">
           <div className="flex flex-col justify-center p-2">
             <h2 className="reveal max-w-[12ch] font-serif text-ink tracking-tightest
@@ -263,7 +265,8 @@ export default function Careers() {
       />
 
       {/* derisk_wrap — 512px closing band on the blue-200 graph-paper ground */}
-      <section ref={endRef} className="relative clip-bleed bg-blue-200 py-[120px]">
+      {/* derisk_wrap measures 512px on live */}
+      <section ref={endRef} className="relative clip-bleed bg-blue-200 py-[135px]">
         <div aria-hidden="true" className="absolute inset-0 bg-grid"
              style={{ '--grid-color': 'rgba(255,255,255,.7)', '--grid-size': '40px' }} />
         <div className="relative z-10 u-container flex flex-col items-center text-center">
