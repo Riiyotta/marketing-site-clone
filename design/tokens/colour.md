@@ -93,22 +93,49 @@ Use the token name in JSX (`bg-flame-600`), never a raw hex.
 | `dark-800` | `#515052` |
 | `dark-900` | `#262627` |
 
-## chart
+## chart-green
 
 | token | hex |
 |---|---|
 | `chart-green-200` | `#e6ffd9` |
+
+## chart-blue
+
+| token | hex |
+|---|---|
 | `chart-blue-200` | `#ceebff` |
+
+## chart-flame
+
+| token | hex |
+|---|---|
 | `chart-flame-200` | `#ffe8e2` |
+
+## chart-pink
+
+| token | hex |
+|---|---|
 | `chart-pink-200` | `#ffe6f3` |
+
+## chart-vintage-electric
+
+| token | hex |
+|---|---|
 | `chart-vintage-electric-200` | `#fffbb7` |
+
+## chart-violet
+
+| token | hex |
+|---|---|
 | `chart-violet-200` | `#e7e3f7` |
 
-`ink-950` — `#1c1c1c`
-
-`olive-700` — `#6f6a00`
-
 `ink` — `#00063d`
+
+## olive
+
+| token | hex |
+|---|---|
+| `olive-700` | `#6f6a00` |
 
 `surface` — `#ffffff`
 

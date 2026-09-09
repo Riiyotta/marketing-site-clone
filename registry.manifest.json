@@ -1,0 +1,79 @@
+{
+  "repositoryId": "marketing-site-clone.design",
+  "repositoryVersion": "1.0.0",
+  "pagespecVersion": "1.0.0",
+  "schemaVersions": {
+    "pagespec": "1.0.0",
+    "components": "1.0.0",
+    "composition": "1.0.0",
+    "responsive": "1.0.0",
+    "motion": "1.0.0",
+    "tokens": "1.0.0",
+    "tokenPolicy": "1.0.0",
+    "allowlist": "1.0.0",
+    "templates": "1.0.0",
+    "assets": "1.0.0"
+  },
+  "status": "complete",
+  "productionApproved": false,
+  "productionApprovalNote": "This repository reproduces the copy, imagery and branding of an existing commercial site for engineering study. It is not cleared for production use. Replace all content and assets before any deployment.",
+  "generatedAt": "2026-09-09",
+  "sourceCommit": "6927569",
+  "counts": {
+    "routes": 54,
+    "templates": 7,
+    "sectionComponents": 36,
+    "shellComponents": 5,
+    "allowlistedSections": 36,
+    "colorTokens": 63,
+    "fontSizes": 11,
+    "assets": 926,
+    "assetRoles": 11
+  },
+  "routesByTemplate": {
+    "marketing.standard": 6,
+    "product.detail": 30,
+    "editorial.index": 4,
+    "document": 2,
+    "industry": 6,
+    "role": 6
+  },
+  "themes": [
+    "light",
+    "tinted",
+    "dark"
+  ],
+  "breakpoints": [
+    1440,
+    768,
+    390
+  ],
+  "entryPoints": {
+    "humanStart": "design/gallery.html",
+    "machineStart": "registry.manifest.json",
+    "pageSpecSchema": "design/schema/pagespec.schema.json",
+    "pageSpecExample": "design/examples/marketing-standard.pagespec.json",
+    "allowlist": "design/registry/allowlist.json",
+    "tokens": "design/tokens/tokens.json",
+    "tokenPolicy": "design/tokens/policy.json",
+    "componentContracts": "design/contracts/components.json",
+    "compositionRules": "design/contracts/composition.json",
+    "responsiveContract": "design/contracts/responsive.json",
+    "motionContract": "design/contracts/motion.json",
+    "assetRoles": "design/registry/assets.json",
+    "informationArchitecture": "design/information-architecture/README.md",
+    "implementationTraps": "design/patterns/README.md",
+    "verify": "design/verify_all.mjs"
+  },
+  "verification": {
+    "command": "node design/verify_all.mjs",
+    "checks": [
+      "every contract file present and parseable",
+      "entry points resolve on disk",
+      "every allowlisted component exists in source",
+      "every PageSpec example validates against the schema and composition rules",
+      "every route in templates.json is routed in App.jsx",
+      "token policy: no raw hex in component markup"
+    ]
+  }
+}

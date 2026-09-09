@@ -47,6 +47,14 @@ const menuOf = (p) => {
   return 'Top level'
 }
 
+/* Template per route, read from the generated registry so this table and the
+   machine-readable contract cannot disagree. */
+let tplByRoute = {}
+try {
+  const reg = JSON.parse(fs.readFileSync('design/registry/templates.json', 'utf8'))
+  for (const r of reg.routes) tplByRoute[r.route] = r.template
+} catch {}
+
 const O = []
 const P = (s) => O.push(s)
 
@@ -72,11 +80,12 @@ for (const g of ORDER) {
   if (!ps) continue
   const done = ps.filter((p) => !stubSet.has(p))
   P(`\n## ${g} — ${done.length}/${ps.length} cloned\n`)
-  P('| route | state | live height |')
-  P('|---|---|---|')
+  P('| route | state | template | live height |')
+  P('|---|---|---|---|')
   for (const p of ps.sort()) {
     const h = live[p] && live[p].h
-    P(`| \`${p}\` | ${stubSet.has(p) ? 'placeholder' : '**cloned**'} | ${h ? h.toLocaleString() + 'px' : '—'} |`)
+    const tpl = tplByRoute[p] || '—'
+    P(`| \`${p}\` | ${stubSet.has(p) ? 'placeholder' : '**cloned**'} | \`${tpl}\` | ${h ? h.toLocaleString() + 'px' : '—'} |`)
   }
 }
 
@@ -92,5 +101,5 @@ for (const [m, hrefs] of Object.entries(MENUS)) {
   P(`| ${m} | ${shape} | ${hrefs.length} |`)
 }
 
-fs.writeFileSync('design/Information architecture/README.md', O.join('\n') + '\n')
+fs.writeFileSync('design/information-architecture/README.md', O.join('\n') + '\n')
 console.log(`wrote Information architecture: ${real.length} cloned, ${stubbed.length} placeholders`)

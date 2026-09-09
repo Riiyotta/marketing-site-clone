@@ -3,8 +3,33 @@
    Re-run with: node design/gen-tokens.mjs                                   */
 import fs from 'fs'
 
-const cfg = (await import('../tailwind.config.js')).default
-const t = (cfg.theme && cfg.theme.extend) || {}
+/* Prefer the canonical artifact so this repo is usable when packaged on its
+   own: tokens/tokens.json is committed, whereas ../tailwind.config.js lives in
+   the app and may not travel with a design-only ZIP. Fall back to the config
+   when the artifact has not been generated yet. */
+import { createRequire } from 'module'
+let t
+if (fs.existsSync('design/tokens/tokens.json')) {
+  const j = JSON.parse(fs.readFileSync('design/tokens/tokens.json', 'utf8'))
+  const colors = {}
+  for (const [name, def] of Object.entries(j.color)) {
+    const i = name.lastIndexOf('-')
+    const fam = i > 0 ? name.slice(0, i) : name
+    const step = i > 0 ? name.slice(i + 1) : null
+    // `ink-950` splits to family `ink`, which is itself a flat token — writing
+    // a step onto that string throws. Only group when the family slot is free
+    // or already an object.
+    const groupable = step && /^\d+$/.test(step) && typeof colors[fam] !== 'string'
+    if (groupable) (colors[fam] ||= {})[step] = def.value
+    else colors[name] = def.value
+  }
+  t = { colors, fontFamily: j.fontFamily, fontSize: j.fontSize, letterSpacing: j.letterSpacing,
+        lineHeight: j.lineHeight, spacing: j.spacing, borderRadius: j.radius,
+        transitionTimingFunction: j.easing, maxWidth: {}, gap: {}, height: {} }
+} else {
+  const cfg = (await import('../tailwind.config.js')).default
+  t = (cfg.theme && cfg.theme.extend) || {}
+}
 
 /* Component comments name the reference site; the docs should not. Scrub on
    output so regenerating never reintroduces it. */

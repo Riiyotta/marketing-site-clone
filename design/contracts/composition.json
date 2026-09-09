@@ -1,0 +1,43 @@
+{
+  "version": "1.0.0",
+  "shell": {
+    "required": [
+      "Navbar",
+      "Footer"
+    ],
+    "note": "Every route mounts these via Layout. A PageSpec never declares them."
+  },
+  "uniquePerPage": [
+    "PageCta",
+    "HeroVertical",
+    "IndustryHero",
+    "RoleHero",
+    "GridHero",
+    "SplitHero"
+  ],
+  "headings": {
+    "h1PerPage": 1,
+    "note": "Exactly one h1. PageCta carries NO heading — the reference marks that line as a <p>; emitting an h2 there injects a phantom section into the outline."
+  },
+  "ordering": [
+    {
+      "rule": "a hero component must be the first section"
+    },
+    {
+      "rule": "PageCta, when present, must be the last section"
+    },
+    {
+      "rule": "Accordion must not directly follow another Accordion"
+    },
+    {
+      "rule": "two adjacent sections must not share the same tint"
+    }
+  ],
+  "rhythm": {
+    "note": "Sections carry padding:0. Vertical rhythm lives in standalone SectionSpace blocks (80px or 112px) plus per-section internal gaps.",
+    "spacers": [
+      80,
+      112
+    ]
+  }
+}

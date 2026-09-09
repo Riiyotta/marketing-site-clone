@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "rules": [
+    "Reference tokens by name. A raw hex, rgb() or named CSS colour in markup is a hard failure.",
+    "Text is ink on light grounds. Never place ink text on an ink-family ground — navy-on-navy passes every automated check while being invisible.",
+    "Do not shrink a measured font size to close a height gap. The substitute faces set ~9% wider than the licensed originals; that width is expected, and shrinking type breaks a verified value to fix a derived one.",
+    "Adjacent sections must not share a tint.",
+    "New tokens require a documented source measurement, not a preference."
+  ],
+  "contrast": {
+    "minimumRatio": 4.5,
+    "note": "Body text against its ground."
+  }
+}

@@ -1,0 +1,411 @@
+{
+  "version": "1.0.0",
+  "note": "The site is a small reusable block vocabulary, not N bespoke pages. Three pages are each exactly 8 sections and ~6200px: one template, three content sets.",
+  "templates": {
+    "marketing.standard": {
+      "description": "Top-level marketing page: hero, alternating feature bands, social proof, closing CTA.",
+      "requiredSections": [
+        "PageCta"
+      ],
+      "allows": [
+        "Accordion",
+        "AgentDetail",
+        "AgentLibrary",
+        "AgentSlider",
+        "ApiEndpointCards",
+        "Catalog",
+        "ChecklistVis",
+        "ClosingPhoto",
+        "DocLayout",
+        "EditorialHero",
+        "FilterIndex",
+        "GridHero",
+        "HeroVertical",
+        "HorizontalContent",
+        "HorizontalVis",
+        "IQHub",
+        "IlloHero",
+        "IndustryHero",
+        "IntegrationsVis",
+        "LayoutCards",
+        "LogoBlade",
+        "PeopleRail",
+        "PhotoMarquee",
+        "ProductSlot",
+        "RevealSection",
+        "RoleHero",
+        "SeoSection",
+        "SideBlockStack",
+        "SimpleLayout",
+        "SplitHero",
+        "StickyScroll",
+        "StoryPanel",
+        "TrustCards",
+        "UseCaseCards",
+        "ValueProps",
+        "WindowCta"
+      ]
+    },
+    "product.detail": {
+      "description": "A single product or capability. The most common shape across the product menu.",
+      "requiredSections": [
+        "PageCta"
+      ],
+      "allows": [
+        "Accordion",
+        "AgentDetail",
+        "AgentLibrary",
+        "AgentSlider",
+        "ApiEndpointCards",
+        "Catalog",
+        "ChecklistVis",
+        "ClosingPhoto",
+        "DocLayout",
+        "EditorialHero",
+        "FilterIndex",
+        "GridHero",
+        "HeroVertical",
+        "HorizontalContent",
+        "HorizontalVis",
+        "IQHub",
+        "IlloHero",
+        "IndustryHero",
+        "IntegrationsVis",
+        "LayoutCards",
+        "LogoBlade",
+        "PeopleRail",
+        "PhotoMarquee",
+        "ProductSlot",
+        "RevealSection",
+        "RoleHero",
+        "SeoSection",
+        "SideBlockStack",
+        "SimpleLayout",
+        "SplitHero",
+        "StickyScroll",
+        "StoryPanel",
+        "TrustCards",
+        "UseCaseCards",
+        "ValueProps",
+        "WindowCta"
+      ]
+    },
+    "industry": {
+      "description": "Industry page. Eight or nine sections; the customer-story panel is conditional — two of six industries ship without one.",
+      "fixedOrder": [
+        "IndustryHero",
+        "LogoBlade",
+        "ChecklistVis",
+        "StoryPanel?",
+        "LayoutCards",
+        "Accordion",
+        "ClosingPhoto"
+      ],
+      "optionalSections": [
+        "StoryPanel"
+      ]
+    },
+    "role": {
+      "description": "Role page. Five sections, identical order on all six; the slider and CTA are byte-identical across them and take no props.",
+      "fixedOrder": [
+        "RoleHero",
+        "UseCaseCards",
+        "AgentSlider",
+        "IntegrationsVis",
+        "PageCta"
+      ]
+    },
+    "editorial.index": {
+      "description": "Card index over a CMS collection: editorial hero then a filtered grid.",
+      "requiredSections": [
+        "PageCta"
+      ]
+    },
+    "document": {
+      "description": "Long-form document with a sticky jump-nav rail."
+    },
+    "placeholder": {
+      "description": "Honest not-built page. Never silently renders another page."
+    }
+  },
+  "routes": [
+    {
+      "route": "/",
+      "page": "Home",
+      "template": "marketing.standard"
+    },
+    {
+      "route": "/pricing",
+      "page": "Pricing",
+      "template": "marketing.standard"
+    },
+    {
+      "route": "/platform",
+      "page": "PlatformPage",
+      "template": "marketing.standard"
+    },
+    {
+      "route": "/solutions",
+      "page": "SolutionsPage",
+      "template": "marketing.standard"
+    },
+    {
+      "route": "/resources",
+      "page": "ResourcesPage",
+      "template": "marketing.standard"
+    },
+    {
+      "route": "/company",
+      "page": "Company",
+      "template": "marketing.standard"
+    },
+    {
+      "route": "/jasper-iq",
+      "page": "JasperIQ",
+      "template": "product.detail"
+    },
+    {
+      "route": "/brand-iq",
+      "page": "BrandIQ",
+      "template": "product.detail"
+    },
+    {
+      "route": "/brand-voice",
+      "page": "BrandVoice",
+      "template": "product.detail"
+    },
+    {
+      "route": "/visual-guidelines",
+      "page": "VisualGuidelines",
+      "template": "product.detail"
+    },
+    {
+      "route": "/style-guide",
+      "page": "StyleGuide",
+      "template": "product.detail"
+    },
+    {
+      "route": "/marketing-iq",
+      "page": "MarketingIQ",
+      "template": "product.detail"
+    },
+    {
+      "route": "/api",
+      "page": "Api",
+      "template": "product.detail"
+    },
+    {
+      "route": "/mcp",
+      "page": "Mcp",
+      "template": "product.detail"
+    },
+    {
+      "route": "/studio",
+      "page": "Studio",
+      "template": "product.detail"
+    },
+    {
+      "route": "/grid",
+      "page": "Grid",
+      "template": "product.detail"
+    },
+    {
+      "route": "/agents/optimization",
+      "page": "AgentOptimization",
+      "template": "product.detail"
+    },
+    {
+      "route": "/agents/research",
+      "page": "AgentResearch",
+      "template": "product.detail"
+    },
+    {
+      "route": "/agents/translation",
+      "page": "AgentTranslation",
+      "template": "product.detail"
+    },
+    {
+      "route": "/agents",
+      "page": "Agents",
+      "template": "product.detail"
+    },
+    {
+      "route": "/content-pipelines",
+      "page": "ContentPipelines",
+      "template": "product.detail"
+    },
+    {
+      "route": "/knowledge-base",
+      "page": "KnowledgeBase",
+      "template": "product.detail"
+    },
+    {
+      "route": "/governance",
+      "page": "Governance",
+      "template": "product.detail"
+    },
+    {
+      "route": "/product-iq",
+      "page": "ProductIQ",
+      "template": "product.detail"
+    },
+    {
+      "route": "/image/api",
+      "page": "ImageApi",
+      "template": "product.detail"
+    },
+    {
+      "route": "/image/pipelines",
+      "page": "ImagePipelines",
+      "template": "product.detail"
+    },
+    {
+      "route": "/geo",
+      "page": "Geo",
+      "template": "product.detail"
+    },
+    {
+      "route": "/canvas",
+      "page": "Canvas",
+      "template": "product.detail"
+    },
+    {
+      "route": "/press",
+      "page": "Press",
+      "template": "editorial.index"
+    },
+    {
+      "route": "/security",
+      "page": "Security",
+      "template": "document"
+    },
+    {
+      "route": "/trust",
+      "page": "TrustPage",
+      "template": "product.detail"
+    },
+    {
+      "route": "/careers",
+      "page": "Careers",
+      "template": "product.detail"
+    },
+    {
+      "route": "/llm-optimized",
+      "page": "LlmOptimized",
+      "template": "product.detail"
+    },
+    {
+      "route": "/legal",
+      "page": "Legal",
+      "template": "document"
+    },
+    {
+      "route": "/blog",
+      "page": "Blog",
+      "template": "editorial.index"
+    },
+    {
+      "route": "/webinars",
+      "page": "Webinars",
+      "template": "editorial.index"
+    },
+    {
+      "route": "/customer-stories",
+      "page": "CustomerStories",
+      "template": "editorial.index"
+    },
+    {
+      "route": "/customer-success",
+      "page": "CustomerSuccess",
+      "template": "product.detail"
+    },
+    {
+      "route": "/contact-support",
+      "page": "ContactSupport",
+      "template": "product.detail"
+    },
+    {
+      "route": "/workflows",
+      "page": "Workflows",
+      "template": "product.detail"
+    },
+    {
+      "route": "/diagnostics/geo",
+      "page": "DiagnosticsGeo",
+      "template": "product.detail"
+    },
+    {
+      "route": "/solutions/by-industry/financial-services",
+      "page": "FinancialServices",
+      "template": "industry"
+    },
+    {
+      "route": "/solutions/by-industry/healthcare",
+      "page": "Healthcare",
+      "template": "industry"
+    },
+    {
+      "route": "/solutions/by-industry/media-and-entertainment",
+      "page": "MediaAndEntertainment",
+      "template": "industry"
+    },
+    {
+      "route": "/solutions/by-industry/professional-services",
+      "page": "ProfessionalServices",
+      "template": "industry"
+    },
+    {
+      "route": "/solutions/by-industry/retail-and-consumer-goods",
+      "page": "RetailAndConsumerGoods",
+      "template": "industry"
+    },
+    {
+      "route": "/solutions/by-industry/tech",
+      "page": "Tech",
+      "template": "industry"
+    },
+    {
+      "route": "/solutions/by-role/brand-marketers",
+      "page": "BrandMarketers",
+      "template": "role"
+    },
+    {
+      "route": "/solutions/by-role/content-marketers",
+      "page": "ContentMarketers",
+      "template": "role"
+    },
+    {
+      "route": "/solutions/by-role/field-marketers",
+      "page": "FieldMarketers",
+      "template": "role"
+    },
+    {
+      "route": "/solutions/by-role/performance-marketers",
+      "page": "PerformanceMarketers",
+      "template": "role"
+    },
+    {
+      "route": "/solutions/by-role/pr-and-communications",
+      "page": "PrAndCommunications",
+      "template": "role"
+    },
+    {
+      "route": "/solutions/by-role/product-marketers",
+      "page": "ProductMarketers",
+      "template": "role"
+    },
+    {
+      "route": "/solutions/seo-aeo-geo",
+      "page": "SeoAeoGeo",
+      "template": "product.detail"
+    }
+  ],
+  "countsByTemplate": {
+    "marketing.standard": 6,
+    "product.detail": 30,
+    "editorial.index": 4,
+    "document": 2,
+    "industry": 6,
+    "role": 6
+  }
+}

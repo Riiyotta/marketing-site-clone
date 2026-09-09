@@ -1,0 +1,56 @@
+{
+  "pagespecVersion": "1.0.0",
+  "route": "/example-product",
+  "title": "Example product page",
+  "template": "product.detail",
+  "theme": "light",
+  "status": "draft",
+  "sections": [
+    {
+      "component": "HeroVertical",
+      "content": {
+        "eyebrow": "Example capability",
+        "title": "A short display headline that fits inside fourteen words",
+        "titleSize": "80",
+        "body": "One supporting paragraph. Keep it inside the body capacity — the block clips rather than reflows when copy overruns.",
+        "ctas": [
+          { "label": "Start free trial", "href": "/" },
+          { "label": "Get a demo", "href": "/", "variant": "btn-secondary" }
+        ]
+      }
+    },
+    {
+      "component": "HorizontalVis",
+      "tint": "surface-2",
+      "content": {
+        "eyebrow": "Feature one",
+        "title": "Copy on the left, illustration on the right",
+        "body": "The band is 670px at 1440: a 140px spacer, a 1360px container 418px tall, then a 112px spacer.",
+        "image": { "role": "feature.illustration", "src": "/assets/example-a.avif", "width": 660, "height": 414 },
+        "link": { "label": "Learn more", "href": "/" }
+      }
+    },
+    {
+      "component": "HorizontalVis",
+      "content": {
+        "eyebrow": "Feature two",
+        "title": "The same block, flipped",
+        "body": "Alternating sides is a prop, not a second component. Note the tint differs from the section above it.",
+        "flip": true,
+        "image": { "role": "feature.illustration", "src": "/assets/example-b.avif", "width": 660, "height": 414 }
+      }
+    },
+    {
+      "component": "Accordion",
+      "content": {
+        "title": "Common questions",
+        "openFirst": true,
+        "items": [
+          { "q": "How is this page assembled?", "a": "From the block vocabulary in the allowlist — no bespoke markup." },
+          { "q": "Can a generator add a new component?", "a": "No. The allowlist is closed; request a contract first." }
+        ]
+      }
+    },
+    { "component": "PageCta", "content": { "headline": "Start creating today" } }
+  ]
+}

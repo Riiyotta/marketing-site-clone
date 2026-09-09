@@ -1,0 +1,2811 @@
+{
+  "version": "1.0.0",
+  "note": "Semantic role per asset, derived from naming conventions. Select imagery by ROLE, not by path — a path tells a generator nothing about what the image is for.",
+  "roles": [
+    "background.texture",
+    "brand.logo",
+    "content.image",
+    "cta.decoration",
+    "customer.logo",
+    "hero.visual",
+    "nav.card",
+    "partner.badge",
+    "person.portrait",
+    "product.screenshot",
+    "resource.cover"
+  ],
+  "counts": {
+    "content.image": 675,
+    "brand.logo": 69,
+    "hero.visual": 51,
+    "background.texture": 32,
+    "product.screenshot": 4,
+    "customer.logo": 26,
+    "cta.decoration": 11,
+    "resource.cover": 16,
+    "nav.card": 8,
+    "person.portrait": 26,
+    "partner.badge": 8
+  },
+  "total": 926,
+  "assets": {
+    "/assets/060413a0ff6f75e061882602805e8b2a_From-Insights-to-Action_-Wh.png": {
+      "role": "content.image"
+    },
+    "/assets/1-BG.avif": {
+      "role": "content.image"
+    },
+    "/assets/1-FG.avif": {
+      "role": "content.image"
+    },
+    "/assets/1.avif": {
+      "role": "content.image"
+    },
+    "/assets/13.png": {
+      "role": "content.image"
+    },
+    "/assets/15.png": {
+      "role": "content.image"
+    },
+    "/assets/1516540885757.webp": {
+      "role": "content.image"
+    },
+    "/assets/1517757404325.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/1644848237738.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/1655742980265.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/1664288274034.jpg": {
+      "role": "content.image"
+    },
+    "/assets/1678038318893.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/1698160642040.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/17-2x-p-1600.png": {
+      "role": "content.image"
+    },
+    "/assets/17-2x.png": {
+      "role": "content.image"
+    },
+    "/assets/1701274082131.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/1774578974399.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/17d97daa-30bf-44d9-9b61-76699dd9c04d_thumb.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/18.png": {
+      "role": "content.image"
+    },
+    "/assets/2-BG.png": {
+      "role": "content.image"
+    },
+    "/assets/2-FG.avif": {
+      "role": "content.image"
+    },
+    "/assets/2.avif": {
+      "role": "content.image"
+    },
+    "/assets/2024-MIC-Article-Artifical-Intelligence-15-1.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/20240618_Jasper_Loreal_Lynch_3x2.webp": {
+      "role": "content.image"
+    },
+    "/assets/3-BG.png": {
+      "role": "content.image"
+    },
+    "/assets/3-FG.avif": {
+      "role": "content.image"
+    },
+    "/assets/3-predictions-for-AI-in-marketing-in-2026_B.png": {
+      "role": "content.image"
+    },
+    "/assets/3.avif": {
+      "role": "content.image"
+    },
+    "/assets/672d24b35ec9bfa3d63c72e6.webp": {
+      "role": "content.image"
+    },
+    "/assets/744e135796b12c1fe8d1607f7527ec1648d1e574.webp": {
+      "role": "content.image"
+    },
+    "/assets/960x0-1.webp": {
+      "role": "content.image"
+    },
+    "/assets/960x0.jpg": {
+      "role": "content.image"
+    },
+    "/assets/960x0.webp": {
+      "role": "content.image"
+    },
+    "/assets/AAA_logo.webp": {
+      "role": "brand.logo"
+    },
+    "/assets/AD_4nXfqxZyq69IQVhEcOkCf6fxVaDr3IQMNu9PKIL3Ock_cW59CpSTnwZc1AFqYwoVjxzdPkazsDMQhxjdm6zGfViK8x2Ov2Qj24nAIP1azwxUlnXP8iAx82UpzsOAy6usQ6K9dOKkVrrDaBVdx9HxIG-x5yik.png": {
+      "role": "content.image"
+    },
+    "/assets/AI-Legal-Rulings-Blog-Header-A-p-1600.jpg": {
+      "role": "content.image"
+    },
+    "/assets/AI-Settings.avif": {
+      "role": "content.image"
+    },
+    "/assets/AI-and-SEO.png": {
+      "role": "content.image"
+    },
+    "/assets/AI-content-strategy-p-1600.webp": {
+      "role": "content.image"
+    },
+    "/assets/AI-writers-tools-blog.png": {
+      "role": "content.image"
+    },
+    "/assets/AICPA-SOC.png": {
+      "role": "content.image"
+    },
+    "/assets/AKBANK.png": {
+      "role": "content.image"
+    },
+    "/assets/API-1.avif": {
+      "role": "content.image"
+    },
+    "/assets/API-2.avif": {
+      "role": "content.image"
+    },
+    "/assets/API-3.avif": {
+      "role": "content.image"
+    },
+    "/assets/API-4.avif": {
+      "role": "content.image"
+    },
+    "/assets/API-Arrow.svg": {
+      "role": "content.image"
+    },
+    "/assets/API-Hero.avif": {
+      "role": "hero.visual"
+    },
+    "/assets/ATS.jpg": {
+      "role": "content.image"
+    },
+    "/assets/Ad-20Copy.png": {
+      "role": "content.image"
+    },
+    "/assets/Afry-Logo.svg": {
+      "role": "brand.logo"
+    },
+    "/assets/Agents-4.avif": {
+      "role": "content.image"
+    },
+    "/assets/Agents-Bottom-p-1600.avif": {
+      "role": "content.image"
+    },
+    "/assets/Agents-Bottom.avif": {
+      "role": "content.image"
+    },
+    "/assets/Agents-New.avif": {
+      "role": "content.image"
+    },
+    "/assets/Agents-Top.avif": {
+      "role": "content.image"
+    },
+    "/assets/Agents.avif": {
+      "role": "content.image"
+    },
+    "/assets/Akbank.svg": {
+      "role": "content.image"
+    },
+    "/assets/Alex-20Buder-20Shapiro.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/Alliant_group_logo.webp": {
+      "role": "brand.logo"
+    },
+    "/assets/Andrea.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/Andrew-20Su.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/Anthropologie_logo.webp": {
+      "role": "brand.logo"
+    },
+    "/assets/Architecture.avif": {
+      "role": "content.image"
+    },
+    "/assets/AriJasper.webp": {
+      "role": "content.image"
+    },
+    "/assets/Audiences.avif": {
+      "role": "content.image"
+    },
+    "/assets/BG-1.png": {
+      "role": "background.texture"
+    },
+    "/assets/BG-2.png": {
+      "role": "background.texture"
+    },
+    "/assets/BG-3.png": {
+      "role": "background.texture"
+    },
+    "/assets/BG-Green.avif": {
+      "role": "background.texture"
+    },
+    "/assets/BG-Yellow.avif": {
+      "role": "background.texture"
+    },
+    "/assets/BRAND-CONSISTENCY---PROCESS-1.avif": {
+      "role": "content.image"
+    },
+    "/assets/BRAND-CONSISTENCY---PROCESS.avif": {
+      "role": "content.image"
+    },
+    "/assets/Bestplaces.png": {
+      "role": "content.image"
+    },
+    "/assets/Blog-Header-A-5-p-1600.png": {
+      "role": "content.image"
+    },
+    "/assets/Blog-Header-B-1-.png": {
+      "role": "content.image"
+    },
+    "/assets/Blog-Hero-Grid-and-Content-Pipelines-p-1600.jpg": {
+      "role": "hero.visual"
+    },
+    "/assets/Blog-How-Leading-Retailers-Are-Using-AI-to-Scale-with-Precision-2-.png": {
+      "role": "content.image"
+    },
+    "/assets/Blog-Jasper-Claude-integration-1-p-1600.png": {
+      "role": "content.image"
+    },
+    "/assets/Blog-Jasper-Webflow.png": {
+      "role": "content.image"
+    },
+    "/assets/Blog-Monday-1-p-1600.png": {
+      "role": "content.image"
+    },
+    "/assets/Blog-Pixel-Perfect.png": {
+      "role": "content.image"
+    },
+    "/assets/Blog-header-AI-is-changing-marketing-roles-p-1600.png": {
+      "role": "content.image"
+    },
+    "/assets/Blog-header_LLM-optimized-architecture.png": {
+      "role": "content.image"
+    },
+    "/assets/Blog_Build_Topic_Pillar_Pages.png": {
+      "role": "content.image"
+    },
+    "/assets/Blog_Content-Engineer-min.png": {
+      "role": "content.image"
+    },
+    "/assets/Blog_Governance_Gap_Behind_AI_Slop-1.png": {
+      "role": "content.image"
+    },
+    "/assets/Blog_Jasper_Diagnostic_Tools.png": {
+      "role": "content.image"
+    },
+    "/assets/Blog_Jasper_GSC-p-1600.png": {
+      "role": "content.image"
+    },
+    "/assets/Boeing_logo.webp": {
+      "role": "brand.logo"
+    },
+    "/assets/Bona_logo.webp": {
+      "role": "brand.logo"
+    },
+    "/assets/Border-Line-Placeholder.avif": {
+      "role": "content.image"
+    },
+    "/assets/Brand-20IQ-20--20visual.png": {
+      "role": "content.image"
+    },
+    "/assets/Brand-Consistency-A-p-1600.png": {
+      "role": "content.image"
+    },
+    "/assets/Brand-IQ.avif": {
+      "role": "content.image"
+    },
+    "/assets/Bryan-Olshock.avif": {
+      "role": "content.image"
+    },
+    "/assets/Bryan-Tsao-Square.png": {
+      "role": "content.image"
+    },
+    "/assets/CP-Hero-placeholder.avif": {
+      "role": "hero.visual"
+    },
+    "/assets/CS-AI-Council.png": {
+      "role": "content.image"
+    },
+    "/assets/CS-Custom-Templates.webp": {
+      "role": "content.image"
+    },
+    "/assets/CS-Person-1-min.webp": {
+      "role": "content.image"
+    },
+    "/assets/CS-Person-10-min.webp": {
+      "role": "content.image"
+    },
+    "/assets/CS-Person-11-min.webp": {
+      "role": "content.image"
+    },
+    "/assets/CS-Person-12-min.webp": {
+      "role": "content.image"
+    },
+    "/assets/CS-Person-13-min.webp": {
+      "role": "content.image"
+    },
+    "/assets/CS-Person-14-min.webp": {
+      "role": "content.image"
+    },
+    "/assets/CS-Person-15-min.webp": {
+      "role": "content.image"
+    },
+    "/assets/CS-Person-16-min.webp": {
+      "role": "content.image"
+    },
+    "/assets/CS-Person-17-min.webp": {
+      "role": "content.image"
+    },
+    "/assets/CS-Person-2-min.webp": {
+      "role": "content.image"
+    },
+    "/assets/CS-Person-3-min.webp": {
+      "role": "content.image"
+    },
+    "/assets/CS-Person-4-min.webp": {
+      "role": "content.image"
+    },
+    "/assets/CS-Person-5-min.webp": {
+      "role": "content.image"
+    },
+    "/assets/CS-Person-6-min.webp": {
+      "role": "content.image"
+    },
+    "/assets/CS-Person-7-min.webp": {
+      "role": "content.image"
+    },
+    "/assets/CS-Person-8-min.webp": {
+      "role": "content.image"
+    },
+    "/assets/CS-Person-9-min.webp": {
+      "role": "content.image"
+    },
+    "/assets/CS-Person-Real-1.png": {
+      "role": "content.image"
+    },
+    "/assets/CS-Person-Real-2.png": {
+      "role": "content.image"
+    },
+    "/assets/CS-Person-Real-3.png": {
+      "role": "content.image"
+    },
+    "/assets/CS-Person-Real-4.png": {
+      "role": "content.image"
+    },
+    "/assets/CS-Person-Real-5.png": {
+      "role": "content.image"
+    },
+    "/assets/CS-ROI-Back-Mob-min.png": {
+      "role": "content.image"
+    },
+    "/assets/CS-ROI-Back-min.webp": {
+      "role": "content.image"
+    },
+    "/assets/CS-ROI-Top-Mob-min.png": {
+      "role": "content.image"
+    },
+    "/assets/CS-ROI-Top.png": {
+      "role": "content.image"
+    },
+    "/assets/CS-Scale-Back-min.png": {
+      "role": "content.image"
+    },
+    "/assets/CS-Scale-Top-Mob-min.png": {
+      "role": "content.image"
+    },
+    "/assets/CS-Scale-Top-min.png": {
+      "role": "content.image"
+    },
+    "/assets/CS-Success-Team-1.png": {
+      "role": "content.image"
+    },
+    "/assets/CS-Success-Team-2.png": {
+      "role": "content.image"
+    },
+    "/assets/CS-Success-Team-3.png": {
+      "role": "content.image"
+    },
+    "/assets/CS-Support-Team-1.webp": {
+      "role": "content.image"
+    },
+    "/assets/CS-Support-Team-2.webp": {
+      "role": "content.image"
+    },
+    "/assets/CS-Support-Team-3.webp": {
+      "role": "content.image"
+    },
+    "/assets/Cannes-thumbnail.jpg": {
+      "role": "content.image"
+    },
+    "/assets/Canvas.avif": {
+      "role": "content.image"
+    },
+    "/assets/Careers---401k.avif": {
+      "role": "content.image"
+    },
+    "/assets/Careers---FamilyPlanning.avif": {
+      "role": "content.image"
+    },
+    "/assets/Careers---FlexExperience.avif": {
+      "role": "content.image"
+    },
+    "/assets/Careers---Flexwellness.avif": {
+      "role": "content.image"
+    },
+    "/assets/Careers---Growth.avif": {
+      "role": "content.image"
+    },
+    "/assets/Careers-Hero---1.avif": {
+      "role": "hero.visual"
+    },
+    "/assets/Careers-Hero---2.avif": {
+      "role": "hero.visual"
+    },
+    "/assets/Careers-Hero---3.avif": {
+      "role": "hero.visual"
+    },
+    "/assets/Careers-Hero---4.avif": {
+      "role": "hero.visual"
+    },
+    "/assets/Careers-Hero---5.avif": {
+      "role": "hero.visual"
+    },
+    "/assets/Careers-Hero---6.avif": {
+      "role": "hero.visual"
+    },
+    "/assets/Careers-Regions.avif": {
+      "role": "content.image"
+    },
+    "/assets/Carissa.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/Carlos-Diaz.png": {
+      "role": "content.image"
+    },
+    "/assets/ChatGPT-Image-Jul-29-2026-11_55_44-AM-p-1600.png": {
+      "role": "content.image"
+    },
+    "/assets/Chegg.png": {
+      "role": "content.image"
+    },
+    "/assets/Christian-Freitas.png": {
+      "role": "content.image"
+    },
+    "/assets/Clipdrop-Uncrop-RGBA-v3-Cleanup-p-1600.png": {
+      "role": "content.image"
+    },
+    "/assets/Clipdrop-min.png": {
+      "role": "content.image"
+    },
+    "/assets/Closing-1-p-1600.avif": {
+      "role": "content.image"
+    },
+    "/assets/Closing-2.avif": {
+      "role": "content.image"
+    },
+    "/assets/Closing_photo_1-p-1600.avif": {
+      "role": "content.image"
+    },
+    "/assets/Closing_photo_1.avif": {
+      "role": "content.image"
+    },
+    "/assets/Cognizant_logo.webp": {
+      "role": "brand.logo"
+    },
+    "/assets/Community.avif": {
+      "role": "content.image"
+    },
+    "/assets/Compliance.avif": {
+      "role": "content.image"
+    },
+    "/assets/Content-Pipelines.avif": {
+      "role": "content.image"
+    },
+    "/assets/Cox_Automotive_logo.webp": {
+      "role": "brand.logo"
+    },
+    "/assets/Cushman_-26_Wakefield_logo.svg.png": {
+      "role": "brand.logo"
+    },
+    "/assets/Cushman___Wakefield_logo.webp": {
+      "role": "brand.logo"
+    },
+    "/assets/Customer-Stories.avif": {
+      "role": "content.image"
+    },
+    "/assets/D1_DSC_8400.avif": {
+      "role": "content.image"
+    },
+    "/assets/DSC_8885-min.avif": {
+      "role": "content.image"
+    },
+    "/assets/DSC_9060-min.avif": {
+      "role": "content.image"
+    },
+    "/assets/DSC_9217-min.avif": {
+      "role": "content.image"
+    },
+    "/assets/Daniel-Su.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/Dumb-Fix-Beige.svg": {
+      "role": "content.image"
+    },
+    "/assets/Dumb-Fix.svg": {
+      "role": "content.image"
+    },
+    "/assets/Duotone-True-Size-24.svg": {
+      "role": "content.image"
+    },
+    "/assets/Ebook-20Hero.png": {
+      "role": "hero.visual"
+    },
+    "/assets/Eli-20-1-.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/Email-20-1-.png": {
+      "role": "content.image"
+    },
+    "/assets/Emerald-Logo-RGB.png": {
+      "role": "brand.logo"
+    },
+    "/assets/Enterprise-Governance.svg": {
+      "role": "content.image"
+    },
+    "/assets/Enterprise-Security-1.svg": {
+      "role": "content.image"
+    },
+    "/assets/Enterprise-Support-1.png": {
+      "role": "content.image"
+    },
+    "/assets/Ethics-Hero-p-1600.png": {
+      "role": "hero.visual"
+    },
+    "/assets/Ethics-Hero.png": {
+      "role": "hero.visual"
+    },
+    "/assets/Favicon.png": {
+      "role": "content.image"
+    },
+    "/assets/Finance-1.png": {
+      "role": "content.image"
+    },
+    "/assets/Finance-2.png": {
+      "role": "content.image"
+    },
+    "/assets/Finance-3.png": {
+      "role": "content.image"
+    },
+    "/assets/Financial-Services-.avif": {
+      "role": "content.image"
+    },
+    "/assets/Forrester-TEI-min-p-1600.png": {
+      "role": "content.image"
+    },
+    "/assets/Forrester-TEI-min.png": {
+      "role": "content.image"
+    },
+    "/assets/Foundations.avif": {
+      "role": "content.image"
+    },
+    "/assets/Frame-201171280409.png": {
+      "role": "content.image"
+    },
+    "/assets/G2-2024---High-Performer.svg": {
+      "role": "content.image"
+    },
+    "/assets/G2-2024---Leader-Small-Business.svg": {
+      "role": "content.image"
+    },
+    "/assets/G2-2024---Leader.svg": {
+      "role": "content.image"
+    },
+    "/assets/G2-2024---Momentum-Leader.svg": {
+      "role": "content.image"
+    },
+    "/assets/GDPR.avif": {
+      "role": "content.image"
+    },
+    "/assets/GEO-AEO-FAQ-p-1600.jpg": {
+      "role": "content.image"
+    },
+    "/assets/GEO-AGENT-HOME.avif": {
+      "role": "content.image"
+    },
+    "/assets/GEO-Launch-Blog.png": {
+      "role": "content.image"
+    },
+    "/assets/Gayle-Troberman.png": {
+      "role": "content.image"
+    },
+    "/assets/Get-Support.avif": {
+      "role": "content.image"
+    },
+    "/assets/Governance-2.avif": {
+      "role": "content.image"
+    },
+    "/assets/Governance.avif": {
+      "role": "content.image"
+    },
+    "/assets/Grid-Cursor---Lifecycle.avif": {
+      "role": "content.image"
+    },
+    "/assets/Grid-Cursor---Performance.avif": {
+      "role": "content.image"
+    },
+    "/assets/Grid-Cursor---Product.avif": {
+      "role": "content.image"
+    },
+    "/assets/Grid-Cursor---SEO.avif": {
+      "role": "content.image"
+    },
+    "/assets/Grid-Illo-1.avif": {
+      "role": "content.image"
+    },
+    "/assets/Grid-Illo-2.avif": {
+      "role": "content.image"
+    },
+    "/assets/Grid-Illo-3.avif": {
+      "role": "content.image"
+    },
+    "/assets/Grid-Illo-4.avif": {
+      "role": "content.image"
+    },
+    "/assets/Grid-Illo.avif": {
+      "role": "content.image"
+    },
+    "/assets/Grid-Lifestyle-A.avif": {
+      "role": "content.image"
+    },
+    "/assets/Grid-Lifestyle-B.avif": {
+      "role": "content.image"
+    },
+    "/assets/Grid-Tab---Campaigns.avif": {
+      "role": "content.image"
+    },
+    "/assets/Grid-Tabs---Personalization.avif": {
+      "role": "content.image"
+    },
+    "/assets/Grid-Tabs---Product-Descriptions.avif": {
+      "role": "content.image"
+    },
+    "/assets/Grid-Tabs---SEO-AEO-GEO.avif": {
+      "role": "content.image"
+    },
+    "/assets/Grid-Uses---Campaigns.avif": {
+      "role": "content.image"
+    },
+    "/assets/Grid-Uses---GEO.avif": {
+      "role": "content.image"
+    },
+    "/assets/Grid-Uses---Personalization.avif": {
+      "role": "content.image"
+    },
+    "/assets/Grid-Uses---Product-Descriptions.avif": {
+      "role": "content.image"
+    },
+    "/assets/Grid-Video-BG.png": {
+      "role": "content.image"
+    },
+    "/assets/Grid.svg": {
+      "role": "content.image"
+    },
+    "/assets/Grids-Lined-Background.avif": {
+      "role": "content.image"
+    },
+    "/assets/Group-201171280311.png": {
+      "role": "content.image"
+    },
+    "/assets/Group-428.svg": {
+      "role": "content.image"
+    },
+    "/assets/Group-429.svg": {
+      "role": "content.image"
+    },
+    "/assets/Group-430.svg": {
+      "role": "content.image"
+    },
+    "/assets/Group-432.png": {
+      "role": "content.image"
+    },
+    "/assets/Guhan.png": {
+      "role": "content.image"
+    },
+    "/assets/Guided-Training-New.webp": {
+      "role": "content.image"
+    },
+    "/assets/HH_logo.webp": {
+      "role": "brand.logo"
+    },
+    "/assets/Hackathon.jpg": {
+      "role": "content.image"
+    },
+    "/assets/Harper_Collins_logo.webp": {
+      "role": "brand.logo"
+    },
+    "/assets/Healthcare-1.png": {
+      "role": "content.image"
+    },
+    "/assets/Healthcare-2.png": {
+      "role": "content.image"
+    },
+    "/assets/Healthcare-3.png": {
+      "role": "content.image"
+    },
+    "/assets/Healthcare-Life-Sciences-.avif": {
+      "role": "content.image"
+    },
+    "/assets/Healthcare-Triangle.png": {
+      "role": "content.image"
+    },
+    "/assets/Hitachi_logo.webp": {
+      "role": "brand.logo"
+    },
+    "/assets/Home-Agents-Plain.avif": {
+      "role": "content.image"
+    },
+    "/assets/Home-BV-Plain.avif": {
+      "role": "content.image"
+    },
+    "/assets/Home-CS-Plain.avif": {
+      "role": "content.image"
+    },
+    "/assets/Home-Depot.png": {
+      "role": "content.image"
+    },
+    "/assets/How-I-Used-Jasper-to-Create-the-State-of-AI-in-Marketing-202.png": {
+      "role": "content.image"
+    },
+    "/assets/How-to-Create-Non-Commodity-Content-That-Wins-AI-Search-Header.png": {
+      "role": "content.image"
+    },
+    "/assets/How-to-Produce-Off-Domain-Content-that-AI-Engines-Actually-Cite.png": {
+      "role": "content.image"
+    },
+    "/assets/HyperCUBEd-blog-C-p-1600.png": {
+      "role": "content.image"
+    },
+    "/assets/IHeartMedia_logo.webp": {
+      "role": "brand.logo"
+    },
+    "/assets/IMG_2445-3--min.avif": {
+      "role": "content.image"
+    },
+    "/assets/IMG_2471.avif": {
+      "role": "content.image"
+    },
+    "/assets/IMG_3311.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/IQ-BG-New.svg": {
+      "role": "background.texture"
+    },
+    "/assets/Icon---Checkmark-Circle.svg": {
+      "role": "content.image"
+    },
+    "/assets/Icon-Tooltip.svg": {
+      "role": "content.image"
+    },
+    "/assets/Images-Slider-BG.avif": {
+      "role": "content.image"
+    },
+    "/assets/Instagram.png": {
+      "role": "content.image"
+    },
+    "/assets/Integrated.avif": {
+      "role": "content.image"
+    },
+    "/assets/Introducing-Product-IQ-p-1600.png": {
+      "role": "content.image"
+    },
+    "/assets/JSON-20Schema.png": {
+      "role": "content.image"
+    },
+    "/assets/January-product-update-p-1600.png": {
+      "role": "content.image"
+    },
+    "/assets/Jasper-20momentum-20post.png": {
+      "role": "content.image"
+    },
+    "/assets/Jasper-Announcement-CMO-CFO.png": {
+      "role": "content.image"
+    },
+    "/assets/Jasper-Blog.avif": {
+      "role": "content.image"
+    },
+    "/assets/Jasper-Grid.avif": {
+      "role": "content.image"
+    },
+    "/assets/Jasper-Logo-Square.svg": {
+      "role": "brand.logo"
+    },
+    "/assets/Jasper-integrates-with-Salesforce-Marketing-Cloud.png": {
+      "role": "content.image"
+    },
+    "/assets/Jasper-search-use-cases-blog.png": {
+      "role": "content.image"
+    },
+    "/assets/Jasper-x-BMC-Customer-Story-Header.png": {
+      "role": "content.image"
+    },
+    "/assets/Jasper-x-claude-Blog-Header-p-1600.png": {
+      "role": "content.image"
+    },
+    "/assets/Jasper-x-semrush-p-1600.png": {
+      "role": "content.image"
+    },
+    "/assets/Jasper_2025-06-23T20-3A16-3A22.149Z_upscaled-p-1600.webp": {
+      "role": "content.image"
+    },
+    "/assets/Jessica-20Hreha-1.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/Jessica_headshots-finals-17-20-1-.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/July-2026-Header-p-1600.png": {
+      "role": "content.image"
+    },
+    "/assets/June-2026-Blog-Header-p-1600.png": {
+      "role": "content.image"
+    },
+    "/assets/KB-Hero.avif": {
+      "role": "hero.visual"
+    },
+    "/assets/Kelly_logo.webp": {
+      "role": "brand.logo"
+    },
+    "/assets/Ken-Boney.png": {
+      "role": "content.image"
+    },
+    "/assets/Knowledge-Base-Connectors-blog.png": {
+      "role": "content.image"
+    },
+    "/assets/Knowledge-Center.avif": {
+      "role": "content.image"
+    },
+    "/assets/Kyle-Byers-headshot-2-1-p-1600.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/Kyndryl.png": {
+      "role": "content.image"
+    },
+    "/assets/LLM-Agnostic.svg": {
+      "role": "content.image"
+    },
+    "/assets/LinkedIn-Q-A-p-1600.png": {
+      "role": "content.image"
+    },
+    "/assets/Linkedin-20-1-.png": {
+      "role": "content.image"
+    },
+    "/assets/Lisa-Gately.jpg": {
+      "role": "content.image"
+    },
+    "/assets/Localsearch.png": {
+      "role": "content.image"
+    },
+    "/assets/Logo_BMC_Software.png": {
+      "role": "brand.logo"
+    },
+    "/assets/Loreal-Lynch-1-.png": {
+      "role": "content.image"
+    },
+    "/assets/Loreal_logo.webp": {
+      "role": "brand.logo"
+    },
+    "/assets/MCP-Hero-A.avif": {
+      "role": "hero.visual"
+    },
+    "/assets/MCP-Hero-B.png": {
+      "role": "hero.visual"
+    },
+    "/assets/MERGE_Logo.jpeg": {
+      "role": "brand.logo"
+    },
+    "/assets/Madelene-Glomsten.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/Mars_logo.webp": {
+      "role": "brand.logo"
+    },
+    "/assets/Mason-Johnson.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/McLendon-Photography-D2-0317-min.avif": {
+      "role": "content.image"
+    },
+    "/assets/Media-1.png": {
+      "role": "content.image"
+    },
+    "/assets/Media-2.png": {
+      "role": "content.image"
+    },
+    "/assets/Media-3.png": {
+      "role": "content.image"
+    },
+    "/assets/Media-Entertainment-.avif": {
+      "role": "content.image"
+    },
+    "/assets/Meghan-20Keaney-20Anderson.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/Merge.png": {
+      "role": "content.image"
+    },
+    "/assets/Meta-20Description.png": {
+      "role": "content.image"
+    },
+    "/assets/Monet.png": {
+      "role": "content.image"
+    },
+    "/assets/Mongoose-Brand-Building-Blocks_3.png": {
+      "role": "content.image"
+    },
+    "/assets/Monochromatic-Asana-Logo.png": {
+      "role": "brand.logo"
+    },
+    "/assets/Monochromatic-Slack-Logo-2.png": {
+      "role": "brand.logo"
+    },
+    "/assets/Morning_Star_logo.webp": {
+      "role": "brand.logo"
+    },
+    "/assets/NA.svg": {
+      "role": "content.image"
+    },
+    "/assets/Nav---Company.avif": {
+      "role": "content.image"
+    },
+    "/assets/Neil-Grasso-Bonterra.png": {
+      "role": "content.image"
+    },
+    "/assets/Netapp.png": {
+      "role": "content.image"
+    },
+    "/assets/Noom_logo.webp": {
+      "role": "brand.logo"
+    },
+    "/assets/ODFL-Blog-Hero-min.png": {
+      "role": "hero.visual"
+    },
+    "/assets/OpenGraph---Grid-min.png": {
+      "role": "content.image"
+    },
+    "/assets/OpenGraph---MCP.png": {
+      "role": "content.image"
+    },
+    "/assets/OpenGraph-Scaling-AI-for-the-Enterprise.webp": {
+      "role": "content.image"
+    },
+    "/assets/Opengraph---GEO.png": {
+      "role": "content.image"
+    },
+    "/assets/Optimization-AEO.avif": {
+      "role": "content.image"
+    },
+    "/assets/Optimization-GEO.avif": {
+      "role": "content.image"
+    },
+    "/assets/Optimization-SEO.avif": {
+      "role": "content.image"
+    },
+    "/assets/Optimization.png": {
+      "role": "content.image"
+    },
+    "/assets/PCI.avif": {
+      "role": "content.image"
+    },
+    "/assets/PGIM-Logo.avif": {
+      "role": "brand.logo"
+    },
+    "/assets/Paraphrasing-20-1-.png": {
+      "role": "content.image"
+    },
+    "/assets/Patrick-headshot.png": {
+      "role": "content.image"
+    },
+    "/assets/Permission-Settings.avif": {
+      "role": "content.image"
+    },
+    "/assets/Peter-So.avif": {
+      "role": "content.image"
+    },
+    "/assets/Photo-with-Overaly.png": {
+      "role": "content.image"
+    },
+    "/assets/Pink-Pattern.svg": {
+      "role": "background.texture"
+    },
+    "/assets/Pipe-Agents.avif": {
+      "role": "content.image"
+    },
+    "/assets/Pipe-Closing-CTA.avif": {
+      "role": "content.image"
+    },
+    "/assets/Pipe-Cursors.avif": {
+      "role": "content.image"
+    },
+    "/assets/Pipe-Grids-Lined-BG.avif": {
+      "role": "content.image"
+    },
+    "/assets/Pixel_Asana.svg": {
+      "role": "content.image"
+    },
+    "/assets/Pixel_ChatGPT.svg": {
+      "role": "content.image"
+    },
+    "/assets/Pixel_Claude.svg": {
+      "role": "content.image"
+    },
+    "/assets/Pixel_Copilot.svg": {
+      "role": "content.image"
+    },
+    "/assets/Pixel_Drive.svg": {
+      "role": "content.image"
+    },
+    "/assets/Pixel_Gemini.svg": {
+      "role": "content.image"
+    },
+    "/assets/Pixel_Monday.svg": {
+      "role": "content.image"
+    },
+    "/assets/Pixel_Notion.svg": {
+      "role": "content.image"
+    },
+    "/assets/Pixel_SEMrush.svg": {
+      "role": "content.image"
+    },
+    "/assets/Pixel_Sharepoint.svg": {
+      "role": "content.image"
+    },
+    "/assets/Press.png": {
+      "role": "content.image"
+    },
+    "/assets/Product-20Descriptions.png": {
+      "role": "content.image"
+    },
+    "/assets/Product-Updates-Carousel-A_compressed.png": {
+      "role": "content.image"
+    },
+    "/assets/ProfServ-1.png": {
+      "role": "content.image"
+    },
+    "/assets/ProfServ-2.png": {
+      "role": "content.image"
+    },
+    "/assets/ProfServ-3.png": {
+      "role": "content.image"
+    },
+    "/assets/Professional-Services-.avif": {
+      "role": "content.image"
+    },
+    "/assets/Prudential_logo.webp": {
+      "role": "brand.logo"
+    },
+    "/assets/Q-A-McKinsey-p-1600.png": {
+      "role": "content.image"
+    },
+    "/assets/Quantifying-AI-A-p-1600.jpg": {
+      "role": "content.image"
+    },
+    "/assets/R2405G_WANG.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/Raakhi-Agrawal.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/Rahul-Sabnis.png": {
+      "role": "content.image"
+    },
+    "/assets/Research.png": {
+      "role": "content.image"
+    },
+    "/assets/Retail-1.png": {
+      "role": "content.image"
+    },
+    "/assets/Retail-2.png": {
+      "role": "content.image"
+    },
+    "/assets/Retail-3.png": {
+      "role": "content.image"
+    },
+    "/assets/Retail-Consumer-Goods-.avif": {
+      "role": "content.image"
+    },
+    "/assets/Riso-1.png": {
+      "role": "content.image"
+    },
+    "/assets/Roles-Card-Admin.webp": {
+      "role": "content.image"
+    },
+    "/assets/Roles-Card-Developer.webp": {
+      "role": "content.image"
+    },
+    "/assets/Roles-Card-Manager.webp": {
+      "role": "content.image"
+    },
+    "/assets/Roles-Card-Member.webp": {
+      "role": "content.image"
+    },
+    "/assets/Roles-Hero-Bottom.png": {
+      "role": "hero.visual"
+    },
+    "/assets/Roles-Hero-Top-Admin.png": {
+      "role": "hero.visual"
+    },
+    "/assets/Roles-Hero-Top-Developer.png": {
+      "role": "hero.visual"
+    },
+    "/assets/Roles-Hero-Top-Manager.png": {
+      "role": "hero.visual"
+    },
+    "/assets/Roles-Hero-Top-Member.png": {
+      "role": "hero.visual"
+    },
+    "/assets/Rowan.png": {
+      "role": "content.image"
+    },
+    "/assets/SEO-Hero-NEw-min-p-1600.avif": {
+      "role": "hero.visual"
+    },
+    "/assets/SHIP-FASTER---INGEST.avif": {
+      "role": "content.image"
+    },
+    "/assets/SOAI-Blog-Header.png": {
+      "role": "content.image"
+    },
+    "/assets/Sage.png": {
+      "role": "content.image"
+    },
+    "/assets/Sanofi-Madelene-Glomsten.png": {
+      "role": "content.image"
+    },
+    "/assets/Sanofi_logo.webp": {
+      "role": "brand.logo"
+    },
+    "/assets/Sara-Mo-Vanacht.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/Savista-Logo-Gray.png": {
+      "role": "brand.logo"
+    },
+    "/assets/Screenshot-202023-08-29-20at-2011.03.01-20AM.png": {
+      "role": "content.image"
+    },
+    "/assets/Screenshot-2024-12-18-at-3.52.06-PM-min.avif": {
+      "role": "content.image"
+    },
+    "/assets/Screenshot-2024-12-18-at-3.52.44-PM-min.avif": {
+      "role": "content.image"
+    },
+    "/assets/Screenshot-2024-12-18-at-3.55.13-PM-min.avif": {
+      "role": "content.image"
+    },
+    "/assets/Screenshot-2025-05-20-at-12.44.07-PM-1.png": {
+      "role": "content.image"
+    },
+    "/assets/Screenshot-2026-04-15-at-3.46.04-PM.png": {
+      "role": "content.image"
+    },
+    "/assets/SeanOwens.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/Secure-Deployment.png": {
+      "role": "content.image"
+    },
+    "/assets/Security-Page---Privacy.png": {
+      "role": "content.image"
+    },
+    "/assets/Security-Page---Security.png": {
+      "role": "content.image"
+    },
+    "/assets/Security-Privacy.png": {
+      "role": "content.image"
+    },
+    "/assets/Security.avif": {
+      "role": "content.image"
+    },
+    "/assets/Shellie-Johnson-Sage.avif": {
+      "role": "content.image"
+    },
+    "/assets/Small-20Thumbnail-2071.png": {
+      "role": "content.image"
+    },
+    "/assets/Stars-Flame.png": {
+      "role": "content.image"
+    },
+    "/assets/State-20of-20AI-20--20blog-20image-20-1-.png": {
+      "role": "content.image"
+    },
+    "/assets/SteveKearns-BlogHeader-Announcement.png": {
+      "role": "content.image"
+    },
+    "/assets/Stories-Logo-Adidas.svg": {
+      "role": "brand.logo"
+    },
+    "/assets/Stories-Logo-Anthropologie.svg": {
+      "role": "brand.logo"
+    },
+    "/assets/Stories-Logo-Avery-Dennison.svg": {
+      "role": "brand.logo"
+    },
+    "/assets/Stories-Logo-Cushman.svg": {
+      "role": "brand.logo"
+    },
+    "/assets/Stories-Logo-EPAM.svg": {
+      "role": "brand.logo"
+    },
+    "/assets/Stories-Logo-Opella.svg": {
+      "role": "brand.logo"
+    },
+    "/assets/Stories-Logo-PGIM.svg": {
+      "role": "brand.logo"
+    },
+    "/assets/Stories-Logo-ServiceTitan.svg": {
+      "role": "brand.logo"
+    },
+    "/assets/Stories-Logo-Ulta.svg": {
+      "role": "brand.logo"
+    },
+    "/assets/Story.png": {
+      "role": "content.image"
+    },
+    "/assets/Studio-20Launch-20G-min.png": {
+      "role": "content.image"
+    },
+    "/assets/Studio-Hero-1.avif": {
+      "role": "hero.visual"
+    },
+    "/assets/Studio-Hero-10.avif": {
+      "role": "hero.visual"
+    },
+    "/assets/Studio-Hero-11.avif": {
+      "role": "hero.visual"
+    },
+    "/assets/Studio-Hero-12.avif": {
+      "role": "hero.visual"
+    },
+    "/assets/Studio-Hero-13.avif": {
+      "role": "hero.visual"
+    },
+    "/assets/Studio-Hero-2.avif": {
+      "role": "hero.visual"
+    },
+    "/assets/Studio-Hero-3.avif": {
+      "role": "hero.visual"
+    },
+    "/assets/Studio-Hero-4.avif": {
+      "role": "hero.visual"
+    },
+    "/assets/Studio-Hero-5.avif": {
+      "role": "hero.visual"
+    },
+    "/assets/Studio-Hero-6.avif": {
+      "role": "hero.visual"
+    },
+    "/assets/Studio-Hero-7.avif": {
+      "role": "hero.visual"
+    },
+    "/assets/Studio-Hero-8.avif": {
+      "role": "hero.visual"
+    },
+    "/assets/Studio-Hero-9.avif": {
+      "role": "hero.visual"
+    },
+    "/assets/Studio.avif": {
+      "role": "content.image"
+    },
+    "/assets/Supercell_logo.webp": {
+      "role": "brand.logo"
+    },
+    "/assets/T04GNA7UB-U06GPSQ234Y-aa582a2908c9-192.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/T04GNA7UB-U07ET5JEEKT-8a49f0242dec-512.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/Team-Settings.avif": {
+      "role": "content.image"
+    },
+    "/assets/Tech-1.png": {
+      "role": "content.image"
+    },
+    "/assets/Tech-2.png": {
+      "role": "content.image"
+    },
+    "/assets/Tech-3.png": {
+      "role": "content.image"
+    },
+    "/assets/Technology-.avif": {
+      "role": "content.image"
+    },
+    "/assets/Timothy-Young-1-.png": {
+      "role": "content.image"
+    },
+    "/assets/Timothy-Young.png": {
+      "role": "content.image"
+    },
+    "/assets/TomHeadshot-45.jpg": {
+      "role": "content.image"
+    },
+    "/assets/TomHeadshot-square.jpg": {
+      "role": "content.image"
+    },
+    "/assets/Top-Left.avif": {
+      "role": "content.image"
+    },
+    "/assets/Top-Right.avif": {
+      "role": "content.image"
+    },
+    "/assets/Translation-Agent.png": {
+      "role": "content.image"
+    },
+    "/assets/Translation-Blog-Image.png": {
+      "role": "content.image"
+    },
+    "/assets/Trusted-Media-Brands-logo.png": {
+      "role": "brand.logo"
+    },
+    "/assets/U.S.-Bank-John-Dotto.png": {
+      "role": "content.image"
+    },
+    "/assets/USBank.png": {
+      "role": "content.image"
+    },
+    "/assets/Ulta.png": {
+      "role": "content.image"
+    },
+    "/assets/Usage-dashboard.avif": {
+      "role": "content.image"
+    },
+    "/assets/VMWare.png": {
+      "role": "content.image"
+    },
+    "/assets/WF-Logo.svg": {
+      "role": "brand.logo"
+    },
+    "/assets/WalkMe.svg": {
+      "role": "content.image"
+    },
+    "/assets/Walkme.png": {
+      "role": "content.image"
+    },
+    "/assets/Wayfair_logo.webp": {
+      "role": "brand.logo"
+    },
+    "/assets/Webclip.png": {
+      "role": "content.image"
+    },
+    "/assets/Wesley-Financial.png": {
+      "role": "content.image"
+    },
+    "/assets/What-is-GEO-p-1600.png": {
+      "role": "content.image"
+    },
+    "/assets/Whats-new-april-2026-p-1600.png": {
+      "role": "content.image"
+    },
+    "/assets/White-Down-Arrow.svg": {
+      "role": "content.image"
+    },
+    "/assets/Youtube.png": {
+      "role": "content.image"
+    },
+    "/assets/Zach-Anderson-Square.png": {
+      "role": "content.image"
+    },
+    "/assets/ZoomInfo.png": {
+      "role": "content.image"
+    },
+    "/assets/accelerate-content-AI-reword-generators-blog.png": {
+      "role": "content.image"
+    },
+    "/assets/agent-optimization.webp": {
+      "role": "product.screenshot"
+    },
+    "/assets/agent-personalization.webp": {
+      "role": "product.screenshot"
+    },
+    "/assets/agent-research.webp": {
+      "role": "product.screenshot"
+    },
+    "/assets/agents.png": {
+      "role": "content.image"
+    },
+    "/assets/agents_header_triangle.svg": {
+      "role": "content.image"
+    },
+    "/assets/ai-bg-item.png": {
+      "role": "background.texture"
+    },
+    "/assets/ai-human-agreement.webp": {
+      "role": "content.image"
+    },
+    "/assets/alert-triangle.svg": {
+      "role": "content.image"
+    },
+    "/assets/announcement-01.svg": {
+      "role": "content.image"
+    },
+    "/assets/api-illo-1.webp": {
+      "role": "content.image"
+    },
+    "/assets/api-illo-2.webp": {
+      "role": "content.image"
+    },
+    "/assets/apply-style-guide.png": {
+      "role": "content.image"
+    },
+    "/assets/arrows-up.svg": {
+      "role": "content.image"
+    },
+    "/assets/audience.avif": {
+      "role": "content.image"
+    },
+    "/assets/audiences.png": {
+      "role": "content.image"
+    },
+    "/assets/avatar-headshots.png": {
+      "role": "content.image"
+    },
+    "/assets/avatar-strong-colours-1.webp": {
+      "role": "content.image"
+    },
+    "/assets/avatar-strong-colours-2.webp": {
+      "role": "content.image"
+    },
+    "/assets/avatar-strong-colours.webp": {
+      "role": "content.image"
+    },
+    "/assets/b-MIC-2024-category-Artifical-Intelligence-1.webp": {
+      "role": "content.image"
+    },
+    "/assets/background.webp": {
+      "role": "content.image"
+    },
+    "/assets/bcg-square-light.svg": {
+      "role": "content.image"
+    },
+    "/assets/benchmarking-tool.png": {
+      "role": "content.image"
+    },
+    "/assets/best-practises.png": {
+      "role": "content.image"
+    },
+    "/assets/bg-flame-circles.svg": {
+      "role": "background.texture"
+    },
+    "/assets/bg-orange.png": {
+      "role": "background.texture"
+    },
+    "/assets/bg-sticky-lines.svg": {
+      "role": "background.texture"
+    },
+    "/assets/bg.avif": {
+      "role": "content.image"
+    },
+    "/assets/bg_flame_circles.svg": {
+      "role": "content.image"
+    },
+    "/assets/bg_sticky_lines.svg": {
+      "role": "content.image"
+    },
+    "/assets/blog-CMOs-ICs-AI-p-1600.jpg": {
+      "role": "content.image"
+    },
+    "/assets/blog-Digital-Marketing-s-New-Operating-Model-p-1600.png": {
+      "role": "content.image"
+    },
+    "/assets/blue-triangle.png": {
+      "role": "content.image"
+    },
+    "/assets/bonterra-logo-horizontal.png": {
+      "role": "brand.logo"
+    },
+    "/assets/bonterra_tech_logo.jpg": {
+      "role": "brand.logo"
+    },
+    "/assets/book-open.svg": {
+      "role": "content.image"
+    },
+    "/assets/bookmark-check.svg": {
+      "role": "content.image"
+    },
+    "/assets/box.svg": {
+      "role": "content.image"
+    },
+    "/assets/brand-card.webp": {
+      "role": "content.image"
+    },
+    "/assets/brand-cursor.webp": {
+      "role": "content.image"
+    },
+    "/assets/brand-headshot.webp": {
+      "role": "content.image"
+    },
+    "/assets/brand-iq-1.png": {
+      "role": "content.image"
+    },
+    "/assets/brand-iq-2.png": {
+      "role": "content.image"
+    },
+    "/assets/brand-iq-3.png": {
+      "role": "content.image"
+    },
+    "/assets/brand-iq-floater.png": {
+      "role": "content.image"
+    },
+    "/assets/brand-iq-left.png": {
+      "role": "content.image"
+    },
+    "/assets/brand-iq-right.avif": {
+      "role": "content.image"
+    },
+    "/assets/brand-iq-vis-style.jpg": {
+      "role": "content.image"
+    },
+    "/assets/brand-iq-vis-visual.jpg": {
+      "role": "content.image"
+    },
+    "/assets/brand-iq-vis-voice.jpg": {
+      "role": "content.image"
+    },
+    "/assets/brand-iq.png": {
+      "role": "content.image"
+    },
+    "/assets/brand-person-role.webp": {
+      "role": "content.image"
+    },
+    "/assets/brand-person.webp": {
+      "role": "content.image"
+    },
+    "/assets/brand-voice-dash-2.png": {
+      "role": "content.image"
+    },
+    "/assets/brand_iq-floater.png": {
+      "role": "content.image"
+    },
+    "/assets/brandvoice-hero.svg": {
+      "role": "hero.visual"
+    },
+    "/assets/briefcase-01.svg": {
+      "role": "content.image"
+    },
+    "/assets/c193a4876faf12c52e3acbd4fdd158f7e914a6cb-p-1600.png": {
+      "role": "content.image"
+    },
+    "/assets/c75a9347ce7fed3ebbaaeb3d84c7504b_closing_circles.svg": {
+      "role": "content.image"
+    },
+    "/assets/calendar-date.svg": {
+      "role": "content.image"
+    },
+    "/assets/camera-plus.svg": {
+      "role": "content.image"
+    },
+    "/assets/canvas-bg.webp": {
+      "role": "content.image"
+    },
+    "/assets/canvas-chat-default.webp": {
+      "role": "content.image"
+    },
+    "/assets/canvas-chat-new2.webp": {
+      "role": "content.image"
+    },
+    "/assets/canvas-chat.webp": {
+      "role": "content.image"
+    },
+    "/assets/canvas-chat1.webp": {
+      "role": "content.image"
+    },
+    "/assets/canvas-chat2.webp": {
+      "role": "content.image"
+    },
+    "/assets/canvas-chat4.webp": {
+      "role": "content.image"
+    },
+    "/assets/canvas-chat6.webp": {
+      "role": "content.image"
+    },
+    "/assets/canvas-chat7.webp": {
+      "role": "content.image"
+    },
+    "/assets/canvas-chat8.webp": {
+      "role": "content.image"
+    },
+    "/assets/canvas-cursor-1.png": {
+      "role": "content.image"
+    },
+    "/assets/canvas-cursor-2.png": {
+      "role": "content.image"
+    },
+    "/assets/canvas-head-bg.png": {
+      "role": "content.image"
+    },
+    "/assets/canvas-seo.webp": {
+      "role": "content.image"
+    },
+    "/assets/canvas.png": {
+      "role": "content.image"
+    },
+    "/assets/cardiac-cowboys-blog.png": {
+      "role": "content.image"
+    },
+    "/assets/chart-breakout-square.svg": {
+      "role": "content.image"
+    },
+    "/assets/check-style-guide.png": {
+      "role": "content.image"
+    },
+    "/assets/check.svg": {
+      "role": "content.image"
+    },
+    "/assets/ckaundart_headshot.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/claude.avif": {
+      "role": "content.image"
+    },
+    "/assets/closing-circles.svg": {
+      "role": "content.image"
+    },
+    "/assets/closing-photo-1.avif": {
+      "role": "content.image"
+    },
+    "/assets/closing-photo-overlay.avif": {
+      "role": "content.image"
+    },
+    "/assets/closing_circles.svg": {
+      "role": "content.image"
+    },
+    "/assets/closing_photo_overlay.avif": {
+      "role": "content.image"
+    },
+    "/assets/company-careers.avif": {
+      "role": "content.image"
+    },
+    "/assets/company-dna-bg-img.png": {
+      "role": "background.texture"
+    },
+    "/assets/content-card.webp": {
+      "role": "content.image"
+    },
+    "/assets/content-cursor.webp": {
+      "role": "content.image"
+    },
+    "/assets/content-freshness-header.png": {
+      "role": "content.image"
+    },
+    "/assets/content-headshot.webp": {
+      "role": "content.image"
+    },
+    "/assets/content-marketer.webp": {
+      "role": "content.image"
+    },
+    "/assets/content-person.webp": {
+      "role": "content.image"
+    },
+    "/assets/contour-green.png": {
+      "role": "content.image"
+    },
+    "/assets/contrast-01.svg": {
+      "role": "content.image"
+    },
+    "/assets/create-panel-1.webp": {
+      "role": "content.image"
+    },
+    "/assets/create-panel-2.webp": {
+      "role": "content.image"
+    },
+    "/assets/create-panel-3.webp": {
+      "role": "content.image"
+    },
+    "/assets/create-panel-4.webp": {
+      "role": "content.image"
+    },
+    "/assets/create-panel-5.webp": {
+      "role": "content.image"
+    },
+    "/assets/create-panel.webp": {
+      "role": "content.image"
+    },
+    "/assets/cs-akbank.svg": {
+      "role": "customer.logo"
+    },
+    "/assets/cs-bmc-new.png": {
+      "role": "customer.logo"
+    },
+    "/assets/cs-bmc.png": {
+      "role": "customer.logo"
+    },
+    "/assets/cs-bonterra-new.png": {
+      "role": "customer.logo"
+    },
+    "/assets/cs-bonterra.png": {
+      "role": "customer.logo"
+    },
+    "/assets/cs-cushman.png": {
+      "role": "customer.logo"
+    },
+    "/assets/cs-emerald-new.png": {
+      "role": "customer.logo"
+    },
+    "/assets/cs-emeraldx.png": {
+      "role": "customer.logo"
+    },
+    "/assets/cs-iheart-new.svg": {
+      "role": "customer.logo"
+    },
+    "/assets/cs-iheart.svg": {
+      "role": "customer.logo"
+    },
+    "/assets/cs-merge-new.jpeg": {
+      "role": "customer.logo"
+    },
+    "/assets/cs-merge.jpeg": {
+      "role": "customer.logo"
+    },
+    "/assets/cs-mongoose-new.png": {
+      "role": "customer.logo"
+    },
+    "/assets/cs-mongoose.png": {
+      "role": "customer.logo"
+    },
+    "/assets/cs-odfl-new.png": {
+      "role": "customer.logo"
+    },
+    "/assets/cs-olddominion.png": {
+      "role": "customer.logo"
+    },
+    "/assets/cs-savista-new.png": {
+      "role": "customer.logo"
+    },
+    "/assets/cs-savista.png": {
+      "role": "customer.logo"
+    },
+    "/assets/cs-tmb-new.png": {
+      "role": "customer.logo"
+    },
+    "/assets/cs-tmb.png": {
+      "role": "customer.logo"
+    },
+    "/assets/cs-verto-new.png": {
+      "role": "customer.logo"
+    },
+    "/assets/cs-vertodigital.png": {
+      "role": "customer.logo"
+    },
+    "/assets/cs-walkme-new.svg": {
+      "role": "customer.logo"
+    },
+    "/assets/cs-walkme.svg": {
+      "role": "customer.logo"
+    },
+    "/assets/cs-webster-new.svg": {
+      "role": "customer.logo"
+    },
+    "/assets/cs-websterfirst.svg": {
+      "role": "customer.logo"
+    },
+    "/assets/cta-bg-p-1600.avif": {
+      "role": "cta.decoration"
+    },
+    "/assets/cta-bg.avif": {
+      "role": "cta.decoration"
+    },
+    "/assets/cta-decoration-1.avif": {
+      "role": "cta.decoration"
+    },
+    "/assets/cta-decoration-2-p-1600.avif": {
+      "role": "cta.decoration"
+    },
+    "/assets/cta-decoration-2.avif": {
+      "role": "cta.decoration"
+    },
+    "/assets/cta-decoration-3-p-1600.png": {
+      "role": "cta.decoration"
+    },
+    "/assets/cta-decoration-3.png": {
+      "role": "cta.decoration"
+    },
+    "/assets/cta-nav-avatar-1.png": {
+      "role": "cta.decoration"
+    },
+    "/assets/cta-nav-avatar-2.png": {
+      "role": "cta.decoration"
+    },
+    "/assets/cta-nav-avatar-3.png": {
+      "role": "cta.decoration"
+    },
+    "/assets/cta-user.avif": {
+      "role": "cta.decoration"
+    },
+    "/assets/ctrs.avif": {
+      "role": "content.image"
+    },
+    "/assets/cube-01.svg": {
+      "role": "content.image"
+    },
+    "/assets/cursor-1.webp": {
+      "role": "content.image"
+    },
+    "/assets/cursor-2.webp": {
+      "role": "content.image"
+    },
+    "/assets/cursor.webp": {
+      "role": "content.image"
+    },
+    "/assets/demo-cta-img.jpg": {
+      "role": "content.image"
+    },
+    "/assets/demo_cta_img.jpg": {
+      "role": "content.image"
+    },
+    "/assets/digital-person.webp": {
+      "role": "content.image"
+    },
+    "/assets/dot-texture-orange.svg": {
+      "role": "background.texture"
+    },
+    "/assets/dots-wrap-1.png": {
+      "role": "content.image"
+    },
+    "/assets/eb-aeo-geo.png": {
+      "role": "resource.cover"
+    },
+    "/assets/eb-aeo-seo.png": {
+      "role": "resource.cover"
+    },
+    "/assets/eb-b2c-search.png": {
+      "role": "resource.cover"
+    },
+    "/assets/eb-cmo-guide.png": {
+      "role": "resource.cover"
+    },
+    "/assets/eb-content-pipeline.png": {
+      "role": "resource.cover"
+    },
+    "/assets/eb-gartner-flex.png": {
+      "role": "resource.cover"
+    },
+    "/assets/eb-geo-playbook.png": {
+      "role": "resource.cover"
+    },
+    "/assets/eb-influence-eng.png": {
+      "role": "resource.cover"
+    },
+    "/assets/eb-owning-ai-search.png": {
+      "role": "resource.cover"
+    },
+    "/assets/eb-pilot-ai.png": {
+      "role": "resource.cover"
+    },
+    "/assets/eb-reinventing.png": {
+      "role": "resource.cover"
+    },
+    "/assets/eb-rfp-to-roi.png": {
+      "role": "resource.cover"
+    },
+    "/assets/eb-scaling-ai.png": {
+      "role": "resource.cover"
+    },
+    "/assets/eb-soaim-2025.png": {
+      "role": "resource.cover"
+    },
+    "/assets/eb-soaim-2026.png": {
+      "role": "resource.cover"
+    },
+    "/assets/eb-tei-report.png": {
+      "role": "resource.cover"
+    },
+    "/assets/elaina-shekhter-EPAM.avif": {
+      "role": "content.image"
+    },
+    "/assets/endpoint-clean-up.png": {
+      "role": "content.image"
+    },
+    "/assets/endpoint-generate-alt-text.png": {
+      "role": "content.image"
+    },
+    "/assets/endpoint-packshot.png": {
+      "role": "content.image"
+    },
+    "/assets/endpoint-remove-background.png": {
+      "role": "content.image"
+    },
+    "/assets/endpoint-remove-text.png": {
+      "role": "content.image"
+    },
+    "/assets/endpoint-replace-background.png": {
+      "role": "content.image"
+    },
+    "/assets/endpoint-uncrop.png": {
+      "role": "content.image"
+    },
+    "/assets/endpoint-upscale.png": {
+      "role": "content.image"
+    },
+    "/assets/field-card.webp": {
+      "role": "content.image"
+    },
+    "/assets/field-cursor.webp": {
+      "role": "content.image"
+    },
+    "/assets/field-marketer.webp": {
+      "role": "content.image"
+    },
+    "/assets/field-marketing-avatar.png": {
+      "role": "content.image"
+    },
+    "/assets/file-check.svg": {
+      "role": "content.image"
+    },
+    "/assets/file-search.svg": {
+      "role": "content.image"
+    },
+    "/assets/footer-img.avif": {
+      "role": "content.image"
+    },
+    "/assets/footer-texture-p-1600.png": {
+      "role": "background.texture"
+    },
+    "/assets/footer-texture-p-3200.png": {
+      "role": "background.texture"
+    },
+    "/assets/footer-texture.png": {
+      "role": "background.texture"
+    },
+    "/assets/fullcolorlogo-100x100.png": {
+      "role": "brand.logo"
+    },
+    "/assets/futureofb2c.png": {
+      "role": "content.image"
+    },
+    "/assets/gGOBvb-K_400x400.jpg": {
+      "role": "content.image"
+    },
+    "/assets/gMg-4BibSw6bY0xbhCcLbA.png": {
+      "role": "content.image"
+    },
+    "/assets/gemini-active.avif": {
+      "role": "content.image"
+    },
+    "/assets/gemini-headshot.avif": {
+      "role": "content.image"
+    },
+    "/assets/gemini.avif": {
+      "role": "content.image"
+    },
+    "/assets/globe-03.svg": {
+      "role": "content.image"
+    },
+    "/assets/goal-driven-agents-blog-p-1600.png": {
+      "role": "content.image"
+    },
+    "/assets/grid-bg.avif": {
+      "role": "background.texture"
+    },
+    "/assets/grid-hero-pixels.svg": {
+      "role": "hero.visual"
+    },
+    "/assets/grid-hero-ui.png": {
+      "role": "hero.visual"
+    },
+    "/assets/group-imgae.jpg": {
+      "role": "content.image"
+    },
+    "/assets/headshot-10.webp": {
+      "role": "content.image"
+    },
+    "/assets/headshot-2.webp": {
+      "role": "content.image"
+    },
+    "/assets/headshot-7.webp": {
+      "role": "content.image"
+    },
+    "/assets/headshot-8.webp": {
+      "role": "content.image"
+    },
+    "/assets/headshot.png": {
+      "role": "content.image"
+    },
+    "/assets/hero-b-bottom.webp": {
+      "role": "hero.visual"
+    },
+    "/assets/heyjasperai_logo.jpg": {
+      "role": "brand.logo"
+    },
+    "/assets/hire-content-engineer-role-p-1600.jpg": {
+      "role": "content.image"
+    },
+    "/assets/home-smile.svg": {
+      "role": "content.image"
+    },
+    "/assets/iHeart-New.svg": {
+      "role": "content.image"
+    },
+    "/assets/iHeartMedia-Gayle-Troberman.png": {
+      "role": "content.image"
+    },
+    "/assets/image-api-hero.png": {
+      "role": "hero.visual"
+    },
+    "/assets/images-1.jpg": {
+      "role": "content.image"
+    },
+    "/assets/images-2.jpg": {
+      "role": "content.image"
+    },
+    "/assets/images-api.png": {
+      "role": "content.image"
+    },
+    "/assets/images.jpg": {
+      "role": "content.image"
+    },
+    "/assets/ind-financial.avif": {
+      "role": "content.image"
+    },
+    "/assets/ind-healthcare.avif": {
+      "role": "content.image"
+    },
+    "/assets/ind-media.avif": {
+      "role": "content.image"
+    },
+    "/assets/ind-professional.avif": {
+      "role": "content.image"
+    },
+    "/assets/ind-retail.avif": {
+      "role": "content.image"
+    },
+    "/assets/ind-technology.avif": {
+      "role": "content.image"
+    },
+    "/assets/industry-pattern-blue.webp": {
+      "role": "background.texture"
+    },
+    "/assets/industry-pattern-green.webp": {
+      "role": "background.texture"
+    },
+    "/assets/industry-pattern-pink.webp": {
+      "role": "background.texture"
+    },
+    "/assets/industry-pattern-purple.png": {
+      "role": "background.texture"
+    },
+    "/assets/industry-pattern-red.webp": {
+      "role": "background.texture"
+    },
+    "/assets/industry-pattern-yellow.png": {
+      "role": "background.texture"
+    },
+    "/assets/influence-engineering-blog-p-1600.jpg": {
+      "role": "content.image"
+    },
+    "/assets/info-icon.svg": {
+      "role": "content.image"
+    },
+    "/assets/jasp-AAA.webp": {
+      "role": "brand.logo"
+    },
+    "/assets/jasp-Bona.webp": {
+      "role": "brand.logo"
+    },
+    "/assets/jasp-HH.webp": {
+      "role": "brand.logo"
+    },
+    "/assets/jasp-canvas-cursor-cm-balanced.avif": {
+      "role": "brand.logo"
+    },
+    "/assets/jasp-canvas-cursor-headcom.webp": {
+      "role": "brand.logo"
+    },
+    "/assets/jasp-canvas-cursor-socmed.webp": {
+      "role": "brand.logo"
+    },
+    "/assets/jasp-cushman.webp": {
+      "role": "brand.logo"
+    },
+    "/assets/jasp-harpercollins.webp": {
+      "role": "brand.logo"
+    },
+    "/assets/jasp-hitachi.webp": {
+      "role": "brand.logo"
+    },
+    "/assets/jasp-iheartmedia.webp": {
+      "role": "brand.logo"
+    },
+    "/assets/jasp-kelly.webp": {
+      "role": "brand.logo"
+    },
+    "/assets/jasp-morningstar.webp": {
+      "role": "brand.logo"
+    },
+    "/assets/jasp-prudential.webp": {
+      "role": "brand.logo"
+    },
+    "/assets/jasp-sanoflif.webp": {
+      "role": "brand.logo"
+    },
+    "/assets/jasp-sol-hero-decor-1.webp": {
+      "role": "brand.logo"
+    },
+    "/assets/jasp-sol-hero-decor-2.webp": {
+      "role": "brand.logo"
+    },
+    "/assets/jasp-sol-hero-pattern-left.webp": {
+      "role": "brand.logo"
+    },
+    "/assets/jasp-sol-hero-pattern-right.webp": {
+      "role": "brand.logo"
+    },
+    "/assets/jasp-sol-hero-ui-box.webp": {
+      "role": "brand.logo"
+    },
+    "/assets/jasp-ulta.png": {
+      "role": "brand.logo"
+    },
+    "/assets/jasper-agents-bg-2.webp": {
+      "role": "background.texture"
+    },
+    "/assets/jasper-arrow-down.svg": {
+      "role": "content.image"
+    },
+    "/assets/jasper-iq-audiences.avif": {
+      "role": "content.image"
+    },
+    "/assets/jasper-iq.-knowledge-base.avif": {
+      "role": "content.image"
+    },
+    "/assets/jasper-logo-png_seeklogo-681818-removebg-preview.png": {
+      "role": "brand.logo"
+    },
+    "/assets/jasper-x-adobe-workfront-integration-p-1600.png": {
+      "role": "content.image"
+    },
+    "/assets/jasperbraze-1-.png": {
+      "role": "content.image"
+    },
+    "/assets/john-dotto.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/kdoyle.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/key-01.svg": {
+      "role": "content.image"
+    },
+    "/assets/knowledge-base.svg": {
+      "role": "content.image"
+    },
+    "/assets/last-item.png": {
+      "role": "content.image"
+    },
+    "/assets/launch-campaigns-faster.svg": {
+      "role": "content.image"
+    },
+    "/assets/layout-grid-02.svg": {
+      "role": "content.image"
+    },
+    "/assets/lightbulb-on.svg": {
+      "role": "content.image"
+    },
+    "/assets/list.svg": {
+      "role": "content.image"
+    },
+    "/assets/llm-grid.png": {
+      "role": "content.image"
+    },
+    "/assets/magic-wand.svg": {
+      "role": "content.image"
+    },
+    "/assets/mail-01.svg": {
+      "role": "content.image"
+    },
+    "/assets/mail-02.svg": {
+      "role": "content.image"
+    },
+    "/assets/marketing-image.png": {
+      "role": "content.image"
+    },
+    "/assets/marketing-iq-floater.avif": {
+      "role": "content.image"
+    },
+    "/assets/marketing-iq-hero-band.jpg": {
+      "role": "hero.visual"
+    },
+    "/assets/marketing-iq-heroriso-flipped.avif": {
+      "role": "hero.visual"
+    },
+    "/assets/marketing_iq_floater.avif": {
+      "role": "content.image"
+    },
+    "/assets/measuring-AI-ROI-p-1600.png": {
+      "role": "content.image"
+    },
+    "/assets/mesh.avif": {
+      "role": "content.image"
+    },
+    "/assets/message-heart.svg": {
+      "role": "content.image"
+    },
+    "/assets/meta-active.avif": {
+      "role": "content.image"
+    },
+    "/assets/meta-headshot.png": {
+      "role": "content.image"
+    },
+    "/assets/meta.avif": {
+      "role": "content.image"
+    },
+    "/assets/mike.webp": {
+      "role": "content.image"
+    },
+    "/assets/mktgai_logo.jpg": {
+      "role": "brand.logo"
+    },
+    "/assets/models-decoration.webp": {
+      "role": "content.image"
+    },
+    "/assets/multimodal-knowldge.avif": {
+      "role": "content.image"
+    },
+    "/assets/nav-agents.avif": {
+      "role": "nav.card"
+    },
+    "/assets/nav-campaigns.avif": {
+      "role": "nav.card"
+    },
+    "/assets/nav-company.avif": {
+      "role": "nav.card"
+    },
+    "/assets/nav-geo.avif": {
+      "role": "nav.card"
+    },
+    "/assets/nav-iq.avif": {
+      "role": "nav.card"
+    },
+    "/assets/nav-personalization.avif": {
+      "role": "nav.card"
+    },
+    "/assets/nav-pipelines.avif": {
+      "role": "nav.card"
+    },
+    "/assets/nav-seo.avif": {
+      "role": "nav.card"
+    },
+    "/assets/on-brand-across-channels.svg": {
+      "role": "content.image"
+    },
+    "/assets/open-ai-headshot.avif": {
+      "role": "content.image"
+    },
+    "/assets/openai-active.avif": {
+      "role": "content.image"
+    },
+    "/assets/openai.avif": {
+      "role": "content.image"
+    },
+    "/assets/optimisation-agent.webp": {
+      "role": "content.image"
+    },
+    "/assets/optimisation-agent2.webp": {
+      "role": "content.image"
+    },
+    "/assets/p-91254053-2025-Ai-predictions.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/paper-texture.webp": {
+      "role": "background.texture"
+    },
+    "/assets/pen-tool.svg": {
+      "role": "content.image"
+    },
+    "/assets/performance-card.webp": {
+      "role": "content.image"
+    },
+    "/assets/performance-cursor.webp": {
+      "role": "content.image"
+    },
+    "/assets/performance-headshot.png": {
+      "role": "content.image"
+    },
+    "/assets/performance-headshot.webp": {
+      "role": "content.image"
+    },
+    "/assets/performance-person.webp": {
+      "role": "content.image"
+    },
+    "/assets/personalisation-agent.webp": {
+      "role": "content.image"
+    },
+    "/assets/personalization-blog-header-p-1600.png": {
+      "role": "content.image"
+    },
+    "/assets/pipeline-kb-hero.avif": {
+      "role": "hero.visual"
+    },
+    "/assets/pipeline-pink-pattern.svg": {
+      "role": "background.texture"
+    },
+    "/assets/pipeline.avif": {
+      "role": "content.image"
+    },
+    "/assets/pointer.svg": {
+      "role": "content.image"
+    },
+    "/assets/pr-comms-card.webp": {
+      "role": "content.image"
+    },
+    "/assets/pr-coms-cursor.webp": {
+      "role": "content.image"
+    },
+    "/assets/pr-coms-person.webp": {
+      "role": "content.image"
+    },
+    "/assets/presentation-chart-02.svg": {
+      "role": "content.image"
+    },
+    "/assets/press-0x0.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/press-1641327954-GettyImages-1249613159.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/press-2024-MIC-Article-Artifical-Intelligence-15-1.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/press-20240618_Jasper_Loreal_Lynch_3x2.webp": {
+      "role": "content.image"
+    },
+    "/assets/press-672d24b35ec9bfa3d63c72e6.webp": {
+      "role": "content.image"
+    },
+    "/assets/press-960x0.jpg": {
+      "role": "content.image"
+    },
+    "/assets/press-960x0.webp": {
+      "role": "content.image"
+    },
+    "/assets/press-AD_4nXfqxZyq69IQVhEcOkCf6fxVaDr3IQMNu9PKIL3Ock_cW59CpSTnwZc1.png": {
+      "role": "content.image"
+    },
+    "/assets/press-AI_Lede-1-.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/press-Brand-IQ---visual.png": {
+      "role": "content.image"
+    },
+    "/assets/press-Clipdrop-min.png": {
+      "role": "content.image"
+    },
+    "/assets/press-Forrester-TEI-min.png": {
+      "role": "content.image"
+    },
+    "/assets/press-Frame-1171280409.png": {
+      "role": "content.image"
+    },
+    "/assets/press-IMG_0455.webp": {
+      "role": "content.image"
+    },
+    "/assets/press-Jasper-Announcement-CMO-CFO.png": {
+      "role": "content.image"
+    },
+    "/assets/press-Jasper-momentum-post.png": {
+      "role": "content.image"
+    },
+    "/assets/press-Keyboards-AI-Generated-Writing-Buisness-1344332721.webp": {
+      "role": "content.image"
+    },
+    "/assets/press-MUo6MihNAVUIcUvRBbcToKZ7MKh1-c9a3pmg.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/press-OpenGraph---Grid-min.png": {
+      "role": "content.image"
+    },
+    "/assets/press-OpenGraph---MCP.png": {
+      "role": "content.image"
+    },
+    "/assets/press-Opengraph---GEO.png": {
+      "role": "content.image"
+    },
+    "/assets/press-Press.png": {
+      "role": "content.image"
+    },
+    "/assets/press-R2405G_WANG.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/press-Screenshot-2023-08-29-at-11.03.01-AM.png": {
+      "role": "content.image"
+    },
+    "/assets/press-State-of-AI---blog-image-1-.png": {
+      "role": "content.image"
+    },
+    "/assets/press-Studio-Launch-G-min.png": {
+      "role": "content.image"
+    },
+    "/assets/press-ai-human-agreement.webp": {
+      "role": "content.image"
+    },
+    "/assets/press-b-MIC-2024-category-Artifical-Intelligence-1.webp": {
+      "role": "content.image"
+    },
+    "/assets/press-fake-text-ai-dangerous-PAGE-2019-600x315.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/press-p-91254053-2025-Ai-predictions.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/press-slack-imgs.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/press-venturebeat-hero.webp": {
+      "role": "hero.visual"
+    },
+    "/assets/printer.svg": {
+      "role": "content.image"
+    },
+    "/assets/product-2.avif": {
+      "role": "content.image"
+    },
+    "/assets/product-3.avif": {
+      "role": "content.image"
+    },
+    "/assets/product-card.webp": {
+      "role": "content.image"
+    },
+    "/assets/product-cursor.webp": {
+      "role": "content.image"
+    },
+    "/assets/product-graphic.avif": {
+      "role": "content.image"
+    },
+    "/assets/product-headshot.webp": {
+      "role": "content.image"
+    },
+    "/assets/product-hero.avif": {
+      "role": "hero.visual"
+    },
+    "/assets/product-iq.avif": {
+      "role": "content.image"
+    },
+    "/assets/product-person.webp": {
+      "role": "content.image"
+    },
+    "/assets/product.avif": {
+      "role": "content.image"
+    },
+    "/assets/red-grid.svg": {
+      "role": "content.image"
+    },
+    "/assets/res-grid-bg.avif": {
+      "role": "background.texture"
+    },
+    "/assets/res-hero-1.png": {
+      "role": "hero.visual"
+    },
+    "/assets/res-hero-2.png": {
+      "role": "hero.visual"
+    },
+    "/assets/res-hero-3.png": {
+      "role": "hero.visual"
+    },
+    "/assets/res-paper-1.svg": {
+      "role": "content.image"
+    },
+    "/assets/res-paper-2.svg": {
+      "role": "content.image"
+    },
+    "/assets/res-red-grid.svg": {
+      "role": "content.image"
+    },
+    "/assets/res-the-loop.png": {
+      "role": "content.image"
+    },
+    "/assets/research-agent.avif": {
+      "role": "content.image"
+    },
+    "/assets/rive-background.avif": {
+      "role": "content.image"
+    },
+    "/assets/rive_background.avif": {
+      "role": "content.image"
+    },
+    "/assets/running-seamless-launches-and-events.png": {
+      "role": "content.image"
+    },
+    "/assets/s2-collage.webp": {
+      "role": "content.image"
+    },
+    "/assets/s3-collage.webp": {
+      "role": "content.image"
+    },
+    "/assets/s4-collage.webp": {
+      "role": "content.image"
+    },
+    "/assets/s5-collage.webp": {
+      "role": "content.image"
+    },
+    "/assets/s6-collage.webp": {
+      "role": "content.image"
+    },
+    "/assets/s7-collage.webp": {
+      "role": "content.image"
+    },
+    "/assets/s8-collage.webp": {
+      "role": "content.image"
+    },
+    "/assets/sam-20smith-20demandwell.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/screenshot_2024-12-18_at_3.26.47___pm_720.avif": {
+      "role": "content.image"
+    },
+    "/assets/search-md.svg": {
+      "role": "content.image"
+    },
+    "/assets/semrush-logo-700.jpg": {
+      "role": "brand.logo"
+    },
+    "/assets/seo-agent-bg.png": {
+      "role": "product.screenshot"
+    },
+    "/assets/seo-agent.png": {
+      "role": "content.image"
+    },
+    "/assets/seoimageplaceholder.webp": {
+      "role": "content.image"
+    },
+    "/assets/shane_headshot.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/siddhi.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/sku.avif": {
+      "role": "content.image"
+    },
+    "/assets/slack-imgs.jpeg": {
+      "role": "content.image"
+    },
+    "/assets/sp-alex.jpeg": {
+      "role": "person.portrait"
+    },
+    "/assets/sp-bryan.png": {
+      "role": "person.portrait"
+    },
+    "/assets/sp-daniel.jpeg": {
+      "role": "person.portrait"
+    },
+    "/assets/sp-eli.jpeg": {
+      "role": "person.portrait"
+    },
+    "/assets/sp-esther.png": {
+      "role": "person.portrait"
+    },
+    "/assets/sp-gayle.png": {
+      "role": "person.portrait"
+    },
+    "/assets/sp-kurt.jpeg": {
+      "role": "person.portrait"
+    },
+    "/assets/sp-kyle.jpeg": {
+      "role": "person.portrait"
+    },
+    "/assets/sp-lisa.jpg": {
+      "role": "person.portrait"
+    },
+    "/assets/sp-loreal.png": {
+      "role": "person.portrait"
+    },
+    "/assets/sp-madelene.jpeg": {
+      "role": "person.portrait"
+    },
+    "/assets/sp-megan.jpeg": {
+      "role": "person.portrait"
+    },
+    "/assets/sp-neil.jpg": {
+      "role": "person.portrait"
+    },
+    "/assets/sp-patrick.png": {
+      "role": "person.portrait"
+    },
+    "/assets/sp-raakhi.jpeg": {
+      "role": "person.portrait"
+    },
+    "/assets/sp-rahul.png": {
+      "role": "person.portrait"
+    },
+    "/assets/sp-robert.webp": {
+      "role": "person.portrait"
+    },
+    "/assets/sp-sara.jpeg": {
+      "role": "person.portrait"
+    },
+    "/assets/sp-steve.png": {
+      "role": "person.portrait"
+    },
+    "/assets/sp-timothy.png": {
+      "role": "person.portrait"
+    },
+    "/assets/sp-tom.jpg": {
+      "role": "person.portrait"
+    },
+    "/assets/sp-zach.png": {
+      "role": "person.portrait"
+    },
+    "/assets/stand.svg": {
+      "role": "content.image"
+    },
+    "/assets/stripes-pattern-blue.svg": {
+      "role": "background.texture"
+    },
+    "/assets/stripes-pattern-gold.svg": {
+      "role": "background.texture"
+    },
+    "/assets/stripes-pattern-orange.svg": {
+      "role": "background.texture"
+    },
+    "/assets/studio-api.webp": {
+      "role": "content.image"
+    },
+    "/assets/studio-builder.webp": {
+      "role": "content.image"
+    },
+    "/assets/studio-integrations.webp": {
+      "role": "content.image"
+    },
+    "/assets/style-guide-hero.svg": {
+      "role": "hero.visual"
+    },
+    "/assets/style-guide.svg": {
+      "role": "content.image"
+    },
+    "/assets/target-04.svg": {
+      "role": "content.image"
+    },
+    "/assets/team-carlos-diaz.png": {
+      "role": "person.portrait"
+    },
+    "/assets/team-christian-freitas.png": {
+      "role": "person.portrait"
+    },
+    "/assets/team-timothy-young.png": {
+      "role": "person.portrait"
+    },
+    "/assets/team-tom-newton.jpg": {
+      "role": "person.portrait"
+    },
+    "/assets/thumbs-up.svg": {
+      "role": "content.image"
+    },
+    "/assets/toolbar-1.webp": {
+      "role": "content.image"
+    },
+    "/assets/toolbar-2.webp": {
+      "role": "content.image"
+    },
+    "/assets/toolkit-style-guide.avif": {
+      "role": "content.image"
+    },
+    "/assets/toolkit-visual-guidelines.avif": {
+      "role": "content.image"
+    },
+    "/assets/translate.svg": {
+      "role": "content.image"
+    },
+    "/assets/triangle-pattern-deep-pink.svg": {
+      "role": "background.texture"
+    },
+    "/assets/triangle-pattern-pink.svg": {
+      "role": "background.texture"
+    },
+    "/assets/trophy.svg": {
+      "role": "content.image"
+    },
+    "/assets/trust.svg": {
+      "role": "content.image"
+    },
+    "/assets/tv-02.svg": {
+      "role": "content.image"
+    },
+    "/assets/tweets-1.webp": {
+      "role": "content.image"
+    },
+    "/assets/tweets-2.webp": {
+      "role": "content.image"
+    },
+    "/assets/tweets-4.webp": {
+      "role": "content.image"
+    },
+    "/assets/tweets-5.webp": {
+      "role": "content.image"
+    },
+    "/assets/tweets-6.webp": {
+      "role": "content.image"
+    },
+    "/assets/tweets.webp": {
+      "role": "content.image"
+    },
+    "/assets/universal_upscale_0_de96b175-dd06-49eb-bc34-76c56db3bec3_0.avif": {
+      "role": "content.image"
+    },
+    "/assets/venturebeat-hero.webp": {
+      "role": "hero.visual"
+    },
+    "/assets/video-recorder.svg": {
+      "role": "content.image"
+    },
+    "/assets/video-script-templates-p-1600.webp": {
+      "role": "content.image"
+    },
+    "/assets/visual-guideline-dash.png": {
+      "role": "content.image"
+    },
+    "/assets/visual-guidelines-hero.png": {
+      "role": "hero.visual"
+    },
+    "/assets/visual-guidelines.svg": {
+      "role": "content.image"
+    },
+    "/assets/wb-bcg.svg": {
+      "role": "partner.badge"
+    },
+    "/assets/wb-bonterra.jpg": {
+      "role": "partner.badge"
+    },
+    "/assets/wb-forrester.jpg": {
+      "role": "partner.badge"
+    },
+    "/assets/wb-heyjasper.jpg": {
+      "role": "partner.badge"
+    },
+    "/assets/wb-jasper-favicon.png": {
+      "role": "partner.badge"
+    },
+    "/assets/wb-jasper-square.svg": {
+      "role": "partner.badge"
+    },
+    "/assets/wb-mckinsey.webp": {
+      "role": "partner.badge"
+    },
+    "/assets/wb-semrush.jpg": {
+      "role": "partner.badge"
+    },
+    "/assets/web-assets.bcg2.webp": {
+      "role": "content.image"
+    },
+    "/assets/webinar-lead-og.png": {
+      "role": "content.image"
+    },
+    "/assets/what-is-chatgpt.png": {
+      "role": "content.image"
+    },
+    "/assets/work-image.jpg": {
+      "role": "content.image"
+    },
+    "/assets/wrappedblog-p-1600.png": {
+      "role": "content.image"
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "version": "1.0.0",
+  "policy": "CLOSED. A generator MUST NOT emit a component outside this list. If a design needs something absent here, stop and request a new component contract — do not improvise one.",
+  "sections": [
+    "Accordion",
+    "AgentDetail",
+    "AgentLibrary",
+    "AgentSlider",
+    "ApiEndpointCards",
+    "Catalog",
+    "ChecklistVis",
+    "ClosingPhoto",
+    "DocLayout",
+    "EditorialHero",
+    "FilterIndex",
+    "GridHero",
+    "HeroVertical",
+    "HorizontalContent",
+    "HorizontalVis",
+    "IQHub",
+    "IlloHero",
+    "IndustryHero",
+    "IntegrationsVis",
+    "LayoutCards",
+    "LogoBlade",
+    "PeopleRail",
+    "PhotoMarquee",
+    "ProductSlot",
+    "RevealSection",
+    "RoleHero",
+    "SeoSection",
+    "SideBlockStack",
+    "SimpleLayout",
+    "SplitHero",
+    "StickyScroll",
+    "StoryPanel",
+    "TrustCards",
+    "UseCaseCards",
+    "ValueProps",
+    "WindowCta"
+  ],
+  "shell": [
+    "Navbar",
+    "Footer",
+    "Layout",
+    "PageCta",
+    "SectionSpace"
+  ],
+  "primitives": [
+    "Eyebrow",
+    "ArrowLink",
+    "CtaRow"
+  ],
+  "forbidden": [
+    "raw hex colours in markup",
+    "inline transform on a .reveal element",
+    "components not listed above",
+    "section-level padding for rhythm (use SectionSpace)"
+  ]
+}

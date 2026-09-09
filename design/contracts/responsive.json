@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "breakpoints": {
+    "desktop": 1440,
+    "tablet": 768,
+    "mobile": 390
+  },
+  "verifiedAt": [
+    1440,
+    768,
+    390
+  ],
+  "grid": {
+    "columns": 12,
+    "container": 1360,
+    "gutter": 16,
+    "columnWidth": 98.667,
+    "paddingInline": 0
+  },
+  "rules": [
+    "The page must never scroll horizontally. Measure by probing the scroll, not by reading documentElement.scrollWidth — with body{overflow-x:hidden} that number reports overflow a user can never reach.",
+    "A full-bleed section that overflows needs .clip-bleed (overflow:hidden; contain:paint). Plain overflow-hidden still lets layout overflow reach the root in Chrome.",
+    "Multi-column sections stack below 768.",
+    "A fixed desktop stage (e.g. a 1440px collage) must shrink or restack below lg, or it slices content off at 390."
+  ]
+}

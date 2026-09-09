@@ -1,0 +1,108 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://design.local/schema/pagespec.schema.json",
+  "title": "PageSpec",
+  "version": "1.0.0",
+  "description": "Declarative contract for one page. A PageSpec names a template and supplies section content; it never contains markup. Generators MUST validate against this schema and against contracts/composition.json before emitting a page.",
+  "type": "object",
+  "required": ["pagespecVersion", "route", "template", "sections"],
+  "additionalProperties": false,
+  "properties": {
+    "pagespecVersion": {
+      "type": "string",
+      "const": "1.0.0",
+      "description": "Schema version this spec targets. Reject on mismatch rather than guessing."
+    },
+    "route": {
+      "type": "string",
+      "pattern": "^/[a-z0-9/-]*$",
+      "description": "URL path. Lowercase, hyphenated, no trailing slash."
+    },
+    "title": { "type": "string", "minLength": 1, "maxLength": 120 },
+    "template": {
+      "type": "string",
+      "description": "Template id from registry/templates.json. Determines which sections are legal and in what order.",
+      "enum": ["marketing.standard", "product.detail", "industry", "role", "editorial.index", "document", "placeholder"]
+    },
+    "theme": {
+      "type": "string",
+      "enum": ["light", "tinted", "dark"],
+      "default": "light"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "review", "approved"],
+      "default": "draft"
+    },
+    "sections": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 24,
+      "description": "Ordered sections. Order is validated against contracts/composition.json.",
+      "items": { "$ref": "#/definitions/section" }
+    }
+  },
+  "definitions": {
+    "section": {
+      "type": "object",
+      "required": ["component"],
+      "additionalProperties": false,
+      "properties": {
+        "component": {
+          "type": "string",
+          "description": "MUST appear in registry/allowlist.json. Any other value is a hard failure — generators may not invent components."
+        },
+        "variant": {
+          "type": "string",
+          "description": "MUST be listed under this component's variants in contracts/components.json."
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]*$",
+          "description": "Anchor id, when the section is a jump-nav target."
+        },
+        "tint": {
+          "type": "string",
+          "description": "Background token name. MUST resolve in tokens/tokens.json; raw hex is rejected."
+        },
+        "content": {
+          "type": "object",
+          "description": "Slot values. Keys and capacities are constrained per component in contracts/components.json.",
+          "additionalProperties": true
+        }
+      }
+    }
+  },
+  "examples": [
+    {
+      "pagespecVersion": "1.0.0",
+      "route": "/example",
+      "title": "Example page",
+      "template": "marketing.standard",
+      "theme": "light",
+      "status": "draft",
+      "sections": [
+        {
+          "component": "HeroVertical",
+          "content": {
+            "eyebrow": "Example",
+            "title": "A short display headline",
+            "body": "One supporting paragraph.",
+            "ctas": [{ "label": "Get started", "href": "/" }]
+          }
+        },
+        {
+          "component": "HorizontalVis",
+          "variant": "default",
+          "tint": "surface-2",
+          "content": {
+            "title": "A feature row",
+            "body": "Copy beside an illustration.",
+            "image": { "role": "feature.illustration", "src": "/assets/example.avif" }
+          }
+        },
+        { "component": "PageCta", "content": { "headline": "Closing line" } }
+      ]
+    }
+  ]
+}

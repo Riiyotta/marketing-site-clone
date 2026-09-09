@@ -1,0 +1,2586 @@
+{
+  "version": "1.0.0",
+  "generated": "node design/gen-contracts.mjs",
+  "note": "Props and variants are read from source. contentLimits are policy, tuned to the measured layouts; exceeding them overflows the block rather than reflowing it.",
+  "components": {
+    "Accordion": {
+      "kind": "section",
+      "file": "src/components/blocks/Accordion.jsx",
+      "description": "`accordion_1 u-container u-grid-autofill` — the interior-page FAQ. MEASURED on live /api at 1440: the block is the 1360px container itself (not a full-bleed section), 394px / 473px for the two stacked instances, split into a ~250px label column and a ~1000px list. The label column",
+      "variants": [
+        "default"
+      ],
+      "props": [
+        {
+          "name": "chip",
+          "required": true
+        },
+        {
+          "name": "title",
+          "required": true
+        },
+        {
+          "name": "items",
+          "required": false,
+          "default": "[]"
+        },
+        {
+          "name": "openFirst",
+          "required": false,
+          "default": "false"
+        },
+        {
+          "name": "tint",
+          "required": false,
+          "default": "'bg-flame-300'"
+        },
+        {
+          "name": "size",
+          "required": false,
+          "default": "'sm'"
+        }
+      ],
+      "contentLimits": {
+        "title": {
+          "maxWords": 14,
+          "maxChars": 120
+        },
+        "eyebrow": {
+          "maxWords": 5,
+          "maxChars": 40
+        },
+        "body": {
+          "maxWords": 90,
+          "maxChars": 600
+        },
+        "ctas": {
+          "maxItems": 2
+        },
+        "items": {
+          "maxItems": 12
+        }
+      },
+      "responsive": {
+        "breakpoints": [
+          1440,
+          768,
+          390
+        ],
+        "stacksBelow": 768
+      }
+    },
+    "AgentDetail": {
+      "kind": "section",
+      "file": "src/components/blocks/AgentDetail.jsx",
+      "description": "`apps_page_wrap` — the Agent Library DETAIL template. One Webflow composition shared verbatim by /agents/optimization, /agents/research and /agents/translation, so it is built once here and the three pages supply only content.",
+      "variants": [
+        "default"
+      ],
+      "props": [
+        {
+          "name": "breadcrumb",
+          "required": false,
+          "default": "{ label: 'Agents Library', href: '/agents#library' }"
+        },
+        {
+          "name": "title",
+          "required": true
+        },
+        {
+          "name": "intro",
+          "required": true
+        },
+        {
+          "name": "card",
+          "required": true
+        },
+        {
+          "name": "tocCta",
+          "required": false,
+          "default": "'Get A Demo Of This Agent'"
+        },
+        {
+          "name": "transcript",
+          "required": false,
+          "default": "[]"
+        },
+        {
+          "name": "body",
+          "required": false,
+          "default": "[]"
+        }
+      ],
+      "contentLimits": {
+        "title": {
+          "maxWords": 14,
+          "maxChars": 120
+        },
+        "eyebrow": {
+          "maxWords": 5,
+          "maxChars": 40
+        },
+        "body": {
+          "maxWords": 90,
+          "maxChars": 600
+        },
+        "ctas": {
+          "maxItems": 2
+        },
+        "items": {
+          "maxItems": 12
+        }
+      },
+      "responsive": {
+        "breakpoints": [
+          1440,
+          768,
+          390
+        ],
+        "stacksBelow": 768
+      }
+    },
+    "AgentLibrary": {
+      "kind": "section",
+      "file": "src/components/blocks/AgentLibrary.jsx",
+      "description": "The Agent Library — the 4445px filter-and-grid block on live /agents. MEASURED at 1440px: ground     flame-200 (rgb 255,247,245) full-bleed, with a 1440x195 \"Agents Top\" stepped avif capping the band and a matching",
+      "variants": [
+        "default"
+      ],
+      "props": [
+        {
+          "name": "eyebrow",
+          "required": true
+        },
+        {
+          "name": "title",
+          "required": true
+        },
+        {
+          "name": "body",
+          "required": true
+        },
+        {
+          "name": "promo",
+          "required": true
+        },
+        {
+          "name": "workflows",
+          "required": false,
+          "default": "[]"
+        },
+        {
+          "name": "roles",
+          "required": false,
+          "default": "[]"
+        },
+        {
+          "name": "cards",
+          "required": false,
+          "default": "[]"
+        },
+        {
+          "name": "pageSize",
+          "required": false,
+          "default": "30"
+        },
+        {
+          "name": "capTop",
+          "required": true
+        },
+        {
+          "name": "capBottom",
+          "required": true
+        }
+      ],
+      "contentLimits": {
+        "title": {
+          "maxWords": 14,
+          "maxChars": 120
+        },
+        "eyebrow": {
+          "maxWords": 5,
+          "maxChars": 40
+        },
+        "body": {
+          "maxWords": 90,
+          "maxChars": 600
+        },
+        "ctas": {
+          "maxItems": 2
+        },
+        "items": {
+          "maxItems": 12
+        }
+      },
+      "responsive": {
+        "breakpoints": [
+          1440,
+          768,
+          390
+        ],
+        "stacksBelow": 768
+      }
+    },
+    "AgentSlider": {
+      "kind": "section",
+      "file": "src/components/blocks/AgentSlider.jsx",
+      "description": "`.slider_main_wrap` — \"Agents for every marketer, across every function\". The third section on all six Solutions > By Role pages, and IDENTICAL on every one of them: same heading, same lede, same 12 cards, same order. It is the only section of the role template that carries no per-page content,",
+      "variants": [
+        "default"
+      ],
+      "props": [],
+      "contentLimits": {
+        "title": {
+          "maxWords": 14,
+          "maxChars": 120
+        },
+        "eyebrow": {
+          "maxWords": 5,
+          "maxChars": 40
+        },
+        "body": {
+          "maxWords": 90,
+          "maxChars": 600
+        },
+        "ctas": {
+          "maxItems": 2
+        },
+        "items": {
+          "maxItems": 12
+        }
+      },
+      "responsive": {
+        "breakpoints": [
+          1440,
+          768,
+          390
+        ],
+        "stacksBelow": 768
+      }
+    },
+    "ApiEndpointCards": {
+      "kind": "section",
+      "file": "src/components/blocks/ApiEndpointCards.jsx",
+      "description": "`.api_cards_section` — \"Jasper API endpoints\", the 8-card catalogue shared VERBATIM by /image/api and /image/pipelines. MEASURED on both pages at 1440px (section 1440 x 1672): a pale flame-200 ground ruled with a 1px flame grid lattice; a 38px Feature heading in a",
+      "variants": [
+        "default"
+      ],
+      "props": [
+        {
+          "name": "title",
+          "required": false,
+          "default": "'Jasper API endpoints'"
+        },
+        {
+          "name": "items",
+          "required": false,
+          "default": "ENDPOINTS"
+        }
+      ],
+      "contentLimits": {
+        "title": {
+          "maxWords": 14,
+          "maxChars": 120
+        },
+        "eyebrow": {
+          "maxWords": 5,
+          "maxChars": 40
+        },
+        "body": {
+          "maxWords": 90,
+          "maxChars": 600
+        },
+        "ctas": {
+          "maxItems": 2
+        },
+        "items": {
+          "maxItems": 12
+        }
+      },
+      "responsive": {
+        "breakpoints": [
+          1440,
+          768,
+          390
+        ],
+        "stacksBelow": 768
+      }
+    },
+    "Catalog": {
+      "kind": "section",
+      "file": "src/components/blocks/Catalog.jsx",
+      "description": "`.catalog_wrap` — left-aligned copy header over a full-width product shot. 3x on /marketing-iq; the same shape recurs on other Platform routes. MEASURED on live /marketing-iq at 1440px (sections h=1414 / 1527 / 1475): 180px g_section_space (the eyebrow lands at +182)",
+      "variants": [
+        "default"
+      ],
+      "props": [
+        {
+          "name": "eyebrow",
+          "required": true
+        },
+        {
+          "name": "title",
+          "required": true
+        },
+        {
+          "name": "body",
+          "required": true
+        },
+        {
+          "name": "link",
+          "required": true
+        },
+        {
+          "name": "img",
+          "required": true
+        },
+        {
+          "name": "bg",
+          "required": false,
+          "default": "'bg-surface'"
+        },
+        {
+          "name": "spaceTop",
+          "required": false,
+          "default": "182"
+        },
+        {
+          "name": "spaceBottom",
+          "required": false,
+          "default": "0"
+        }
+      ],
+      "contentLimits": {
+        "title": {
+          "maxWords": 14,
+          "maxChars": 120
+        },
+        "eyebrow": {
+          "maxWords": 5,
+          "maxChars": 40
+        },
+        "body": {
+          "maxWords": 90,
+          "maxChars": 600
+        },
+        "ctas": {
+          "maxItems": 2
+        },
+        "items": {
+          "maxItems": 12
+        }
+      },
+      "responsive": {
+        "breakpoints": [
+          1440,
+          768,
+          390
+        ],
+        "stacksBelow": 768
+      }
+    },
+    "ChecklistVis": {
+      "kind": "section",
+      "file": "src/components/blocks/ChecklistVis.jsx",
+      "description": "`.horizontal_vis_wrap` as it appears on the six Solutions > By Industry pages — the same two-column band as HorizontalVis, but the copy column carries a THREE-ITEM CHECKLIST under the lede instead of a single body paragraph + arrow link, and the art column layers a product screenshot on",
+      "variants": [
+        "default"
+      ],
+      "props": [
+        {
+          "name": "eyebrow",
+          "required": true
+        },
+        {
+          "name": "eyebrowChip",
+          "required": false,
+          "default": "'bg-green-400'"
+        },
+        {
+          "name": "title",
+          "required": true
+        },
+        {
+          "name": "lede",
+          "required": true
+        },
+        {
+          "name": "items",
+          "required": false,
+          "default": "[]"
+        },
+        {
+          "name": "bg",
+          "required": true
+        },
+        {
+          "name": "art",
+          "required": true
+        },
+        {
+          "name": "spaceTop",
+          "required": false,
+          "default": "112"
+        },
+        {
+          "name": "spaceBottom",
+          "required": false,
+          "default": "112"
+        }
+      ],
+      "contentLimits": {
+        "title": {
+          "maxWords": 14,
+          "maxChars": 120
+        },
+        "eyebrow": {
+          "maxWords": 5,
+          "maxChars": 40
+        },
+        "body": {
+          "maxWords": 90,
+          "maxChars": 600
+        },
+        "ctas": {
+          "maxItems": 2
+        },
+        "items": {
+          "maxItems": 12
+        }
+      },
+      "responsive": {
+        "breakpoints": [
+          1440,
+          768,
+          390
+        ],
+        "stacksBelow": 768
+      }
+    },
+    "ClosingPhoto": {
+      "kind": "section",
+      "file": "src/components/blocks/ClosingPhoto.jsx",
+      "description": "`.closing_photo_wrap` — the 900px photo-and-copy band that closes every Solutions > By Industry page (in place of the `cta_main_wrap` the Platform pages use). Identical geometry on all six; only the headline, lede and the button label change.",
+      "variants": [
+        "default"
+      ],
+      "props": [
+        {
+          "name": "title",
+          "required": true
+        },
+        {
+          "name": "body",
+          "required": true
+        },
+        {
+          "name": "ctas",
+          "required": false,
+          "default": "[]"
+        },
+        {
+          "name": "photo",
+          "required": true
+        }
+      ],
+      "contentLimits": {
+        "title": {
+          "maxWords": 14,
+          "maxChars": 120
+        },
+        "eyebrow": {
+          "maxWords": 5,
+          "maxChars": 40
+        },
+        "body": {
+          "maxWords": 90,
+          "maxChars": 600
+        },
+        "ctas": {
+          "maxItems": 2
+        },
+        "items": {
+          "maxItems": 12
+        }
+      },
+      "responsive": {
+        "breakpoints": [
+          1440,
+          768,
+          390
+        ],
+        "stacksBelow": 768
+      }
+    },
+    "DocLayout": {
+      "kind": "section",
+      "file": "src/components/blocks/DocLayout.jsx",
+      "description": "`.simple_layout_wrap u-position-relative` used as a LONG-FORM DOCUMENT — the whitepaper body on live /security (section 1440 x 4312). MEASURED at 1440px off .scrape/plat-security.png: ground   rgb(206,235,255) = blue-300, full bleed, from y=3693 to y=8005",
+      "variants": [
+        "default"
+      ],
+      "props": [
+        {
+          "name": "title",
+          "required": true
+        },
+        {
+          "name": "nav",
+          "required": false,
+          "default": "[]"
+        },
+        {
+          "name": "cta",
+          "required": true
+        },
+        {
+          "name": "sections",
+          "required": false,
+          "default": "[]"
+        },
+        {
+          "name": "signoff",
+          "required": true
+        },
+        {
+          "name": "bg",
+          "required": false,
+          "default": "'bg-blue-300'"
+        }
+      ],
+      "contentLimits": {
+        "title": {
+          "maxWords": 14,
+          "maxChars": 120
+        },
+        "eyebrow": {
+          "maxWords": 5,
+          "maxChars": 40
+        },
+        "body": {
+          "maxWords": 90,
+          "maxChars": 600
+        },
+        "ctas": {
+          "maxItems": 2
+        },
+        "items": {
+          "maxItems": 12
+        }
+      },
+      "responsive": {
+        "breakpoints": [
+          1440,
+          768,
+          390
+        ],
+        "stacksBelow": 768
+      }
+    },
+    "EditorialHero": {
+      "kind": "section",
+      "file": "src/components/blocks/EditorialHero.jsx",
+      "description": "`.editorial_hero_wrap` — the split \"one big card | ranked list\" band that opens both /blog (h=865) and /webinars (h=948). MEASURED at 1440px (.scrape/plat-blog.json #4, plat-webinars.json #3, .scrape/leaves-blog.json, .scrape/leaves-webinars.json):",
+      "variants": [
+        "default"
+      ],
+      "props": [
+        {
+          "name": "lead",
+          "required": true
+        },
+        {
+          "name": "listLabel",
+          "required": true
+        },
+        {
+          "name": "items",
+          "required": false,
+          "default": "[]"
+        },
+        {
+          "name": "metaBelow",
+          "required": false,
+          "default": "false"
+        },
+        {
+          "name": "leadCta",
+          "required": true
+        }
+      ],
+      "contentLimits": {
+        "title": {
+          "maxWords": 14,
+          "maxChars": 120
+        },
+        "eyebrow": {
+          "maxWords": 5,
+          "maxChars": 40
+        },
+        "body": {
+          "maxWords": 90,
+          "maxChars": 600
+        },
+        "ctas": {
+          "maxItems": 2
+        },
+        "items": {
+          "maxItems": 12
+        }
+      },
+      "responsive": {
+        "breakpoints": [
+          1440,
+          768,
+          390
+        ],
+        "stacksBelow": 768
+      }
+    },
+    "FilterIndex": {
+      "kind": "section",
+      "file": "src/components/blocks/FilterIndex.jsx",
+      "description": "`.sticky_scroll_wrap` in its CMS-index form — a sticky left rail carrying the section heading, a search field, a \"Clear Filters\" button and (on /workflows) a chip cloud, beside a long grid or list of collection entries. Live uses this on the three big Resources index pages:",
+      "variants": [
+        "default"
+      ],
+      "props": [
+        {
+          "name": "title",
+          "required": true
+        },
+        {
+          "name": "chips",
+          "required": false,
+          "default": "[]"
+        },
+        {
+          "name": "promo",
+          "required": true
+        },
+        {
+          "name": "items",
+          "required": false,
+          "default": "[]"
+        },
+        {
+          "name": "search",
+          "required": true
+        },
+        {
+          "name": "render",
+          "required": true
+        },
+        {
+          "name": "layout",
+          "required": false,
+          "default": "'grid'"
+        },
+        {
+          "name": "railWidth",
+          "required": false,
+          "default": "310"
+        },
+        {
+          "name": "wellWidth",
+          "required": false,
+          "default": "1010"
+        },
+        {
+          "name": "empty",
+          "required": false,
+          "default": "'No results match that search.'"
+        }
+      ],
+      "contentLimits": {
+        "title": {
+          "maxWords": 14,
+          "maxChars": 120
+        },
+        "eyebrow": {
+          "maxWords": 5,
+          "maxChars": 40
+        },
+        "body": {
+          "maxWords": 90,
+          "maxChars": 600
+        },
+        "ctas": {
+          "maxItems": 2
+        },
+        "items": {
+          "maxItems": 12
+        }
+      },
+      "responsive": {
+        "breakpoints": [
+          1440,
+          768,
+          390
+        ],
+        "stacksBelow": 768
+      }
+    },
+    "GridHero": {
+      "kind": "section",
+      "file": "src/components/blocks/GridHero.jsx",
+      "description": "`.grid_hero_wrap` — a full-bleed coloured band with the copy in the 1360px well on the left and one photo anchored to the RIGHT edge, bleeding past 1440. Used by live /marketing-iq, /knowledge-base and /product-iq. MEASURED at 1440px:",
+      "variants": [
+        "default"
+      ],
+      "props": [
+        {
+          "name": "eyebrow",
+          "required": true
+        },
+        {
+          "name": "eyebrowChip",
+          "required": true
+        },
+        {
+          "name": "title",
+          "required": true
+        },
+        {
+          "name": "body",
+          "required": true
+        },
+        {
+          "name": "ctas",
+          "required": false,
+          "default": "[]"
+        },
+        {
+          "name": "photo",
+          "required": true
+        },
+        {
+          "name": "bg",
+          "required": false,
+          "default": "'bg-yellow-400'"
+        },
+        {
+          "name": "tone",
+          "required": false,
+          "default": "'ink'"
+        },
+        {
+          "name": "height",
+          "required": false,
+          "default": "615"
+        }
+      ],
+      "contentLimits": {
+        "title": {
+          "maxWords": 14,
+          "maxChars": 120
+        },
+        "eyebrow": {
+          "maxWords": 5,
+          "maxChars": 40
+        },
+        "body": {
+          "maxWords": 90,
+          "maxChars": 600
+        },
+        "ctas": {
+          "maxItems": 2
+        },
+        "items": {
+          "maxItems": 12
+        }
+      },
+      "responsive": {
+        "breakpoints": [
+          1440,
+          768,
+          390
+        ],
+        "stacksBelow": 768
+      }
+    },
+    "HeroVertical": {
+      "kind": "section",
+      "file": "src/components/blocks/HeroVertical.jsx",
+      "description": "`.hero_vertical_wrap` — the CENTRED statement block. 10x across Platform. MEASURED at 1440px: Bare statement (brand-voice #1, h=304; visual-guidelines #1, h=304): 82px  g_section_space",
+      "variants": [
+        "default"
+      ],
+      "props": [
+        {
+          "name": "eyebrow",
+          "required": true
+        },
+        {
+          "name": "title",
+          "required": true
+        },
+        {
+          "name": "titleTag",
+          "required": false,
+          "default": "'h2'"
+        },
+        {
+          "name": "titleSize",
+          "required": false,
+          "default": "'54'"
+        },
+        {
+          "name": "titleWidth",
+          "required": false,
+          "default": "690"
+        },
+        {
+          "name": "body",
+          "required": true
+        },
+        {
+          "name": "link",
+          "required": true
+        },
+        {
+          "name": "ctas",
+          "required": false,
+          "default": "[]"
+        },
+        {
+          "name": "media",
+          "required": true
+        },
+        {
+          "name": "bg",
+          "required": false,
+          "default": "'bg-surface'"
+        },
+        {
+          "name": "spaceTop",
+          "required": false,
+          "default": "82"
+        },
+        {
+          "name": "spaceBottom",
+          "required": false,
+          "default": "0"
+        }
+      ],
+      "contentLimits": {
+        "title": {
+          "maxWords": 14,
+          "maxChars": 120
+        },
+        "eyebrow": {
+          "maxWords": 5,
+          "maxChars": 40
+        },
+        "body": {
+          "maxWords": 90,
+          "maxChars": 600
+        },
+        "ctas": {
+          "maxItems": 2
+        },
+        "items": {
+          "maxItems": 12
+        }
+      },
+      "responsive": {
+        "breakpoints": [
+          1440,
+          768,
+          390
+        ],
+        "stacksBelow": 768
+      }
+    },
+    "HorizontalContent": {
+      "kind": "section",
+      "file": "src/components/blocks/HorizontalContent.jsx",
+      "description": "`.horizontal_content_wrap` — a copy column beside a CHECKLIST column. Distinct from `horizontal_vis_wrap` (which pairs copy with an illustration): the right track here is a list of check-marked points, not artwork. Used 3x on live /knowledge-base and 3x on live /product-iq.",
+      "variants": [
+        "default"
+      ],
+      "props": [
+        {
+          "name": "eyebrow",
+          "required": true
+        },
+        {
+          "name": "tint",
+          "required": false,
+          "default": "'bg-flame-300'"
+        },
+        {
+          "name": "title",
+          "required": true
+        },
+        {
+          "name": "body",
+          "required": true
+        },
+        {
+          "name": "items",
+          "required": false,
+          "default": "[]"
+        },
+        {
+          "name": "bg",
+          "required": false,
+          "default": "'bg-surface'"
+        },
+        {
+          "name": "spaceTop",
+          "required": false,
+          "default": "112"
+        },
+        {
+          "name": "spaceBottom",
+          "required": false,
+          "default": "0"
+        }
+      ],
+      "contentLimits": {
+        "title": {
+          "maxWords": 14,
+          "maxChars": 120
+        },
+        "eyebrow": {
+          "maxWords": 5,
+          "maxChars": 40
+        },
+        "body": {
+          "maxWords": 90,
+          "maxChars": 600
+        },
+        "ctas": {
+          "maxItems": 2
+        },
+        "items": {
+          "maxItems": 12
+        }
+      },
+      "responsive": {
+        "breakpoints": [
+          1440,
+          768,
+          390
+        ],
+        "stacksBelow": 768
+      }
+    },
+    "HorizontalVis": {
+      "kind": "section",
+      "file": "src/components/blocks/HorizontalVis.jsx",
+      "description": "`.horizontal_vis_wrap` — the two-column copy | illustration band. Appears 12x across the 22 Platform pages; it is BOTH the page hero on several routes and a mid-page feature row on others. MEASURED at 1440px (.scrape/txt-style-guide.json, txt-brand-voice.json,",
+      "variants": [
+        "default"
+      ],
+      "props": [
+        {
+          "name": "eyebrow",
+          "required": true
+        },
+        {
+          "name": "eyebrowTag",
+          "required": false,
+          "default": "'p'"
+        },
+        {
+          "name": "eyebrowChip",
+          "required": false,
+          "default": "false"
+        },
+        {
+          "name": "title",
+          "required": true
+        },
+        {
+          "name": "titleTag",
+          "required": false,
+          "default": "'h2'"
+        },
+        {
+          "name": "titleSize",
+          "required": false,
+          "default": "'38'"
+        },
+        {
+          "name": "titleAsPara",
+          "required": false,
+          "default": "false"
+        },
+        {
+          "name": "body",
+          "required": true
+        },
+        {
+          "name": "bodySize",
+          "required": false,
+          "default": "'16'"
+        },
+        {
+          "name": "link",
+          "required": true
+        },
+        {
+          "name": "ctas",
+          "required": false,
+          "default": "[]"
+        },
+        {
+          "name": "img",
+          "required": true
+        },
+        {
+          "name": "flip",
+          "required": false,
+          "default": "false"
+        },
+        {
+          "name": "bg",
+          "required": false,
+          "default": "'bg-surface'"
+        },
+        {
+          "name": "spaceTop",
+          "required": false,
+          "default": "140"
+        },
+        {
+          "name": "spaceBottom",
+          "required": false,
+          "default": "112"
+        },
+        {
+          "name": "copyWidth",
+          "required": false,
+          "default": "660"
+        },
+        {
+          "name": "bodyWidth",
+          "required": false,
+          "default": "514"
+        },
+        {
+          "name": "children",
+          "required": true
+        }
+      ],
+      "contentLimits": {
+        "title": {
+          "maxWords": 14,
+          "maxChars": 120
+        },
+        "eyebrow": {
+          "maxWords": 5,
+          "maxChars": 40
+        },
+        "body": {
+          "maxWords": 90,
+          "maxChars": 600
+        },
+        "ctas": {
+          "maxItems": 2
+        },
+        "items": {
+          "maxItems": 12
+        }
+      },
+      "responsive": {
+        "breakpoints": [
+          1440,
+          768,
+          390
+        ],
+        "stacksBelow": 768
+      }
+    },
+    "IQHub": {
+      "kind": "section",
+      "file": "src/components/blocks/IQHub.jsx",
+      "description": "`hero_main_wrap` + `feature_banner_wrap` — the \"Jasper IQ\" cross-sell band that closes the IQ-family pages. Live /knowledge-base and /product-iq both end on it before the closing photo. MEASURED on live /knowledge-base at 1440px (section h=1235):",
+      "variants": [
+        "default"
+      ],
+      "props": [
+        {
+          "name": "eyebrow",
+          "required": false,
+          "default": "'Jasper IQ'"
+        },
+        {
+          "name": "title",
+          "required": false,
+          "default": "'The intelligence layer that powers agent execution'"
+        },
+        {
+          "name": "body",
+          "required": false,
+          "default": "'Jasper IQ embeds brand rules"
+        },
+        {
+          "name": "cta",
+          "required": false,
+          "default": "{ label: 'Jasper IQ', href: '/jasper-iq' }"
+        }
+      ],
+      "contentLimits": {
+        "title": {
+          "maxWords": 14,
+          "maxChars": 120
+        },
+        "eyebrow": {
+          "maxWords": 5,
+          "maxChars": 40
+        },
+        "body": {
+          "maxWords": 90,
+          "maxChars": 600
+        },
+        "ctas": {
+          "maxItems": 2
+        },
+        "items": {
+          "maxItems": 12
+        }
+      },
+      "responsive": {
+        "breakpoints": [
+          1440,
+          768,
+          390
+        ],
+        "stacksBelow": 768
+      }
+    },
+    "IlloHero": {
+      "kind": "section",
+      "file": "src/components/blocks/IlloHero.jsx",
+      "description": "`.illo_hero` — the centred hero on /solutions/seo-aeo-geo. A one-off: no other route in the Solutions family uses it, and neither Solutions template includes it. MEASURED at 1440px on live (.scrape/seolib.json, section 834px tall):",
+      "variants": [
+        "default"
+      ],
+      "props": [
+        {
+          "name": "eyebrow",
+          "required": true
+        },
+        {
+          "name": "title",
+          "required": true
+        },
+        {
+          "name": "body",
+          "required": true
+        },
+        {
+          "name": "ctas",
+          "required": false,
+          "default": "[]"
+        },
+        {
+          "name": "illo",
+          "required": true
+        }
+      ],
+      "contentLimits": {
+        "title": {
+          "maxWords": 14,
+          "maxChars": 120
+        },
+        "eyebrow": {
+          "maxWords": 5,
+          "maxChars": 40
+        },
+        "body": {
+          "maxWords": 90,
+          "maxChars": 600
+        },
+        "ctas": {
+          "maxItems": 2
+        },
+        "items": {
+          "maxItems": 12
+        }
+      },
+      "responsive": {
+        "breakpoints": [
+          1440,
+          768,
+          390
+        ],
+        "stacksBelow": 768
+      }
+    },
+    "IndustryHero": {
+      "kind": "section",
+      "file": "src/components/blocks/IndustryHero.jsx",
+      "description": "`.grid_hero_wrap` as used by the six Solutions > By Industry pages — the same right-anchored photo band as blocks/GridHero, plus the stepped pixel-grid overlay that dissolves the photo's left edge into the ground. GridHero's Platform variants bake that dither into the photo asset; these",
+      "variants": [
+        "default"
+      ],
+      "props": [
+        {
+          "name": "eyebrow",
+          "required": true
+        },
+        {
+          "name": "title",
+          "required": true
+        },
+        {
+          "name": "body",
+          "required": true
+        },
+        {
+          "name": "ctas",
+          "required": false,
+          "default": "[]"
+        },
+        {
+          "name": "photo",
+          "required": true
+        }
+      ],
+      "contentLimits": {
+        "title": {
+          "maxWords": 14,
+          "maxChars": 120
+        },
+        "eyebrow": {
+          "maxWords": 5,
+          "maxChars": 40
+        },
+        "body": {
+          "maxWords": 90,
+          "maxChars": 600
+        },
+        "ctas": {
+          "maxItems": 2
+        },
+        "items": {
+          "maxItems": 12
+        }
+      },
+      "responsive": {
+        "breakpoints": [
+          1440,
+          768,
+          390
+        ],
+        "stacksBelow": 768
+      }
+    },
+    "IntegrationsVis": {
+      "kind": "section",
+      "file": "src/components/blocks/IntegrationsVis.jsx",
+      "description": "`.horizontal_vis_wrap` — the \"Integrations for <Role>\" band, fourth section on all six Solutions > By Role pages. Structurally it is HorizontalVis (copy left, art right) but the art is a THREE-PIECE collage rather than one illustration, so it gets its own block instead of a collage prop on the",
+      "variants": [
+        "default"
+      ],
+      "props": [
+        {
+          "name": "title",
+          "required": true
+        },
+        {
+          "name": "body",
+          "required": true
+        },
+        {
+          "name": "ctas",
+          "required": false,
+          "default": "[]"
+        }
+      ],
+      "contentLimits": {
+        "title": {
+          "maxWords": 14,
+          "maxChars": 120
+        },
+        "eyebrow": {
+          "maxWords": 5,
+          "maxChars": 40
+        },
+        "body": {
+          "maxWords": 90,
+          "maxChars": 600
+        },
+        "ctas": {
+          "maxItems": 2
+        },
+        "items": {
+          "maxItems": 12
+        }
+      },
+      "responsive": {
+        "breakpoints": [
+          1440,
+          768,
+          390
+        ],
+        "stacksBelow": 768
+      }
+    },
+    "LayoutCards": {
+      "kind": "section",
+      "file": "src/components/blocks/LayoutCards.jsx",
+      "description": "`.layout_cards_wrap` — a split header over a 3-up card row. 5x on Platform. MEASURED on live /style-guide at 1440px (section h=963): 112px g_section_space header row inside the 1360px container, two columns:",
+      "variants": [
+        "default"
+      ],
+      "props": [
+        {
+          "name": "eyebrow",
+          "required": true
+        },
+        {
+          "name": "eyebrowChip",
+          "required": false,
+          "default": "false"
+        },
+        {
+          "name": "title",
+          "required": true
+        },
+        {
+          "name": "body",
+          "required": true
+        },
+        {
+          "name": "ctas",
+          "required": false,
+          "default": "[]"
+        },
+        {
+          "name": "link",
+          "required": true
+        },
+        {
+          "name": "cards",
+          "required": false,
+          "default": "[]"
+        },
+        {
+          "name": "bg",
+          "required": false,
+          "default": "'bg-surface'"
+        },
+        {
+          "name": "spaceTop",
+          "required": false,
+          "default": "112"
+        },
+        {
+          "name": "spaceBottom",
+          "required": false,
+          "default": "112"
+        }
+      ],
+      "contentLimits": {
+        "title": {
+          "maxWords": 14,
+          "maxChars": 120
+        },
+        "eyebrow": {
+          "maxWords": 5,
+          "maxChars": 40
+        },
+        "body": {
+          "maxWords": 90,
+          "maxChars": 600
+        },
+        "ctas": {
+          "maxItems": 2
+        },
+        "items": {
+          "maxItems": 12
+        }
+      },
+      "responsive": {
+        "breakpoints": [
+          1440,
+          768,
+          390
+        ],
+        "stacksBelow": 768
+      }
+    },
+    "LogoBlade": {
+      "kind": "section",
+      "file": "src/components/blocks/LogoBlade.jsx",
+      "description": "`.marquee_wrap` — the customer-logo blade that sits directly under the hero on every Solutions > By Industry page. MEASURED at 1440px on live /solutions/by-industry/tech (.scrape/solx3.json): section     1440 x 296, ground blue-300 (rgb 206,235,255) full-bleed",
+      "variants": [
+        "default"
+      ],
+      "props": [
+        {
+          "name": "title",
+          "required": true
+        },
+        {
+          "name": "logos",
+          "required": false,
+          "default": "[]"
+        }
+      ],
+      "contentLimits": {
+        "title": {
+          "maxWords": 14,
+          "maxChars": 120
+        },
+        "eyebrow": {
+          "maxWords": 5,
+          "maxChars": 40
+        },
+        "body": {
+          "maxWords": 90,
+          "maxChars": 600
+        },
+        "ctas": {
+          "maxItems": 2
+        },
+        "items": {
+          "maxItems": 12
+        }
+      },
+      "responsive": {
+        "breakpoints": [
+          1440,
+          768,
+          390
+        ],
+        "stacksBelow": 768
+      }
+    },
+    "PeopleRail": {
+      "kind": "section",
+      "file": "src/components/blocks/PeopleRail.jsx",
+      "description": "`.slider_main_wrap` — a split header over a horizontally-scrolling rail. Used TWICE on live /careers, in two shapes. MEASURED at 1440px off .scrape/plat-careers.png: variant=\"quotes\" (section 892px, \"Rewrite the rules of marketing\"):",
+      "variants": [
+        "quotes",
+        "people"
+      ],
+      "props": [
+        {
+          "name": "eyebrow",
+          "required": true
+        },
+        {
+          "name": "title",
+          "required": true
+        },
+        {
+          "name": "body",
+          "required": true
+        },
+        {
+          "name": "titleSize",
+          "required": false,
+          "default": "'54'"
+        },
+        {
+          "name": "items",
+          "required": false,
+          "default": "[]"
+        },
+        {
+          "name": "variant",
+          "required": false,
+          "default": "'people'"
+        },
+        {
+          "name": "bg",
+          "required": false,
+          "default": "'bg-surface'"
+        },
+        {
+          "name": "spaceTop",
+          "required": false,
+          "default": "112"
+        },
+        {
+          "name": "spaceBottom",
+          "required": false,
+          "default": "112"
+        }
+      ],
+      "contentLimits": {
+        "title": {
+          "maxWords": 14,
+          "maxChars": 120
+        },
+        "eyebrow": {
+          "maxWords": 5,
+          "maxChars": 40
+        },
+        "body": {
+          "maxWords": 90,
+          "maxChars": 600
+        },
+        "ctas": {
+          "maxItems": 2
+        },
+        "items": {
+          "maxItems": 12
+        }
+      },
+      "responsive": {
+        "breakpoints": [
+          1440,
+          768,
+          390
+        ],
+        "stacksBelow": 768
+      }
+    },
+    "PhotoMarquee": {
+      "kind": "section",
+      "file": "src/components/blocks/PhotoMarquee.jsx",
+      "description": "`.careers-photo-marquee-wrapper` — the two-row photo rail on live /careers (section 1440 x 704). MEASURED at 1440px off .scrape/plat-careers.png: two full-bleed rows of 500 x 320 photographs on a 16px gutter, the TOP row",
+      "variants": [
+        "columns",
+        "rows"
+      ],
+      "props": [
+        {
+          "name": "rows",
+          "required": false,
+          "default": "[]"
+        },
+        {
+          "name": "columns",
+          "required": false,
+          "default": "[]"
+        },
+        {
+          "name": "variant",
+          "required": false,
+          "default": "'rows'"
+        },
+        {
+          "name": "tileW",
+          "required": false,
+          "default": "500"
+        },
+        {
+          "name": "tileH",
+          "required": false,
+          "default": "320"
+        },
+        {
+          "name": "duration",
+          "required": false,
+          "default": "'60s'"
+        },
+        {
+          "name": "height",
+          "required": false,
+          "default": "1000"
+        }
+      ],
+      "contentLimits": {
+        "title": {
+          "maxWords": 14,
+          "maxChars": 120
+        },
+        "eyebrow": {
+          "maxWords": 5,
+          "maxChars": 40
+        },
+        "body": {
+          "maxWords": 90,
+          "maxChars": 600
+        },
+        "ctas": {
+          "maxItems": 2
+        },
+        "items": {
+          "maxItems": 12
+        }
+      },
+      "responsive": {
+        "breakpoints": [
+          1440,
+          768,
+          390
+        ],
+        "stacksBelow": 768
+      }
+    },
+    "ProductSlot": {
+      "kind": "section",
+      "file": "src/components/blocks/ProductSlot.jsx",
+      "description": "`.g_slot u-container` — a full-bleed patterned backdrop with one product screenshot floated on top of it. Alternates with `horizontal_content_wrap` 3x on live /knowledge-base and 3x on live /product-iq. MEASURED on live /knowledge-base at 1440px (all three slots h=1053):",
+      "variants": [
+        "default"
+      ],
+      "props": [
+        {
+          "name": "bg",
+          "required": true
+        },
+        {
+          "name": "shot",
+          "required": true
+        },
+        {
+          "name": "caption",
+          "required": true
+        },
+        {
+          "name": "height",
+          "required": false,
+          "default": "1053"
+        }
+      ],
+      "contentLimits": {
+        "title": {
+          "maxWords": 14,
+          "maxChars": 120
+        },
+        "eyebrow": {
+          "maxWords": 5,
+          "maxChars": 40
+        },
+        "body": {
+          "maxWords": 90,
+          "maxChars": 600
+        },
+        "ctas": {
+          "maxItems": 2
+        },
+        "items": {
+          "maxItems": 12
+        }
+      },
+      "responsive": {
+        "breakpoints": [
+          1440,
+          768,
+          390
+        ],
+        "stacksBelow": 768
+      }
+    },
+    "RevealSection": {
+      "kind": "section",
+      "file": "src/components/blocks/RevealSection.jsx",
+      "description": "A `<section>` that owns its own reveal observer. Page-local one-off bands used to sit inside a single wrapping `<div ref={useReveal()}>` per page. That works visually, but it collapses the whole page into ONE child of `.page_wrap`, and both the comparison",
+      "variants": [
+        "default"
+      ],
+      "props": [
+        {
+          "name": "as",
+          "required": false,
+          "default": "'section'"
+        },
+        {
+          "name": "children",
+          "required": true
+        }
+      ],
+      "contentLimits": {
+        "title": {
+          "maxWords": 14,
+          "maxChars": 120
+        },
+        "eyebrow": {
+          "maxWords": 5,
+          "maxChars": 40
+        },
+        "body": {
+          "maxWords": 90,
+          "maxChars": 600
+        },
+        "ctas": {
+          "maxItems": 2
+        },
+        "items": {
+          "maxItems": 12
+        }
+      },
+      "responsive": {
+        "breakpoints": [
+          1440,
+          768,
+          390
+        ],
+        "stacksBelow": 768
+      }
+    },
+    "RoleHero": {
+      "kind": "section",
+      "file": "src/components/blocks/RoleHero.jsx",
+      "description": "`.hero_main_wrap.is_full_height.is_solutions` — the CENTRED hero that opens all six Solutions > By Role pages. Unlike every Platform hero (copy left, art right) this one stacks the copy dead centre and flanks it with two mirrored collages of a pattern block, a cut-out headshot, a small UI card",
+      "variants": [
+        "default"
+      ],
+      "props": [
+        {
+          "name": "eyebrow",
+          "required": true
+        },
+        {
+          "name": "title",
+          "required": true
+        },
+        {
+          "name": "body",
+          "required": true
+        },
+        {
+          "name": "ctas",
+          "required": false,
+          "default": "[]"
+        },
+        {
+          "name": "headshotLeft",
+          "required": true
+        },
+        {
+          "name": "headshotRight",
+          "required": true
+        },
+        {
+          "name": "cardLeft",
+          "required": false,
+          "default": "'Creative Brief'"
+        },
+        {
+          "name": "cardRight",
+          "required": false,
+          "default": "'Ad Campaign'"
+        }
+      ],
+      "contentLimits": {
+        "title": {
+          "maxWords": 14,
+          "maxChars": 120
+        },
+        "eyebrow": {
+          "maxWords": 5,
+          "maxChars": 40
+        },
+        "body": {
+          "maxWords": 90,
+          "maxChars": 600
+        },
+        "ctas": {
+          "maxItems": 2
+        },
+        "items": {
+          "maxItems": 12
+        }
+      },
+      "responsive": {
+        "breakpoints": [
+          1440,
+          768,
+          390
+        ],
+        "stacksBelow": 768
+      }
+    },
+    "SeoSection": {
+      "kind": "section",
+      "file": "src/components/blocks/SeoSection.jsx",
+      "description": "The `.horizontal_content_wrap` + `.seo_image_wrap` pair that repeats three times on /solutions/seo-aeo-geo — once each for SEO, GEO and AEO. Unlike ChecklistVis (copy over art, checklist under the lede) this one puts the COPY and the CHECKLIST side by side and hangs a full-width figure beneath.",
+      "variants": [
+        "default"
+      ],
+      "props": [
+        {
+          "name": "eyebrow",
+          "required": true
+        },
+        {
+          "name": "eyebrowChip",
+          "required": false,
+          "default": "'bg-blue-300'"
+        },
+        {
+          "name": "checkChip",
+          "required": false,
+          "default": "'bg-blue-300'"
+        },
+        {
+          "name": "title",
+          "required": true
+        },
+        {
+          "name": "lede",
+          "required": true
+        },
+        {
+          "name": "link",
+          "required": true
+        },
+        {
+          "name": "items",
+          "required": false,
+          "default": "[]"
+        },
+        {
+          "name": "figure",
+          "required": true
+        }
+      ],
+      "contentLimits": {
+        "title": {
+          "maxWords": 14,
+          "maxChars": 120
+        },
+        "eyebrow": {
+          "maxWords": 5,
+          "maxChars": 40
+        },
+        "body": {
+          "maxWords": 90,
+          "maxChars": 600
+        },
+        "ctas": {
+          "maxItems": 2
+        },
+        "items": {
+          "maxItems": 12
+        }
+      },
+      "responsive": {
+        "breakpoints": [
+          1440,
+          768,
+          390
+        ],
+        "stacksBelow": 768
+      }
+    },
+    "SideBlockStack": {
+      "kind": "section",
+      "file": "src/components/blocks/SideBlockStack.jsx",
+      "description": "`.side_block` x N inside a `.simple_layout_inner` — the scroll-pinned feature stack. Used on live /jasper-iq for the four IQ components. MEASURED on live /jasper-iq at 1440px (.scrape/row-jasper-iq.json): the four `.side_block` rows are 1360 x 782 each, stacked with no gap",
+      "variants": [
+        "default"
+      ],
+      "props": [
+        {
+          "name": "items",
+          "required": false,
+          "default": "[]"
+        },
+        {
+          "name": "rowH",
+          "required": false,
+          "default": "782"
+        }
+      ],
+      "contentLimits": {
+        "title": {
+          "maxWords": 14,
+          "maxChars": 120
+        },
+        "eyebrow": {
+          "maxWords": 5,
+          "maxChars": 40
+        },
+        "body": {
+          "maxWords": 90,
+          "maxChars": 600
+        },
+        "ctas": {
+          "maxItems": 2
+        },
+        "items": {
+          "maxItems": 12
+        }
+      },
+      "responsive": {
+        "breakpoints": [
+          1440,
+          768,
+          390
+        ],
+        "stacksBelow": 768
+      }
+    },
+    "SimpleLayout": {
+      "kind": "section",
+      "file": "src/components/blocks/SimpleLayout.jsx",
+      "description": "`.simple_layout_wrap` — the N-up tile grid. 15x across Platform, the single most common block. Its shape varies by column count; all three variants measured on the IQ family share one grid and differ only in track width. MEASURED at 1440px:",
+      "variants": [
+        "promo",
+        "grid"
+      ],
+      "props": [
+        {
+          "name": "items",
+          "required": false,
+          "default": "[]"
+        },
+        {
+          "name": "cols",
+          "required": false,
+          "default": "2"
+        },
+        {
+          "name": "order",
+          "required": false,
+          "default": "'media-first'"
+        },
+        {
+          "name": "tint",
+          "required": false,
+          "default": "'bg-surface-2'"
+        },
+        {
+          "name": "mediaH",
+          "required": false,
+          "default": "440"
+        },
+        {
+          "name": "mediaPad",
+          "required": false,
+          "default": "false"
+        },
+        {
+          "name": "cardH",
+          "required": true
+        },
+        {
+          "name": "bg",
+          "required": false,
+          "default": "'bg-surface'"
+        },
+        {
+          "name": "spaceTop",
+          "required": false,
+          "default": "40"
+        },
+        {
+          "name": "spaceBottom",
+          "required": false,
+          "default": "112"
+        },
+        {
+          "name": "variant",
+          "required": false,
+          "default": "'grid'"
+        },
+        {
+          "name": "eyebrow",
+          "required": true
+        },
+        {
+          "name": "title",
+          "required": true
+        },
+        {
+          "name": "titleSize",
+          "required": false,
+          "default": "'54'"
+        },
+        {
+          "name": "cta",
+          "required": true
+        },
+        {
+          "name": "img",
+          "required": true
+        },
+        {
+          "name": "bgImage",
+          "required": true
+        },
+        {
+          "name": "center",
+          "required": false,
+          "default": "false"
+        },
+        {
+          "name": "bleed",
+          "required": false,
+          "default": "false"
+        },
+        {
+          "name": "minHeight",
+          "required": true
+        }
+      ],
+      "contentLimits": {
+        "title": {
+          "maxWords": 14,
+          "maxChars": 120
+        },
+        "eyebrow": {
+          "maxWords": 5,
+          "maxChars": 40
+        },
+        "body": {
+          "maxWords": 90,
+          "maxChars": 600
+        },
+        "ctas": {
+          "maxItems": 2
+        },
+        "items": {
+          "maxItems": 12
+        }
+      },
+      "responsive": {
+        "breakpoints": [
+          1440,
+          768,
+          390
+        ],
+        "stacksBelow": 768
+      }
+    },
+    "SplitHero": {
+      "kind": "section",
+      "file": "src/components/blocks/SplitHero.jsx",
+      "description": "`.split_hero_wrap` — the centred hero flanked by two clipped product panels. MEASURED on live /brand-iq at 1440px (section h=940): ground   flame-400 (rgb 255,179,163) full-bleed, PLUS a 1440x940 \"Grid BG\" avif laid over it edge to edge",
+      "variants": [
+        "default"
+      ],
+      "props": [
+        {
+          "name": "eyebrow",
+          "required": true
+        },
+        {
+          "name": "title",
+          "required": true
+        },
+        {
+          "name": "body",
+          "required": true
+        },
+        {
+          "name": "ctas",
+          "required": false,
+          "default": "[]"
+        },
+        {
+          "name": "gridBg",
+          "required": true
+        },
+        {
+          "name": "left",
+          "required": true
+        },
+        {
+          "name": "right",
+          "required": true
+        },
+        {
+          "name": "bg",
+          "required": false,
+          "default": "'bg-flame-400'"
+        },
+        {
+          "name": "height",
+          "required": false,
+          "default": "940"
+        }
+      ],
+      "contentLimits": {
+        "title": {
+          "maxWords": 14,
+          "maxChars": 120
+        },
+        "eyebrow": {
+          "maxWords": 5,
+          "maxChars": 40
+        },
+        "body": {
+          "maxWords": 90,
+          "maxChars": 600
+        },
+        "ctas": {
+          "maxItems": 2
+        },
+        "items": {
+          "maxItems": 12
+        }
+      },
+      "responsive": {
+        "breakpoints": [
+          1440,
+          768,
+          390
+        ],
+        "stacksBelow": 768
+      }
+    },
+    "StickyScroll": {
+      "kind": "section",
+      "file": "src/components/blocks/StickyScroll.jsx",
+      "description": "`sticky_scroll_wrap` — a two-column band whose LEFT column is a heading that sticks while the RIGHT column scrolls a stacked list of features past it. MEASURED on live /api (section 1440 x 1637): the left column holds a mono eyebrow (\"API Overview\") and a 54px Feature h2 in a ~18ch measure, pinned",
+      "variants": [
+        "panels",
+        "cards",
+        "rows"
+      ],
+      "props": [
+        {
+          "name": "eyebrow",
+          "required": true
+        },
+        {
+          "name": "title",
+          "required": true
+        },
+        {
+          "name": "titleSize",
+          "required": false,
+          "default": "'text-[clamp(2rem,3.75vw,3.375rem)]'"
+        },
+        {
+          "name": "body",
+          "required": true
+        },
+        {
+          "name": "cta",
+          "required": true
+        },
+        {
+          "name": "items",
+          "required": false,
+          "default": "[]"
+        },
+        {
+          "name": "variant",
+          "required": false,
+          "default": "'rows'"
+        },
+        {
+          "name": "tint",
+          "required": false,
+          "default": "'bg-surface'"
+        }
+      ],
+      "contentLimits": {
+        "title": {
+          "maxWords": 14,
+          "maxChars": 120
+        },
+        "eyebrow": {
+          "maxWords": 5,
+          "maxChars": 40
+        },
+        "body": {
+          "maxWords": 90,
+          "maxChars": 600
+        },
+        "ctas": {
+          "maxItems": 2
+        },
+        "items": {
+          "maxItems": 12
+        }
+      },
+      "responsive": {
+        "breakpoints": [
+          1440,
+          768,
+          390
+        ],
+        "stacksBelow": 768
+      }
+    },
+    "StoryPanel": {
+      "kind": "section",
+      "file": "src/components/blocks/StoryPanel.jsx",
+      "description": "`.stories_large_wrap` (inside a `.w-dyn-list`) — the customer-story panel that sits between the feature bands and the \"How Jasper Powers …\" cards on four of the six Solutions > By Industry pages. It is NOT on every industry page: /professional-services and",
+      "variants": [
+        "default"
+      ],
+      "props": [
+        {
+          "name": "tint",
+          "required": false,
+          "default": "'blue'"
+        },
+        {
+          "name": "logo",
+          "required": true
+        },
+        {
+          "name": "link",
+          "required": true
+        },
+        {
+          "name": "stats",
+          "required": false,
+          "default": "[]"
+        },
+        {
+          "name": "quote",
+          "required": false,
+          "default": "[]"
+        },
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "role",
+          "required": true
+        },
+        {
+          "name": "portrait",
+          "required": true
+        }
+      ],
+      "contentLimits": {
+        "title": {
+          "maxWords": 14,
+          "maxChars": 120
+        },
+        "eyebrow": {
+          "maxWords": 5,
+          "maxChars": 40
+        },
+        "body": {
+          "maxWords": 90,
+          "maxChars": 600
+        },
+        "ctas": {
+          "maxItems": 2
+        },
+        "items": {
+          "maxItems": 12
+        }
+      },
+      "responsive": {
+        "breakpoints": [
+          1440,
+          768,
+          390
+        ],
+        "stacksBelow": 768
+      }
+    },
+    "TrustCards": {
+      "kind": "section",
+      "file": "src/components/blocks/TrustCards.jsx",
+      "description": "`.layout_cards_wrap` in its CENTRED 4-up form — the \"Foster AI Trust. Scale AI Adoption.\" band that closes live /security (section 1440 x 835). MEASURED at 1440px off .scrape/plat-security.png: ground   white",
+      "variants": [
+        "default"
+      ],
+      "props": [
+        {
+          "name": "eyebrow",
+          "required": true
+        },
+        {
+          "name": "title",
+          "required": true
+        },
+        {
+          "name": "body",
+          "required": true
+        },
+        {
+          "name": "link",
+          "required": true
+        },
+        {
+          "name": "cards",
+          "required": false,
+          "default": "[]"
+        },
+        {
+          "name": "bg",
+          "required": false,
+          "default": "'bg-surface'"
+        },
+        {
+          "name": "spaceTop",
+          "required": false,
+          "default": "112"
+        },
+        {
+          "name": "spaceBottom",
+          "required": false,
+          "default": "112"
+        }
+      ],
+      "contentLimits": {
+        "title": {
+          "maxWords": 14,
+          "maxChars": 120
+        },
+        "eyebrow": {
+          "maxWords": 5,
+          "maxChars": 40
+        },
+        "body": {
+          "maxWords": 90,
+          "maxChars": 600
+        },
+        "ctas": {
+          "maxItems": 2
+        },
+        "items": {
+          "maxItems": 12
+        }
+      },
+      "responsive": {
+        "breakpoints": [
+          1440,
+          768,
+          390
+        ],
+        "stacksBelow": 768
+      }
+    },
+    "UseCaseCards": {
+      "kind": "section",
+      "file": "src/components/blocks/UseCaseCards.jsx",
+      "description": "`.layout_cards_wrap` holding `.card_iq_wrap` tiles — the \"The only generative AI purpose-built for <role>\" band, second section on all six Solutions > By Role pages. It shares the wrapper class with blocks/LayoutCards but not its shape:",
+      "variants": [
+        "default"
+      ],
+      "props": [
+        {
+          "name": "eyebrow",
+          "required": true
+        },
+        {
+          "name": "title",
+          "required": true
+        },
+        {
+          "name": "cards",
+          "required": false,
+          "default": "[]"
+        }
+      ],
+      "contentLimits": {
+        "title": {
+          "maxWords": 14,
+          "maxChars": 120
+        },
+        "eyebrow": {
+          "maxWords": 5,
+          "maxChars": 40
+        },
+        "body": {
+          "maxWords": 90,
+          "maxChars": 600
+        },
+        "ctas": {
+          "maxItems": 2
+        },
+        "items": {
+          "maxItems": 12
+        }
+      },
+      "responsive": {
+        "breakpoints": [
+          1440,
+          768,
+          390
+        ],
+        "stacksBelow": 768
+      }
+    },
+    "ValueProps": {
+      "kind": "section",
+      "file": "src/components/blocks/ValueProps.jsx",
+      "description": "`value_props_wrap` — an 80px display heading over a two-track band: a column of flat tinted cards on the LEFT and one tall duotone photograph on the RIGHT, with the \"Pink Pattern\" dot-lattice SVG rotated over the photo's top-right corner.",
+      "variants": [
+        "default"
+      ],
+      "props": [
+        {
+          "name": "eyebrow",
+          "required": true
+        },
+        {
+          "name": "title",
+          "required": true
+        },
+        {
+          "name": "items",
+          "required": false,
+          "default": "[]"
+        },
+        {
+          "name": "photo",
+          "required": true
+        },
+        {
+          "name": "pattern",
+          "required": false,
+          "default": "true"
+        },
+        {
+          "name": "tint",
+          "required": false,
+          "default": "'bg-surface'"
+        },
+        {
+          "name": "cardTitleSize",
+          "required": false,
+          "default": "'text-[clamp(1.5rem,2.65vw,2.375rem)]'"
+        },
+        {
+          "name": "children",
+          "required": true
+        }
+      ],
+      "contentLimits": {
+        "title": {
+          "maxWords": 14,
+          "maxChars": 120
+        },
+        "eyebrow": {
+          "maxWords": 5,
+          "maxChars": 40
+        },
+        "body": {
+          "maxWords": 90,
+          "maxChars": 600
+        },
+        "ctas": {
+          "maxItems": 2
+        },
+        "items": {
+          "maxItems": 12
+        }
+      },
+      "responsive": {
+        "breakpoints": [
+          1440,
+          768,
+          390
+        ],
+        "stacksBelow": 768
+      }
+    },
+    "WindowCta": {
+      "kind": "section",
+      "file": "src/components/blocks/WindowCta.jsx",
+      "description": "`window_wrap u-width-full` — the short navy closing band used by the two /image/* pages, and by /studio as a media frame. MEASURED on live /image/api and /image/pipelines (section 1440 x 350): a full-bleed ink (#00063d) band, a 54px Feature heading in WHITE centred",
+      "variants": [
+        "default"
+      ],
+      "props": [
+        {
+          "name": "title",
+          "required": true
+        },
+        {
+          "name": "cta",
+          "required": true
+        },
+        {
+          "name": "media",
+          "required": true
+        },
+        {
+          "name": "height",
+          "required": true
+        }
+      ],
+      "contentLimits": {
+        "title": {
+          "maxWords": 14,
+          "maxChars": 120
+        },
+        "eyebrow": {
+          "maxWords": 5,
+          "maxChars": 40
+        },
+        "body": {
+          "maxWords": 90,
+          "maxChars": 600
+        },
+        "ctas": {
+          "maxItems": 2
+        },
+        "items": {
+          "maxItems": 12
+        }
+      },
+      "responsive": {
+        "breakpoints": [
+          1440,
+          768,
+          390
+        ],
+        "stacksBelow": 768
+      }
+    },
+    "Navbar": {
+      "kind": "shell",
+      "file": "src/components/Navbar.jsx",
+      "description": "Measured from the the reference site `.nav_wrap` (Chrome, 1440x1000): .nav_wrap      position:fixed; top:0; left:0; right:0; z-index:1000; background transparent; pointer-events:none (so the full-height overlay layer never eats clicks).",
+      "variants": [
+        "default"
+      ],
+      "props": []
+    },
+    "Footer": {
+      "kind": "shell",
+      "file": "src/components/Footer.jsx",
+      "description": "Footer — rebuilt from measurements of the live .footer_wrap (1440px). Structure on the original is NOT \"brand block + 5 link columns\". It is: .footer_contain   1360px well, padding 80px 0, column flex, gap 112px .footer_layout  grid, auto-fit 304px tracks -> 4 up at 1440,",
+      "variants": [
+        "default"
+      ],
+      "props": []
+    },
+    "Layout": {
+      "kind": "shell",
+      "file": "src/components/Layout.jsx",
+      "description": "Shared chrome for every route, plus scroll-reset on navigation. The reveal observer is mounted HERE, on <main>, rather than per-section. Several pages declared one `useReveal()` but rendered multiple <section> elements, so only the first ever received `ref={ref}` — every `.reveal`",
+      "variants": [
+        "default"
+      ],
+      "props": [
+        {
+          "name": "children",
+          "required": true
+        }
+      ]
+    },
+    "PageCta": {
+      "kind": "shell",
+      "file": "src/components/PageCta.jsx",
+      "description": "Interior-page closing CTA (`.cta_main_wrap`). Measured on live /solutions at 1440px — section is 1440 x 925 and layers, back to front: cta-bg.avif            1440x925 at 0,0        (blue grid ground)",
+      "variants": [
+        "default"
+      ],
+      "props": [
+        {
+          "name": "headline",
+          "required": false
+        },
+        {
+          "name": "ctas",
+          "required": true
+        },
+        {
+          "name": "docName",
+          "required": false
+        }
+      ]
+    },
+    "SectionSpace": {
+      "kind": "shell",
+      "file": "src/components/SectionSpace.jsx",
+      "description": "Standalone vertical spacer. The live page carries NO padding on its sections — every gap between them is a `g_section_space` div in `.page_main`. Measured on the homepage: three of them at 112px, after Tabs, after Closing, and at the very end.",
+      "variants": [
+        "default"
+      ],
+      "props": [
+        {
+          "name": "size",
+          "required": false
+        }
+      ]
+    }
+  }
+}

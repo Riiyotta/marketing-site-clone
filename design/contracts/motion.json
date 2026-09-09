@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "reveal": {
+    "mechanism": "IntersectionObserver adds .is-visible; CSS animates opacity+translateY with fill:forwards. .is-settled is added on animationend to drop the transform.",
+    "stagger": {
+      "property": "--reveal-delay",
+      "typical": [
+        0,
+        80,
+        120,
+        160,
+        200
+      ],
+      "unit": "ms"
+    },
+    "easing": "cubic-bezier(0.625, 0.05, 0, 1)"
+  },
+  "rules": [
+    "NEVER put .reveal on an element inside a horizontally-scrolling rail. Off-viewport items never intersect and stay at opacity:0 permanently. Put it on the rail container.",
+    "NEVER rely on an inline transform on a .reveal element. The animation uses fill:forwards and silently overrides it — put rotation/offset on a wrapper.",
+    "A finished animation keeps the element on its own compositor layer, which can inflate the document. .is-settled returns it to normal paint.",
+    "Honour prefers-reduced-motion: reveal everything immediately."
+  ]
+}

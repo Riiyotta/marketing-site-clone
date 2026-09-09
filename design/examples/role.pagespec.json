@@ -1,0 +1,44 @@
+{
+  "pagespecVersion": "1.0.0",
+  "route": "/solutions/by-role/content-marketers",
+  "title": "Solutions for Content Marketers",
+  "template": "role",
+  "theme": "light",
+  "status": "approved",
+  "sections": [
+    {
+      "component": "RoleHero",
+      "content": {
+        "eyebrow": "Solutions by Role",
+        "title": "Solutions for Content Marketers",
+        "body": "Accelerate your engagement goals and elevate your brand with high-quality, AI-enhanced content.",
+        "ctas": [
+          { "label": "Get A Demo", "href": "/" },
+          { "label": "Start Free Trial", "href": "/", "variant": "btn-secondary" }
+        ]
+      }
+    },
+    {
+      "component": "UseCaseCards",
+      "content": {
+        "eyebrow": "Use cases",
+        "title": "The only generative AI purpose-built for content marketing",
+        "cards": [
+          { "title": "Brief to draft", "body": "Turn an approved brief into on-brand copy across every channel." },
+          { "title": "Repurpose at scale", "body": "Reshape one asset into the formats each channel needs." },
+          { "title": "Optimise what exists", "body": "Improve live content for search and conversion." }
+        ]
+      }
+    },
+    { "component": "AgentSlider" },
+    {
+      "component": "IntegrationsVis",
+      "content": {
+        "title": "Integrations for Content Marketers",
+        "body": "Bring Jasper into the tools your team already works in.",
+        "ctas": [{ "label": "Explore integrations", "href": "/" }]
+      }
+    },
+    { "component": "PageCta" }
+  ]
+}

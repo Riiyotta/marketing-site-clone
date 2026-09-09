@@ -77,8 +77,6 @@ Generated from `tailwind.config.js` — do not hand-edit.
 
 | token | value |
 |---|---|
-| `site` | `min(90rem, 100vw)` |
-| `container` | `85rem` |
 
 ## Radius
 
@@ -91,16 +89,11 @@ Generated from `tailwind.config.js` — do not hand-edit.
 
 | token | value |
 |---|---|
-| `gutter` | `16px` |
-| `tabs` | `80px` |
-| `footer` | `64px` |
 
 ## Height
 
 | token | value |
 |---|---|
-| `section-xxs` | `40px` |
-| `section-space` | `112px` |
 
 ## Easing
 
