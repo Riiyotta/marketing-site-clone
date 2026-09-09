@@ -1,0 +1,368 @@
+/* ---------------------------------------------------------------
+   Fonts
+   The original uses licensed typefaces served from Webflow:
+     ABC ROM / ABC ROM Mono  (Dinamo)  — UI + mono
+     Feature Headline        (Feature) — display serif
+   Those cannot be redistributed, so we load metric-similar free
+   substitutes. To restore exact fidelity, drop the .woff2 files
+   into /public/fonts and swap the @font-face srcs below.
+--------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --site-max-width: min(90rem, 100vw);
+    --container-pad: clamp(1rem, 0.4171rem + 2.3144vw, 2.5rem);
+    --ease-jasper: cubic-bezier(0.625, 0.05, 0, 1);
+  }
+
+  * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    @apply bg-surface text-ink font-sans;
+    font-weight: 450;
+    font-size: 1rem;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+    overflow-x: hidden;
+  }
+
+  /* --_theme---selection--* */
+  ::selection { background: #fa4028; color: #fff; }
+
+  h1, h2, h3, h4, h5, h6 { @apply font-serif; font-weight: 450; }
+
+  /* Playfair renders heavier AND ~9% wider than Feature at the same px size,
+     so display headlines wrap one line early (measured: a 672px column needs
+     733px for a line the original fits on one). Tighten tracking on display
+     sizes to recover the width — transform:scaleX() cannot help here, because
+     it scales the box AFTER line-breaking has already happened. */
+  .font-serif { font-synthesis-weight: none; }
+
+}
+
+@layer components {
+  /* Measured .u-container: exactly 1360px wide with padding:0 — the page
+     gutter sits OUTSIDE the well, so the 12-col tracks land on 98.667px
+     (1360 - 11*16 = 1184 / 12). Padding here would shrink every track. */
+  .u-container {
+    width: min(100% - var(--container-pad) * 2, 85rem);
+    margin-inline: auto;
+    padding-inline: 0;
+  }
+
+  /* ---- Buttons (--_theme---button-*) ---- */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 whitespace-nowrap;
+    @apply text-text-main font-sans rounded-DEFAULT border;
+    /* measured on the live btn_main_wrap: 16px 20px padding, 48px tall.
+       line-height must be 1 or the box overshoots to 56px. */
+    padding: 1rem 1.25rem;
+    line-height: 1;
+    font-weight: 450;
+    letter-spacing: -0.01em;
+    transition: background-color .3s var(--ease-jasper),
+                border-color .3s var(--ease-jasper),
+                color .3s var(--ease-jasper),
+                transform .2s var(--ease-jasper);
+  }
+  .btn:active { transform: scale(0.97); }
+
+  .btn-primary   { @apply bg-flame-600 border-flame-600 text-white; }
+  .btn-primary:hover   { @apply bg-flame-700 border-flame-700; color: #fffdfc; }
+
+  .btn-secondary { @apply bg-transparent border-ink text-ink; }
+  .btn-secondary:hover { @apply bg-ink text-white; }
+
+  .btn-tertiary  { @apply bg-ink border-ink text-white; }
+  .btn-tertiary:hover  { @apply bg-blue-700 border-blue-700; }
+
+  /* The outline button as it appears on a DARK ground — measured on the live
+     /knowledge-base hero, whose grid_hero_wrap sits on blue-600 and paints
+     "Start Free Trial" as a white 1px outline with white label. The default
+     .btn-secondary is ink-on-transparent, which would be navy-on-blue there. */
+  .btn-inverse { @apply bg-transparent border-white text-white; }
+  .btn-inverse:hover { @apply bg-white text-ink; }
+
+  /* The FILLED white button on a dark ground — measured on the live
+     Solutions > By Industry heroes (`.grid_hero_wrap` on blue-600), whose
+     single "Get a Demo" is a solid white 141x48 box with an ink label.
+     .btn-inverse is the outline form of the same idea and would render this
+     one as white-on-blue text with no fill. */
+  .btn-solid-light { @apply bg-surface border-surface text-ink; }
+  .btn-solid-light:hover { @apply bg-flame-300 border-flame-300; }
+
+  /* ---- Footer buttons (.btn_main_wrap inside .footer_btn_wrap) ----
+     Measured on the live footer: 164.1 x 47.7px, padding 16px 20px,
+     1px border, radius 0, label 18px ABC ROM weight 500 lh 18px,
+     text-transform capitalize. Primary fills flame-600 and darkens to
+     flame-700 (#801a10) on hover; the outline variant is flame-600 text
+     on a transparent ground with a flame-600 border. */
+  .btn-footer {
+    @apply inline-flex items-center justify-center whitespace-nowrap font-sans;
+    box-sizing: border-box;
+    /* 16+16 padding + 2 border + a 13.7px glyph box = the measured 47.7px.
+       The live .btn_main_text is a flow-root div whose height is the glyph
+       box, not the 18px line-height, so height is pinned rather than derived. */
+    height: 47.7px;
+    padding: 16px 20px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 0;
+    font-size: 18px;
+    line-height: 13.7px;
+    font-weight: 500;
+    text-transform: capitalize;
+    transition: background-color .3s var(--ease-jasper),
+                border-color .3s var(--ease-jasper),
+                color .3s var(--ease-jasper);
+  }
+  .btn-footer-primary { @apply bg-flame-600 border-flame-600 text-white; }
+  .btn-footer-primary:hover { @apply bg-flame-700 border-flame-700; color: #fffdfc; }
+
+  .btn-footer-outline { @apply bg-transparent border-flame-600 text-flame-600; }
+  .btn-footer-outline:hover { @apply bg-flame-600 text-white; }
+
+  /* measured: .footer_layout column-gap is 48px while more than one track
+     fits, and collapses to 12px at the one-up breakpoint (<=479px on the
+     live site, where the 304px minmax floor can no longer pair). */
+  .footer-layout { --footer-col-gap: 48px; }
+  @media (max-width: 479px) {
+    .footer-layout { --footer-col-gap: 12px; }
+  }
+
+  /* measured: .footer_bottom_content — 522.4px wide, right-aligned, gap 16px
+     at 768 and 1440; full-width, left-aligned, gap 20px at 390. The live
+     switch happens at the same 479px one-up breakpoint as the grid. */
+  /* The live block is 522.4px wide against a 186px logo in a 1360px row.
+     Our disclaimer is ~3x the length of "© 2026 Jasper AI, INC.", so the
+     block is allowed to grow to the remaining track instead of wrapping the
+     logo onto its own line — same row, same right alignment. */
+  .footer-bottom-content {
+    align-items: flex-end;
+    gap: 16px;
+    width: auto;
+    /* basis 0 so the block takes the track LEFT OVER by the 186px logo
+       rather than sizing to its (much longer) disclaimer text and wrapping
+       the logo onto its own row. */
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .footer-bottom-content > ul { justify-content: flex-end; }
+
+  /* Live keeps logo and content on ONE row from 480px up (bottom bar 69.8px
+     tall at both 768 and 1440). Our disclaimer is ~576px against the live
+     165px, so between 480 and 1023 it is allowed to wrap onto its own line
+     INSIDE the content block instead of wrapping the logo off the row. */
+  @media (min-width: 480px) {
+    /* basis 0 so the block takes the track LEFT OVER by the 186px logo
+       rather than sizing to its disclaimer and wrapping the logo off the row. */
+    .footer-bottom-content { flex: 1 1 0; }
+  }
+  @media (min-width: 480px) and (max-width: 1023px) {
+    .footer-bottom-content { padding-left: 24px; }
+    .footer-bottom-content > ul { justify-content: flex-start; }
+    .footer-bottom-content [data-f='legaltext'] { flex-basis: 100%; }
+  }
+
+  @media (max-width: 479px) {
+    .footer-bottom-content { align-items: flex-start; gap: 20px; width: 100%; }
+    .footer-bottom-content > ul { justify-content: flex-start; }
+  }
+
+  /* measured: .footer_logo — 186px wide at >=768, full 358px track at 390 */
+  .footer-logo-link { width: 186px; max-width: 100%; }
+  .footer-logo-link > span { font-size: 69.75px; }
+  @media (max-width: 479px) {
+    /* measured: the live mark grows to the full 358px track at 390, and its
+       height rides with it at the same 0.375 ratio -> 134.25px. */
+    .footer-logo-link { width: 100%; }
+    .footer-logo-link > span { font-size: 134.25px; }
+  }
+
+  /* Mono eyebrow label used above section headings */
+  /* measured: mono, 16px, letter-spacing -0.16px, text-transform NONE.
+     (An earlier draft uppercased these — the original does not.) */
+  .eyebrow {
+    @apply font-mono text-text-main;
+    text-transform: none;
+    letter-spacing: -0.01em;
+    font-weight: 450;
+  }
+
+  /* Arrow link — coral underline that wipes on hover */
+  .link-arrow {
+    @apply inline-flex items-center gap-2 text-flame-600 relative;
+    text-decoration: none;
+  }
+  .link-arrow::after {
+    content: ''; position: absolute; left: 0; bottom: -2px;
+    width: 100%; height: 1px; background: currentColor;
+    transform-origin: right; transform: scaleX(1);
+    transition: transform .4s var(--ease-jasper);
+  }
+  .link-arrow:hover::after { transform-origin: left; transform: scaleX(0); }
+  .link-arrow svg { transition: transform .3s var(--ease-jasper); }
+  .link-arrow:hover svg { transform: translateX(4px); }
+}
+
+@layer utilities {
+  /* Substitute-font width compensation.
+     Playfair sets ~9% wider than Feature, so 80px display headlines wrap one
+     line early (a line the original fits in 672px measures 733px here).
+     Overriding tracking-tightest recovers the width and restores the original
+     line breaks. Measured: -0.07em -> 663px, fits the 672px column.
+     Delete this once the licensed Feature .woff2 is installed. */
+  .tracking-tightest { letter-spacing: -0.07em; }
+
+  /* Graph-paper grid used behind hero + card illustrations */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right,  var(--grid-color, rgba(0,6,61,.08)) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-color, rgba(0,6,61,.08)) 1px, transparent 1px);
+    background-size: var(--grid-size, 40px) var(--grid-size, 40px);
+  }
+
+  /* Plus-mark lattice behind the /platform hero.
+     Live ships it as a 1970x1028 inline SVG of ~5000 stroked plus marks on a
+     20.12px pitch (1.98px stroke, ~10px arms), drawn white at 0.75 opacity
+     over flame-300. One tile of that lattice as a data-URI repeats to the
+     same result at a fraction of the weight. --plus-size sets the pitch;
+     --plus-color is baked per-use via the stroke in the data-URI below, so
+     the tile itself is white and callers tint with opacity instead. */
+  .bg-plus {
+    --plus-size: 20.12px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath d='M5 10h10M10 5v10' stroke='%23fff' stroke-width='1.98'/%3E%3C/svg%3E");
+    background-size: var(--plus-size) var(--plus-size);
+    background-repeat: repeat;
+  }
+
+  .text-balance { text-wrap: balance; }
+  .text-pretty  { text-wrap: pretty; }
+
+  /* Hide scrollbar on the persona tab rail */
+  /* `overflow:hidden` alone still lets a clipped subtree's layout overflow
+     bubble into documentElement.scrollWidth in Chrome, so a full-bleed
+     decoration or a duplicated marquee strip reports page-wide overflow even
+     though nothing is scrollable. `contain: paint` scopes the overflow to the
+     box, which is what the live site's own clipping achieves. Apply it to any
+     section that deliberately bleeds artwork past its edges. */
+  .clip-bleed { overflow: hidden; contain: paint; }
+
+  .no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+}
+
+/* ---------------------------------------------------------------
+   Motion — mirrors the site's GSAP ScrollTrigger + SplitText work
+--------------------------------------------------------------- */
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-in { from { opacity: 0 } to { opacity: 1 } }
+@keyframes marquee { from { transform: translateX(0) } to { transform: translateX(-50%) } }
+/* Reverse and vertical companions to `marquee`, added for the /careers photo
+   rails. Live runs the two horizontal photo rows in OPPOSITE directions and
+   scrolls the two hero portrait columns vertically (one up, one down) — a
+   single left-only keyframe cannot express that. Each track duplicates its
+   content once, so a 50% translate is exactly one full pass. */
+@keyframes marquee-reverse { from { transform: translateX(-50%) } to { transform: translateX(0) } }
+@keyframes marquee-up      { from { transform: translateY(0) }    to { transform: translateY(-50%) } }
+@keyframes marquee-down    { from { transform: translateY(-50%) } to { transform: translateY(0) } }
+
+/* Scroll-reveal: set by IntersectionObserver in useReveal().
+   `is-visible` sets opacity:1 in its OWN right rather than relying on the
+   animation's forwards fill. A revealed element must stay painted even if the
+   animation is restarted or dropped — Chrome restarts CSS animations when the
+   viewport is resized, which is exactly what a full-page screenshot does, and
+   a fill-dependent element would be captured back at its opacity:0 keyframe. */
+.reveal { opacity: 0; }
+.reveal.is-visible {
+  opacity: 1;
+  animation: reveal-up .9s var(--ease-jasper) both;
+  animation-delay: var(--reveal-delay, 0ms);
+}
+/* Entrance finished: drop the animation so the element leaves its compositor
+   layer. Kept as a separate class (set on animationend) rather than relying on
+   the animation's fill, because a lingering finished transform animation makes
+   full-page screenshots rasterise the element blank. */
+.reveal.is-visible.is-settled {
+  animation: none;
+  transform: none;
+}
+
+/* SplitText-style per-line headline entrance */
+.reveal-line { display: block; overflow: hidden; }
+.reveal-line > span {
+  display: block;
+  transform: translateY(105%);
+  transition: transform 1s var(--ease-jasper);
+  transition-delay: var(--line-delay, 0ms);
+}
+.is-visible .reveal-line > span { transform: translateY(0); }
+
+.animate-marquee {
+  animation: marquee var(--marquee-duration, 40s) linear infinite;
+}
+.animate-marquee-reverse {
+  animation: marquee-reverse var(--marquee-duration, 40s) linear infinite;
+}
+.animate-marquee-up {
+  animation: marquee-up var(--marquee-duration, 40s) linear infinite;
+}
+.animate-marquee-down {
+  animation: marquee-down var(--marquee-duration, 40s) linear infinite;
+}
+.marquee-track:hover .animate-marquee { animation-play-state: paused; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal, .reveal.is-visible { opacity: 1; animation: none; }
+  .reveal-line > span { transform: none; transition: none; }
+  .animate-marquee,
+  .animate-marquee-reverse,
+  .animate-marquee-up,
+  .animate-marquee-down { animation: none; }
+}
+
+/* ---------------------------------------------------------------
+   Platform card visuals
+   The original serves these as three Rive embeds (one per card).
+   That is licensed artwork on Jasper's own Rive account, so the
+   motion is reproduced natively here: a slow idle drift plus a
+   staggered pulse on the illustration layers.
+--------------------------------------------------------------- */
+@keyframes card-drift {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50%      { transform: translate3d(0, -6px, 0); }
+}
+@keyframes card-pulse {
+  0%, 100% { opacity: .55; transform: scale(1); }
+  50%      { opacity: 1;   transform: scale(1.04); }
+}
+@keyframes grid-pan {
+  from { background-position: 0 0; }
+  to   { background-position: var(--grid-size, 22px) var(--grid-size, 22px); }
+}
+
+.card-visual      { animation: card-drift 7s ease-in-out infinite; }
+.card-visual-grid { animation: grid-pan 9s linear infinite; }
+.card-spark       { animation: card-pulse 3.2s ease-in-out infinite; }
+.card-spark:nth-of-type(2) { animation-delay: .7s; }
+.card-spark:nth-of-type(3) { animation-delay: 1.4s; }
+
+/* pause the idle motion when the card is hovered, matching the
+   deliberate feel of the original's state machine */
+.group:hover .card-visual,
+.group:hover .card-visual-grid { animation-play-state: paused; }
+
+@media (prefers-reduced-motion: reduce) {
+  .card-visual, .card-visual-grid, .card-spark { animation: none; }
+}

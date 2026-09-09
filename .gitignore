@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.DS_Store
+*.log
+
+# Scraping + verification harness. Excluded from the repo: it holds full-page
+# captures of the reference site and its CDN asset URLs.
+.scrape/
