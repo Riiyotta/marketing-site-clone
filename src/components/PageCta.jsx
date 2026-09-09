@@ -153,14 +153,17 @@ export default function PageCta({ headline = HEADLINE, ctas, docName = 'Jasper C
                className="pointer-events-none absolute hidden max-w-none md:block"
                style={{ width: 160, height: 41, left: 149, top: 80 }} />
 
-          <h2 className="reveal mx-auto max-w-[13ch] font-serif tracking-tightest
-                         text-[clamp(2.25rem,5.6vw,5rem)] leading-1">
+          {/* Live's `.cta_main_wrap` contains NO heading element — this line is a
+              <p>. Rendering it as an <h2> put a phantom section heading into the
+              document outline on all four pages that close with this block. */}
+          <p className="reveal mx-auto max-w-[13ch] font-serif tracking-tightest
+                        text-[clamp(2.25rem,5.6vw,5rem)] leading-1">
             {words.map((w, i) => (
               <span key={`${w}-${i}`} className="bg-flame-600 text-white box-decoration-clone">
                 {w}{i < words.length - 1 ? ' ' : ''}
               </span>
             ))}
-          </h2>
+          </p>
 
           <div className="reveal flex flex-wrap items-center justify-center gap-3"
                style={{ '--reveal-delay': '120ms' }}>
